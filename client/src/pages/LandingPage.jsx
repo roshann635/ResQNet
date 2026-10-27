@@ -65,18 +65,35 @@ export default function LandingPage() {
               <span>ACADEMIC SIMULATION • COMPUTER ENGINEERING PBL</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-emerald-950 tracking-tight leading-[1.1]">
-              Next-Gen Emergency Dispatch &{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-green-700">
-                Route Optimization
-              </span>
-            </h1>
+            <div className="relative flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1 space-y-4">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-emerald-950 tracking-tight leading-[1.1]">
+                  Next-Gen Emergency Dispatch &{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-green-700">
+                    Route Optimization
+                  </span>
+                </h1>
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-              An educational, full-stack incident command simulation driven by{' '}
-              <strong className="text-emerald-700 font-semibold">100% hand-crafted Data Structures & Graph Algorithms</strong> in pure JavaScript. 
-              Zero third-party routing, heap, or tree libraries.
-            </p>
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                  An educational, full-stack incident command simulation driven by{' '}
+                  <strong className="text-emerald-700 font-semibold">100% hand-crafted Data Structures & Graph Algorithms</strong> in pure JavaScript. 
+                  Zero third-party routing, heap, or tree libraries.
+                </p>
+              </div>
+
+              {/* Stethoscope Visual near text matching user mockup */}
+              <div className="shrink-0 relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-emerald-300 shadow-lg shadow-emerald-500/10 bg-emerald-50 group">
+                <img
+                  src="/images/stethoscope-round.jpg"
+                  alt="Medical Stethoscope and ECG Heartbeat Telemetry"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 rounded-full ring-2 ring-emerald-500/20 pointer-events-none" />
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-sm border border-emerald-300 text-[10px] font-mono font-bold text-emerald-800 shadow-sm whitespace-nowrap">
+                  CLINICAL TRIAGE
+                </div>
+              </div>
+            </div>
 
             {/* Feature highlights chips */}
             <div className="flex flex-wrap gap-2 text-xs font-mono text-slate-700">

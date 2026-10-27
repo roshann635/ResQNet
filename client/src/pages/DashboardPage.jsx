@@ -71,26 +71,35 @@ export default function DashboardPage() {
     <div className="space-y-6">
       {/* Top Banner & Quick Controls */}
       <div className="flex flex-wrap items-center justify-between gap-4 bg-white border border-emerald-200 p-5 rounded-2xl shadow-sm">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border font-semibold uppercase ${
-              isAdmin
-                ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
-                : 'bg-emerald-50 text-emerald-800 border-emerald-300'
-            }`}>
-              {isAdmin ? 'Dispatcher Console' : 'Evaluator Audit View'}
-            </span>
-            <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
-              LIVE NETWORK
-            </span>
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl overflow-hidden border border-emerald-300 shadow-sm bg-emerald-50 hidden sm:block">
+            <img
+              src="/images/trauma-kit.jpg"
+              alt="Emergency Response Kit & AED"
+              className="w-full h-full object-cover"
+            />
           </div>
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border font-semibold uppercase ${
+                isAdmin
+                  ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                  : 'bg-emerald-50 text-emerald-800 border-emerald-300'
+              }`}>
+                {isAdmin ? 'Dispatcher Console' : 'Evaluator Audit View'}
+              </span>
+              <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+                LIVE NETWORK
+              </span>
+            </div>
 
-          <h1 className="text-2xl font-black text-emerald-950 tracking-tight">
-            Emergency Dispatch Command Console
-          </h1>
-          <p className="text-xs text-slate-500 mt-1">
-            Real-time DSA optimization engine: MinHeap priority queues, Dijkstra, A*, and greedy fleet allocation.
-          </p>
+            <h1 className="text-2xl font-black text-emerald-950 tracking-tight">
+              Emergency Dispatch Command Console
+            </h1>
+            <p className="text-xs text-slate-500 mt-1">
+              Real-time DSA optimization engine: MinHeap priority queues, Dijkstra, A*, and greedy fleet allocation.
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center gap-2.5">

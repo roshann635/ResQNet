@@ -182,16 +182,25 @@ export default function IncidentsPage() {
     <div className="space-y-6">
       {/* Header with Role Status */}
       <div className="flex flex-wrap items-center justify-between gap-4 bg-white border border-emerald-200 p-5 rounded-2xl shadow-sm">
-        <div>
-          <h1 className="text-2xl font-black text-emerald-950 tracking-tight flex items-center gap-2.5">
-            Emergency Incident Management & Priority Queue
-            <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300">
-              Min-Heap O(log N)
-            </span>
-          </h1>
-          <p className="text-xs text-slate-500 mt-1">
-            Hand-crafted multi-level priority queue: Severity tiering + timestamp FIFO tie-breaking with strict RBAC lifecycle validation.
-          </p>
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl overflow-hidden border border-emerald-300 shadow-sm bg-emerald-50">
+            <img
+              src="/images/cardiac-monitor.jpg"
+              alt="Cardiac Vitals Monitor"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl sm:text-2xl font-black text-emerald-950 tracking-tight flex flex-wrap items-center gap-2.5">
+              Emergency Incident Management & Priority Queue
+              <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300">
+                Min-Heap O(log N)
+              </span>
+            </h1>
+            <p className="text-xs text-slate-500 mt-1">
+              Hand-crafted multi-level priority queue: Severity tiering + timestamp FIFO tie-breaking with strict RBAC lifecycle validation.
+            </p>
+          </div>
         </div>
 
         {isAdmin ? (

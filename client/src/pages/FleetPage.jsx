@@ -73,6 +73,31 @@ export default function FleetPage() {
         </div>
       </div>
 
+      {/* Fleet Showcase Banner */}
+      <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row items-stretch">
+        <div className="md:w-1/3 min-h-[160px] relative bg-emerald-50">
+          <img
+            src="/images/ambulance-fleet.jpg"
+            alt="Emergency Medical Ambulance Fleet"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm border border-emerald-200 text-[10px] font-mono text-emerald-800 font-bold">
+            ADVANCED LIFE SUPPORT (ALS)
+          </div>
+        </div>
+        <div className="md:w-2/3 p-5 flex flex-col justify-center">
+          <div className="text-xs font-mono text-emerald-700 uppercase tracking-widest font-semibold mb-1">
+            Emergency Medical Service Units
+          </div>
+          <h2 className="text-lg font-bold text-emerald-950 mb-2">
+            Active Ambulance Fleet Readiness & Dynamic Staging
+          </h2>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Equipped with modern life support systems, certified paramedics, and GPS telemetry. Units are deployed dynamically across municipal road sectors to minimize response times for high-priority emergency incidents.
+          </p>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {ambulances.map((amb) => (
           <div

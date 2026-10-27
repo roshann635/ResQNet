@@ -35,28 +35,42 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-[calc(100vh-140px)] flex items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-6 bg-white border border-emerald-200 rounded-2xl p-8 shadow-xl">
-        {/* Protected Route Notice if redirected */}
-        {location.state?.from && (
-          <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-800 text-xs flex items-center gap-2">
-            <ShieldAlert className="w-4 h-4 shrink-0 text-amber-600" />
-            <span>Authentication required to access operations console. Please sign in below.</span>
+      <div className="max-w-md w-full bg-white border border-emerald-200 rounded-2xl shadow-xl overflow-hidden">
+        {/* Top Emergency Dispatch Center Image Banner */}
+        <div className="relative h-36 w-full bg-emerald-50 overflow-hidden">
+          <img
+            src="/images/dispatch-center.jpg"
+            alt="Emergency Medical Dispatch Operations"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
+          <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-emerald-200 text-[10px] font-mono text-emerald-800 font-bold shadow-sm">
+            DISPATCH SIMULATION
           </div>
-        )}
-
-        {/* Header */}
-        <div className="text-center">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-md shadow-emerald-500/10">
-            <Cpu className="w-7 h-7" />
-          </div>
-          <h2 className="text-2xl font-black tracking-tight text-emerald-950">ResQNet Simulation Portal</h2>
-          <p className="mt-1 text-xs text-slate-500 font-mono">
-            Role-Based Access Control for PBL Evaluation
-          </p>
         </div>
 
-        {/* Demo Quick-Select Cards */}
-        <div className="space-y-2.5">
+        <div className="p-8 pt-4 space-y-6">
+          {/* Protected Route Notice if redirected */}
+          {location.state?.from && (
+            <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-800 text-xs flex items-center gap-2">
+              <ShieldAlert className="w-4 h-4 shrink-0 text-amber-600" />
+              <span>Authentication required to access operations console. Please sign in below.</span>
+            </div>
+          )}
+
+          {/* Header */}
+          <div className="text-center">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-600 flex items-center justify-center mx-auto mb-3 shadow-md shadow-emerald-500/10">
+              <Cpu className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl font-black tracking-tight text-emerald-950">ResQNet Simulation Portal</h2>
+            <p className="mt-1 text-xs text-slate-500 font-mono">
+              Role-Based Access Control for PBL Evaluation
+            </p>
+          </div>
+
+          {/* Demo Quick-Select Cards */}
+          <div className="space-y-2.5">
           <div className="flex items-center justify-between">
             <label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
               1-Click Demo Accounts
@@ -157,5 +171,6 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }

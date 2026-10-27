@@ -58,6 +58,31 @@ export default function HospitalsPage() {
         </div>
       </div>
 
+      {/* Hospital Network Showcase Banner */}
+      <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row items-stretch">
+        <div className="md:w-1/3 min-h-[160px] relative bg-emerald-50">
+          <img
+            src="/images/hospital-building.jpg"
+            alt="Emergency Trauma Care Center"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm border border-emerald-200 text-[10px] font-mono text-emerald-800 font-bold">
+            TRAUMA LEVEL 1 & SPECIALTY
+          </div>
+        </div>
+        <div className="md:w-2/3 p-5 flex flex-col justify-center">
+          <div className="text-xs font-mono text-emerald-700 uppercase tracking-widest font-semibold mb-1">
+            Specialized Facility Directory
+          </div>
+          <h2 className="text-lg font-bold text-emerald-950 mb-2">
+            Nashik Municipal Health Infrastructure & Real-Time Bed Telemetry
+          </h2>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Continuous monitoring of critical care beds, cardiac intensive units, and burn treatment centers. The ResQNet dispatch engine automatically reroutes ambulances when local ER capacity reaches zero.
+          </p>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {hospitals.map((hosp) => {
           const isAtCapacity = hosp.availableSlots === 0 || hosp.status === 'AT_CAPACITY';

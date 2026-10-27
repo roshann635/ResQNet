@@ -600,36 +600,72 @@ export default function LandingPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-white border border-emerald-200 p-5 rounded-2xl relative shadow-sm">
-            <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 01</div>
-            <h3 className="font-bold text-emerald-950 text-sm mb-1">Incident Triage & PQ</h3>
-            <p className="text-xs text-slate-600">
-              Simulated 911 calls enter the binary min-heap. Critical cases with earliest timestamps are prioritized first.
-            </p>
+          <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden relative shadow-sm flex flex-col hover:border-emerald-300 transition-all">
+            <div className="h-32 w-full overflow-hidden bg-emerald-50">
+              <img
+                src="/images/triage-care.jpg"
+                alt="Emergency incident triage and patient intake"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 01</div>
+              <h3 className="font-bold text-emerald-950 text-sm mb-1">Incident Triage & PQ</h3>
+              <p className="text-xs text-slate-600">
+                Simulated 911 calls enter the binary min-heap. Critical cases with earliest timestamps are prioritized first.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white border border-emerald-200 p-5 rounded-2xl relative shadow-sm">
-            <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 02</div>
-            <h3 className="font-bold text-emerald-950 text-sm mb-1">Candidate Scoring</h3>
-            <p className="text-xs text-slate-600">
-              Dijkstra runs from each available ambulance to incident node. Scored via 4-variable penalty formula.
-            </p>
+          <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden relative shadow-sm flex flex-col hover:border-emerald-300 transition-all">
+            <div className="h-32 w-full overflow-hidden bg-emerald-50">
+              <img
+                src="/images/ambulance-fleet.jpg"
+                alt="Ambulance candidate routing and scoring"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 02</div>
+              <h3 className="font-bold text-emerald-950 text-sm mb-1">Candidate Scoring</h3>
+              <p className="text-xs text-slate-600">
+                Dijkstra runs from each available ambulance to incident node. Scored via 4-variable penalty formula.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white border border-emerald-200 p-5 rounded-2xl relative shadow-sm">
-            <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 03</div>
-            <h3 className="font-bold text-emerald-950 text-sm mb-1">Hospital Assignment</h3>
-            <p className="text-xs text-slate-600">
-              Filters facilities by medical capability (trauma, cardiac, burn) and bed capacity (&gt;0) to choose the best destination.
-            </p>
+          <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden relative shadow-sm flex flex-col hover:border-emerald-300 transition-all">
+            <div className="h-32 w-full overflow-hidden bg-emerald-50">
+              <img
+                src="/images/hospital-building.jpg"
+                alt="Hospital facility assignment and bed capacity checking"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 03</div>
+              <h3 className="font-bold text-emerald-950 text-sm mb-1">Hospital Assignment</h3>
+              <p className="text-xs text-slate-600">
+                Filters facilities by medical capability (trauma, cardiac, burn) and bed capacity (&gt;0) to choose the best destination.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white border border-emerald-200 p-5 rounded-2xl relative shadow-sm">
-            <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 04</div>
-            <h3 className="font-bold text-emerald-950 text-sm mb-1">Dispatch & Invalidation</h3>
-            <p className="text-xs text-slate-600">
-              Ambulance moves to EN_ROUTE. Road condition changes bump graphVersion, triggering immediate detour alerts.
-            </p>
+          <div className="bg-white border border-emerald-200 rounded-2xl overflow-hidden relative shadow-sm flex flex-col hover:border-emerald-300 transition-all">
+            <div className="h-32 w-full overflow-hidden bg-emerald-50">
+              <img
+                src="/images/dispatch-center.jpg"
+                alt="Real-time dispatch coordination and route invalidation"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="text-xs font-mono text-emerald-700 font-bold mb-2">STEP 04</div>
+              <h3 className="font-bold text-emerald-950 text-sm mb-1">Dispatch & Invalidation</h3>
+              <p className="text-xs text-slate-600">
+                Ambulance moves to EN_ROUTE. Road condition changes bump graphVersion, triggering immediate detour alerts.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -73,14 +73,14 @@ export default function SvgGraphView({
   };
 
   return (
-    <div className="relative w-full h-[650px] bg-slate-950 rounded-xl border border-slate-800 overflow-hidden shadow-inner select-none">
+    <div className="relative w-full h-[650px] bg-white rounded-xl border border-emerald-200 overflow-hidden shadow-sm select-none">
       <svg
         viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
         className="w-full h-full cursor-crosshair"
       >
         <defs>
           <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" strokeWidth="0.5" strokeDasharray="2 2" />
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d1fae5" strokeWidth="0.5" strokeDasharray="2 2" />
           </pattern>
           <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="3" result="blur" />
@@ -102,7 +102,7 @@ export default function SvgGraphView({
             const isBlocked = edge.condition === 'BLOCKED';
             const isCongested = edge.condition === 'CONGESTED';
 
-            let strokeColor = '#334155'; // default slate-700
+            let strokeColor = '#94a3b8'; // default road line
             let strokeWidth = 2;
             let dashArray = 'none';
 
@@ -114,7 +114,7 @@ export default function SvgGraphView({
               strokeColor = '#f59e0b'; // Amber
               strokeWidth = 3;
             } else if (isPrimary) {
-              strokeColor = '#06b6d4'; // Cyan primary route
+              strokeColor = '#059669'; // Emerald primary route
               strokeWidth = 5;
             }
 
@@ -144,7 +144,7 @@ export default function SvgGraphView({
                   strokeDasharray={dashArray}
                   strokeLinecap="round"
                   filter={isPrimary ? 'url(#glow)' : undefined}
-                  className="transition-all duration-300 group-hover:stroke-cyan-400 group-hover:stroke-[4]"
+                  className="transition-all duration-300 group-hover:stroke-emerald-500 group-hover:stroke-[4]"
                 />
                 {/* Midpoint badge for road condition */}
                 {(isBlocked || isCongested) && (
@@ -153,7 +153,7 @@ export default function SvgGraphView({
                     cy={(p1.y + p2.y) / 2}
                     r="5"
                     fill={isBlocked ? '#dc2626' : '#d97706'}
-                    stroke="#0f172a"
+                    stroke="#ffffff"
                     strokeWidth="1.5"
                   />
                 )}
@@ -182,20 +182,20 @@ export default function SvgGraphView({
                 {/* Node Ring */}
                 <circle
                   r={isSelected ? 10 : inRoute ? 8 : 6}
-                  fill={inRoute ? '#06b6d4' : '#0f172a'}
-                  stroke={isSelected ? '#38bdf8' : zColor}
-                  strokeWidth={isSelected ? 3 : 2}
-                  className="transition-all duration-200 group-hover:r-8"
+                  fill={inRoute ? '#059669' : '#ffffff'}
+                  stroke={isSelected ? '#047857' : inRoute ? '#065f46' : zColor}
+                  strokeWidth={isSelected ? 3.5 : inRoute ? 2.5 : 2}
+                  className="transition-all duration-200 group-hover:r-8 shadow-sm"
                 />
 
                 {/* Node Identifier Label */}
                 <text
                   y="-11"
                   textAnchor="middle"
-                  fill="#e2e8f0"
+                  fill="#064e3b"
                   fontSize="9.5"
                   fontWeight="600"
-                  className="pointer-events-none drop-shadow"
+                  className="pointer-events-none drop-shadow-sm"
                 >
                   {node.nodeId}
                 </text>
@@ -212,8 +212,8 @@ export default function SvgGraphView({
             if (!pos) return null;
             return (
               <g key={h.hospitalId} transform={`translate(${pos.x + 10}, ${pos.y - 10})`}>
-                <rect x="-8" y="-8" width="16" height="16" rx="3" fill="#1e293b" stroke="#3b82f6" strokeWidth="1.5" />
-                <text x="0" y="3" textAnchor="middle" fill="#60a5fa" fontSize="10" fontWeight="bold">H</text>
+                <rect x="-8" y="-8" width="16" height="16" rx="3" fill="#ecfdf5" stroke="#059669" strokeWidth="1.5" />
+                <text x="0" y="3" textAnchor="middle" fill="#047857" fontSize="10" fontWeight="bold">H</text>
               </g>
             );
           })}
@@ -225,7 +225,7 @@ export default function SvgGraphView({
             const isAvail = a.status === 'AVAILABLE';
             return (
               <g key={a.ambulanceId} transform={`translate(${pos.x - 14}, ${pos.y + 10})`}>
-                <circle r="7" fill={isAvail ? '#15803d' : '#475569'} stroke="#f8fafc" strokeWidth="1" />
+                <circle r="7" fill={isAvail ? '#059669' : '#64748b'} stroke="#ffffff" strokeWidth="1.5" />
                 <text x="0" y="2.5" textAnchor="middle" fill="#fff" fontSize="7" fontWeight="bold">A</text>
               </g>
             );
@@ -248,8 +248,8 @@ export default function SvgGraphView({
       </svg>
 
       {/* Floating Offline Indicator */}
-      <div className="absolute top-3 right-3 bg-slate-900/90 border border-slate-700/60 rounded-lg px-3 py-1.5 text-xs flex items-center gap-2 backdrop-blur-sm text-slate-300">
-        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+      <div className="absolute top-3 right-3 bg-white/95 border border-emerald-200 rounded-lg px-3 py-1.5 text-xs flex items-center gap-2 backdrop-blur-sm text-emerald-950 shadow-sm">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
         <span>Offline SVG Canvas Graph (Deterministic Topology)</span>
       </div>
     </div>

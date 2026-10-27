@@ -39,35 +39,35 @@ export default function FleetPage() {
   const statusBadge = (st) => {
     switch (st) {
       case 'AVAILABLE':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-emerald-100 text-emerald-800 border-emerald-300';
       case 'DISPATCHED':
       case 'EN_ROUTE':
-        return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+        return 'bg-amber-100 text-amber-800 border-amber-300';
       case 'MAINTENANCE':
-        return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
+        return 'bg-purple-100 text-purple-800 border-purple-300';
       default:
-        return 'bg-slate-700/40 text-slate-400 border-slate-700';
+        return 'bg-slate-100 text-slate-700 border-slate-300';
     }
   };
 
   return (
     <div className="space-y-6">
-      <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-white border border-emerald-200 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
-            <Truck className="w-5 h-5 text-emerald-400" />
+          <h1 className="text-xl font-bold text-emerald-950 flex items-center gap-2">
+            <Truck className="w-5 h-5 text-emerald-600" />
             Response Unit Fleet Management & Eligibility
           </h1>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-500">
             Real-time readiness telemetry, clinical capabilities, utilization balancing, and greedy reliability metrics.
           </p>
         </div>
 
         <div className="flex items-center gap-3 text-xs font-mono">
-          <span className="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          <span className="px-3 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold shadow-sm">
             {ambulances.filter((a) => a.status === 'AVAILABLE').length} Units Available
           </span>
-          <span className="px-3 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          <span className="px-3 py-1 rounded-lg bg-amber-50 text-amber-800 border border-amber-300 font-semibold shadow-sm">
             {ambulances.filter((a) => a.status === 'DISPATCHED' || a.status === 'EN_ROUTE').length} Busy
           </span>
         </div>
@@ -77,47 +77,47 @@ export default function FleetPage() {
         {ambulances.map((amb) => (
           <div
             key={amb.ambulanceId}
-            className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm hover:border-slate-700 transition-all flex flex-col justify-between"
+            className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="font-mono font-bold text-white text-base">{amb.ambulanceId}</span>
+                <span className="font-mono font-bold text-emerald-950 text-base">{amb.ambulanceId}</span>
                 <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold border ${statusBadge(amb.status)}`}>
                   {amb.status}
                 </span>
               </div>
 
-              <div className="text-xs font-semibold text-slate-200">{amb.label}</div>
-              <div className="text-[11px] text-cyan-400 font-mono mt-0.5">
+              <div className="text-xs font-semibold text-slate-800">{amb.label}</div>
+              <div className="text-[11px] text-emerald-700 font-mono mt-0.5">
                 Type: {amb.vehicleType} • Location: @ {amb.currentNodeId}
               </div>
 
               {/* Metrics */}
-              <div className="mt-4 bg-slate-950 p-2.5 rounded-lg border border-slate-800/80 text-[11px] space-y-1.5 font-mono">
+              <div className="mt-4 bg-emerald-50/50 p-2.5 rounded-lg border border-emerald-200 text-[11px] space-y-1.5 font-mono">
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Reliability Index:</span>
-                  <span className="text-emerald-400 font-bold">{Math.round((amb.reliabilityScore || 0.95) * 100)}%</span>
+                  <span className="text-slate-500">Reliability Index:</span>
+                  <span className="text-emerald-700 font-bold">{Math.round((amb.reliabilityScore || 0.95) * 100)}%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Utilization Rate:</span>
-                  <span className="text-slate-300 font-bold">{Math.round((amb.utilizationRate || 0.20) * 100)}%</span>
+                  <span className="text-slate-500">Utilization Rate:</span>
+                  <span className="text-slate-700 font-bold">{Math.round((amb.utilizationRate || 0.20) * 100)}%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Total Runs:</span>
-                  <span className="text-slate-300">{amb.totalDispatches || 0}</span>
+                  <span className="text-slate-500">Total Runs:</span>
+                  <span className="text-slate-700">{amb.totalDispatches || 0}</span>
                 </div>
               </div>
 
               {/* Capabilities */}
               <div className="mt-3">
-                <div className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider mb-1.5">
+                <div className="text-[10px] text-slate-500 uppercase font-semibold tracking-wider mb-1.5">
                   Clinical Capabilities:
                 </div>
                 <div className="flex flex-wrap gap-1">
                   {amb.capabilities?.map((cap) => (
                     <span
                       key={cap}
-                      className="text-[9.5px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 font-mono"
+                      className="text-[9.5px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono"
                     >
                       {cap}
                     </span>
@@ -127,26 +127,26 @@ export default function FleetPage() {
             </div>
 
             {/* Status Modification Controls */}
-            <div className="mt-4 pt-3 border-t border-slate-800">
-              <label className="block text-[10px] text-slate-400 uppercase font-semibold mb-1">
+            <div className="mt-4 pt-3 border-t border-emerald-100">
+              <label className="block text-[10px] text-slate-500 uppercase font-semibold mb-1">
                 Set Vehicle Status:
               </label>
               <div className="grid grid-cols-3 gap-1">
                 <button
                   onClick={() => handleStatusChange(amb.ambulanceId, 'AVAILABLE')}
-                  className="py-1 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30"
+                  className="py-1 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-300 transition-colors"
                 >
                   Available
                 </button>
                 <button
                   onClick={() => handleStatusChange(amb.ambulanceId, 'DISPATCHED')}
-                  className="py-1 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 border border-amber-500/30"
+                  className="py-1 rounded text-[10px] font-semibold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-300 transition-colors"
                 >
                   Busy
                 </button>
                 <button
                   onClick={() => handleStatusChange(amb.ambulanceId, 'MAINTENANCE')}
-                  className="py-1 rounded text-[10px] font-semibold bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 border border-purple-500/30"
+                  className="py-1 rounded text-[10px] font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300 transition-colors"
                 >
                   Offline
                 </button>

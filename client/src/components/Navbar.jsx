@@ -60,23 +60,23 @@ export default function Navbar() {
       ];
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+    <nav className="bg-white/95 backdrop-blur-md border-b border-emerald-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
           <div className="flex items-center gap-6">
-            <NavLink to="/" className="flex items-center gap-2.5 text-white font-bold text-lg tracking-tight group">
-              <div className="w-9 h-9 rounded-lg bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-500 group-hover:bg-red-600/30 transition-colors">
+            <NavLink to="/" className="flex items-center gap-2.5 text-emerald-950 font-bold text-lg tracking-tight group">
+              <div className="w-9 h-9 rounded-lg bg-emerald-100 border border-emerald-300 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-200 transition-colors">
                 <Activity className="w-5 h-5 animate-pulse" />
               </div>
               <div className="flex flex-col">
-                <span className="leading-tight text-white font-black tracking-wide flex items-center gap-1.5">
+                <span className="leading-tight text-emerald-950 font-black tracking-wide flex items-center gap-1.5">
                   ResQNet
-                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-400 font-mono font-normal border border-cyan-500/30">
+                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-mono font-medium border border-emerald-200">
                     DSA
                   </span>
                 </span>
-                <span className="text-[10px] text-slate-400 font-normal leading-none">
+                <span className="text-[10px] text-emerald-700/80 font-normal leading-none">
                   Emergency Route Optimization
                 </span>
               </div>
@@ -93,8 +93,8 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       `flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                         isActive
-                          ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shadow-sm'
-                          : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                          ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 shadow-sm font-semibold'
+                          : 'text-slate-600 hover:text-emerald-800 hover:bg-emerald-50/70'
                       }`
                     }
                   >
@@ -113,26 +113,26 @@ export default function Navbar() {
               <button
                 onClick={handleResetScenario}
                 title="Reset simulation to deterministic seed state"
-                className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700 transition-colors"
+                className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-50 text-emerald-900 hover:bg-emerald-100 border border-emerald-300 transition-colors shadow-sm"
               >
-                <RotateCcw className="w-3.5 h-3.5 text-amber-400" />
+                <RotateCcw className="w-3.5 h-3.5 text-amber-600" />
                 Reset Data
               </button>
             )}
 
             {/* User profile / Role or Login CTA */}
             {user ? (
-              <div className="flex items-center gap-2 pl-2 border-l border-slate-800">
+              <div className="flex items-center gap-2 pl-2 border-l border-emerald-200">
                 <div className="hidden sm:flex flex-col items-end">
-                  <span className="text-xs font-semibold text-slate-200">{user.displayName}</span>
-                  <span className={`text-[10px] font-mono uppercase tracking-wider ${isAdmin ? 'text-emerald-400' : 'text-indigo-400'}`}>
+                  <span className="text-xs font-semibold text-emerald-950">{user.displayName}</span>
+                  <span className={`text-[10px] font-mono uppercase tracking-wider ${isAdmin ? 'text-emerald-700 font-bold' : 'text-slate-600'}`}>
                     {user.role} {isEvaluator && '(Read-Only)'}
                   </span>
                 </div>
                 <button
                   onClick={logout}
                   title="Sign out"
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-colors"
+                  className="p-1.5 rounded-lg text-slate-500 hover:text-red-600 hover:bg-red-50 transition-colors"
                 >
                   <LogOut className="w-4 h-4" />
                 </button>
@@ -140,7 +140,7 @@ export default function Navbar() {
             ) : (
               <NavLink
                 to="/login"
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-md shadow-cyan-600/20 transition-all"
+                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/20 transition-all"
               >
                 <Lock className="w-3.5 h-3.5" />
                 Sign In to Console
@@ -150,7 +150,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav items */}
-        <div className="lg:hidden flex overflow-x-auto py-2 gap-1 border-t border-slate-800/60 no-scrollbar">
+        <div className="lg:hidden flex overflow-x-auto py-2 gap-1 border-t border-emerald-100 no-scrollbar">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -160,8 +160,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap transition-colors ${
                     isActive
-                      ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/30'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold'
+                      : 'text-slate-600 hover:text-emerald-800'
                   }`
                 }
               >

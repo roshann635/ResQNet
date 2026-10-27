@@ -181,15 +181,15 @@ export default function IncidentsPage() {
   return (
     <div className="space-y-6">
       {/* Header with Role Status */}
-      <div className="flex flex-wrap items-center justify-between gap-4 bg-slate-900 border border-slate-800 p-5 rounded-2xl shadow-lg">
+      <div className="flex flex-wrap items-center justify-between gap-4 bg-white border border-emerald-200 p-5 rounded-2xl shadow-sm">
         <div>
-          <h1 className="text-2xl font-black text-white tracking-tight flex items-center gap-2.5">
+          <h1 className="text-2xl font-black text-emerald-950 tracking-tight flex items-center gap-2.5">
             Emergency Incident Management & Priority Queue
-            <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+            <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300">
               Min-Heap O(log N)
             </span>
           </h1>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             Hand-crafted multi-level priority queue: Severity tiering + timestamp FIFO tie-breaking with strict RBAC lifecycle validation.
           </p>
         </div>
@@ -197,14 +197,14 @@ export default function IncidentsPage() {
         {isAdmin ? (
           <button
             onClick={fillSampleData}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-600/20 text-cyan-400 hover:bg-cyan-600 hover:text-white border border-cyan-500/30 transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white border border-emerald-300 transition-all shadow-sm"
           >
             <Sparkles className="w-4 h-4" />
             Fill Sample Data
           </button>
         ) : (
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-medium">
-            <Eye className="w-3.5 h-3.5 text-indigo-400" />
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-medium">
+            <Eye className="w-3.5 h-3.5 text-emerald-700" />
             Evaluator Mode (Read-Only)
           </div>
         )}
@@ -214,25 +214,25 @@ export default function IncidentsPage() {
         {/* Left Column: Role-Tailored Panel */}
         {isAdmin ? (
           // Dispatcher: Incident Creation Form
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-bold text-white flex items-center gap-2">
-              <PlusCircle className="w-4 h-4 text-cyan-400" />
+          <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-4">
+            <h2 className="text-sm font-bold text-emerald-950 flex items-center gap-2">
+              <PlusCircle className="w-4 h-4 text-emerald-600" />
               Register Simulated Emergency
             </h2>
 
             {formError && (
-              <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs">
+              <div className="p-3 rounded-lg bg-red-50 border border-red-300 text-red-600 text-xs">
                 {formError}
               </div>
             )}
 
             <form onSubmit={handleCreateIncident} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Emergency Category</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Emergency Category</label>
                 <select
                   value={type}
                   onChange={(e) => setType(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-emerald-50/30 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-500 font-sans"
                 >
                   <option value="cardiac arrest">cardiac arrest</option>
                   <option value="road accident">road accident</option>
@@ -244,7 +244,7 @@ export default function IncidentsPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Severity Level</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Severity Level</label>
                 <div className="grid grid-cols-2 gap-2">
                   {['CRITICAL', 'HIGH', 'MEDIUM', 'LOW'].map((s) => (
                     <button
@@ -254,7 +254,7 @@ export default function IncidentsPage() {
                       className={`py-1.5 rounded-lg text-xs font-bold border transition-colors ${
                         severity === s
                           ? severityBadge(s) + ' shadow-sm'
-                          : 'bg-slate-950 border-slate-800 text-slate-400'
+                          : 'bg-white border-emerald-200 text-slate-600 hover:bg-emerald-50'
                       }`}
                     >
                       {s}
@@ -264,11 +264,11 @@ export default function IncidentsPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Incident Location Node</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Incident Location Node</label>
                 <select
                   value={locationNodeId}
                   onChange={(e) => setLocationNodeId(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white font-mono"
+                  className="w-full bg-emerald-50/30 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 font-mono focus:outline-none focus:border-emerald-500"
                 >
                   {nodes.map((n) => (
                     <option key={n.nodeId} value={n.nodeId}>
@@ -279,18 +279,18 @@ export default function IncidentsPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Clinical Description</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Clinical Description</label>
                 <textarea
                   rows={2}
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Clinical symptom summary or incident dispatch details..."
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500"
+                  className="w-full bg-emerald-50/30 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Required Capabilities</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Required Capabilities</label>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     'advanced-life-support',
@@ -310,10 +310,10 @@ export default function IncidentsPage() {
                             active ? prev.filter((c) => c !== cap) : [...prev, cap]
                           );
                         }}
-                        className={`text-[10px] px-2 py-0.5 rounded-md border font-medium ${
+                        className={`text-[10px] px-2 py-0.5 rounded-md border font-medium transition-colors ${
                           active
-                            ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
-                            : 'bg-slate-950 text-slate-400 border-slate-800'
+                            ? 'bg-emerald-100 text-emerald-800 border-emerald-400 shadow-sm'
+                            : 'bg-white text-slate-600 border-emerald-200 hover:bg-emerald-50'
                         }`}
                       >
                         {cap}
@@ -326,7 +326,7 @@ export default function IncidentsPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-2.5 rounded-lg text-xs font-bold bg-red-600 hover:bg-red-500 text-white disabled:opacity-50 transition-colors shadow-lg shadow-red-600/20"
+                className="w-full py-2.5 rounded-lg text-xs font-bold bg-red-600 hover:bg-red-500 text-white disabled:opacity-50 transition-colors shadow-md shadow-red-600/20"
               >
                 {submitting ? 'Registering...' : 'Submit Incident to Priority Queue'}
               </button>
@@ -334,74 +334,74 @@ export default function IncidentsPage() {
           </div>
         ) : (
           // Evaluator: Priority Queue Analysis & Invariant Inspection Panel
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-bold text-white flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-indigo-400" />
+          <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-4">
+            <h2 className="text-sm font-bold text-emerald-950 flex items-center gap-2">
+              <Cpu className="w-4 h-4 text-emerald-600" />
               Priority Queue DSA Inspector
             </h2>
 
-            <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-lg text-xs text-indigo-300 space-y-1">
+            <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-900 space-y-1">
               <div className="font-semibold flex items-center gap-1.5">
-                <Eye className="w-3.5 h-3.5 text-indigo-400" />
+                <Eye className="w-3.5 h-3.5 text-emerald-700" />
                 Evaluator Mode Active
               </div>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
+              <p className="text-[11px] text-slate-700 leading-relaxed">
                 Emergency registration is restricted to Dispatchers. The hand-crafted Priority Queue order and tie-breaking metrics can be inspected live below.
               </p>
             </div>
 
-            <div className="bg-slate-950 p-3.5 rounded-lg border border-slate-800 space-y-2 text-xs font-mono">
-              <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+            <div className="bg-emerald-50/50 p-3.5 rounded-lg border border-emerald-200 space-y-2 text-xs font-mono">
+              <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                 Priority Key Calculation
               </div>
-              <div className="text-slate-300 text-[11px] bg-slate-900 p-2 rounded border border-slate-800">
+              <div className="text-emerald-950 text-[11px] bg-white p-2 rounded border border-emerald-200">
                 <code>priorityKey = (severityTier * 1e14) + timestamp</code>
               </div>
-              <div className="space-y-1 text-[11px] text-slate-400 pt-1">
+              <div className="space-y-1 text-[11px] text-slate-600 pt-1">
                 <div className="flex justify-between">
                   <span>CRITICAL (Tier 0):</span>
-                  <span className="text-red-400 font-bold">Highest Priority</span>
+                  <span className="text-red-600 font-bold">Highest Priority</span>
                 </div>
                 <div className="flex justify-between">
                   <span>HIGH (Tier 1):</span>
-                  <span className="text-orange-400 font-bold">Tier 1</span>
+                  <span className="text-orange-600 font-bold">Tier 1</span>
                 </div>
                 <div className="flex justify-between">
                   <span>MEDIUM (Tier 2):</span>
-                  <span className="text-amber-400 font-bold">Tier 2</span>
+                  <span className="text-amber-600 font-bold">Tier 2</span>
                 </div>
                 <div className="flex justify-between">
                   <span>LOW (Tier 3):</span>
-                  <span className="text-emerald-400 font-bold">Tier 3</span>
+                  <span className="text-emerald-700 font-bold">Tier 3</span>
                 </div>
               </div>
             </div>
 
-            <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-1.5 text-xs">
+            <div className="p-3 bg-emerald-50/50 rounded-lg border border-emerald-200 space-y-1.5 text-xs">
               <div className="flex justify-between">
-                <span className="text-slate-400">Total Incidents:</span>
-                <span className="font-bold text-white">{incidents.length}</span>
+                <span className="text-slate-500">Total Incidents:</span>
+                <span className="font-bold text-emerald-950">{incidents.length}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Active in MinHeap:</span>
-                <span className="font-bold text-cyan-400">{priorityQueue.length}</span>
+                <span className="text-slate-500">Active in MinHeap:</span>
+                <span className="font-bold text-emerald-700">{priorityQueue.length}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-400">Resolved / Closed:</span>
-                <span className="font-bold text-emerald-400">{incidents.filter((i) => i.status === 'RESOLVED').length}</span>
+                <span className="text-slate-500">Resolved / Closed:</span>
+                <span className="font-bold text-emerald-700">{incidents.filter((i) => i.status === 'RESOLVED').length}</span>
               </div>
             </div>
           </div>
         )}
 
         {/* Center: Incident List & Queue */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4">
+        <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm font-bold text-white flex items-center gap-2">
-              <ListFilter className="w-4 h-4 text-cyan-400" />
+            <h2 className="text-sm font-bold text-emerald-950 flex items-center gap-2">
+              <ListFilter className="w-4 h-4 text-emerald-600" />
               Incidents Registry ({incidents.length})
             </h2>
-            <span className="text-xs text-slate-400 font-mono">
+            <span className="text-xs text-slate-500 font-mono">
               Queue Size: {priorityQueue.length}
             </span>
           </div>
@@ -415,22 +415,22 @@ export default function IncidentsPage() {
                   onClick={() => setSelectedIncident(inc)}
                   className={`p-3 rounded-lg border cursor-pointer transition-all ${
                     isSelected
-                      ? 'bg-slate-800 border-cyan-500/60 shadow-md'
-                      : 'bg-slate-950 border-slate-800/80 hover:border-slate-700'
+                      ? 'bg-emerald-50 border-emerald-500 shadow-md'
+                      : 'bg-white border-emerald-200/90 hover:border-emerald-400 shadow-sm'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-xs text-white">{inc.incidentId}</span>
+                    <span className="font-bold text-xs text-emerald-950">{inc.incidentId}</span>
                     <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold border ${severityBadge(inc.severity)}`}>
                       {inc.severity}
                     </span>
                   </div>
 
-                  <div className="text-xs text-slate-300 mt-1 line-clamp-1">{inc.description}</div>
+                  <div className="text-xs text-slate-700 mt-1 line-clamp-1">{inc.description}</div>
 
-                  <div className="flex items-center justify-between text-[11px] text-slate-400 mt-2 pt-1 border-t border-slate-800/50">
-                    <span className="font-mono text-cyan-400">@ {inc.locationNodeId}</span>
-                    <span className="text-slate-400 uppercase text-[10px]">{inc.status}</span>
+                  <div className="flex items-center justify-between text-[11px] text-slate-500 mt-2 pt-1 border-t border-emerald-100">
+                    <span className="font-mono text-emerald-700 font-medium">@ {inc.locationNodeId}</span>
+                    <span className="text-slate-500 uppercase text-[10px]">{inc.status}</span>
                   </div>
                 </div>
               );
@@ -439,32 +439,32 @@ export default function IncidentsPage() {
         </div>
 
         {/* Right: State Machine Inspector & History Timeline */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4">
-          <h2 className="text-sm font-bold text-white flex items-center gap-2">
-            <Clock className="w-4 h-4 text-cyan-400" />
+        <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-4">
+          <h2 className="text-sm font-bold text-emerald-950 flex items-center gap-2">
+            <Clock className="w-4 h-4 text-emerald-600" />
             Lifecycle State Machine & Audit
           </h2>
 
           {selectedIncident ? (
             <div className="space-y-4 text-xs">
-              <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1.5">
+              <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200 space-y-1.5">
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Incident:</span>
-                  <span className="font-bold text-white">{selectedIncident.incidentId}</span>
+                  <span className="text-slate-500">Incident:</span>
+                  <span className="font-bold text-emerald-950">{selectedIncident.incidentId}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Current Status:</span>
-                  <span className="font-mono font-bold text-cyan-400">{selectedIncident.status}</span>
+                  <span className="text-slate-500">Current Status:</span>
+                  <span className="font-mono font-bold text-emerald-700">{selectedIncident.status}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Assigned Unit:</span>
-                  <span className="font-mono text-slate-300">{selectedIncident.assignedAmbulanceId || 'None'}</span>
+                  <span className="text-slate-500">Assigned Unit:</span>
+                  <span className="font-mono text-slate-800">{selectedIncident.assignedAmbulanceId || 'None'}</span>
                 </div>
               </div>
 
               {/* State Machine Transition Dropdown */}
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">
                   Validate & Advance Lifecycle State:
                 </label>
                 {isAdmin ? (
@@ -474,18 +474,18 @@ export default function IncidentsPage() {
                         <button
                           key={nextStatus}
                           onClick={() => handleStatusTransition(selectedIncident.incidentId, nextStatus)}
-                          className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-600/20 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-600 hover:text-white transition-all"
+                          className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
                         >
                           Advance to {nextStatus}
                         </button>
                       ))}
                     </div>
                   ) : (
-                    <div className="text-slate-400 italic">Terminal state reached ({selectedIncident.status}).</div>
+                    <div className="text-slate-500 italic">Terminal state reached ({selectedIncident.status}).</div>
                   )
                 ) : (
-                  <div className="text-[11px] text-slate-400 font-mono p-2.5 rounded bg-slate-950 border border-slate-800 flex items-center gap-2">
-                    <Lock className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+                  <div className="text-[11px] text-slate-700 font-mono p-2.5 rounded bg-emerald-50/50 border border-emerald-200 flex items-center gap-2">
+                    <Lock className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                     <span>State transitions restricted to Dispatcher role.</span>
                   </div>
                 )}
@@ -493,22 +493,22 @@ export default function IncidentsPage() {
 
               {/* Status History Timeline */}
               <div>
-                <h3 className="font-semibold text-slate-300 mb-2">Lifecycle History Trail:</h3>
-                <div className="space-y-2 border-l-2 border-slate-800 pl-3">
+                <h3 className="font-semibold text-emerald-950 mb-2">Lifecycle History Trail:</h3>
+                <div className="space-y-2 border-l-2 border-emerald-200 pl-3">
                   {selectedIncident.statusHistory?.map((hist, idx) => (
                     <div key={idx} className="relative text-[11px]">
-                      <div className="font-bold text-cyan-400">{hist.status}</div>
-                      <div className="text-slate-400 text-[10px]">
+                      <div className="font-bold text-emerald-700">{hist.status}</div>
+                      <div className="text-slate-500 text-[10px]">
                         {new Date(hist.timestamp).toLocaleTimeString()} • {hist.actorId} (Graph v{hist.routeVersion})
                       </div>
-                      <div className="text-slate-300 mt-0.5">{hist.note}</div>
+                      <div className="text-slate-700 mt-0.5">{hist.note}</div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           ) : (
-            <div className="text-slate-400 text-xs">Select an incident to view state machine details.</div>
+            <div className="text-slate-500 text-xs">Select an incident to view state machine details.</div>
           )}
         </div>
       </div>

@@ -28,50 +28,50 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-      <div className="bg-slate-900 border border-slate-800 rounded-xl max-w-md w-full p-6 shadow-2xl relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+      <div className="bg-white border border-emerald-200 rounded-xl max-w-md w-full p-6 shadow-2xl relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"
+          className="absolute top-4 right-4 text-slate-400 hover:text-emerald-950 p-1 rounded-lg hover:bg-emerald-50"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
+          <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-300">
             <ShieldAlert className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-base font-bold text-white">Road Segment Details</h3>
-            <p className="text-xs text-slate-400 font-mono">Edge ID: {edge.edgeId}</p>
+            <h3 className="text-base font-bold text-emerald-950">Road Segment Details</h3>
+            <p className="text-xs text-slate-500 font-mono">Edge ID: {edge.edgeId}</p>
           </div>
         </div>
 
         {/* Read-only notice for evaluators */}
         {isEvaluator && (
-          <div className="mb-4 p-2.5 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs flex items-center gap-2">
-            <Lock className="w-3.5 h-3.5 shrink-0 text-indigo-400" />
+          <div className="mb-4 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center gap-2">
+            <Lock className="w-3.5 h-3.5 shrink-0 text-emerald-700" />
             <span>Read-Only Evaluator Mode: Road conditions can be inspected, but alterations require Dispatcher authorization.</span>
           </div>
         )}
 
-        <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs mb-5 space-y-1 font-mono">
+        <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200 text-xs mb-5 space-y-1 font-mono">
           <div className="flex justify-between">
-            <span className="text-slate-400">Endpoints:</span>
-            <span className="font-semibold text-slate-200">{edge.fromNodeId} → {edge.toNodeId}</span>
+            <span className="text-slate-500">Endpoints:</span>
+            <span className="font-semibold text-slate-800">{edge.fromNodeId} → {edge.toNodeId}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-slate-400">Base Travel Distance:</span>
-            <span className="font-semibold text-slate-200">{edge.baseCost} km</span>
+            <span className="text-slate-500">Base Travel Distance:</span>
+            <span className="font-semibold text-slate-800">{edge.baseCost} km</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-slate-400">Effective Cost:</span>
-            <span className="font-semibold text-cyan-400">{edge.effectiveCost ? edge.effectiveCost.toFixed(2) : edge.baseCost} km</span>
+            <span className="text-slate-500">Effective Cost:</span>
+            <span className="font-semibold text-emerald-700">{edge.effectiveCost ? edge.effectiveCost.toFixed(2) : edge.baseCost} km</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-slate-400">Current Condition:</span>
+            <span className="text-slate-500">Current Condition:</span>
             <span className={`font-semibold uppercase ${
-              edge.condition === 'BLOCKED' ? 'text-red-400' : edge.condition === 'CONGESTED' ? 'text-amber-400' : 'text-emerald-400'
+              edge.condition === 'BLOCKED' ? 'text-red-500' : edge.condition === 'CONGESTED' ? 'text-amber-500' : 'text-emerald-600'
             }`}>
               {edge.condition}
             </span>
@@ -82,7 +82,7 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
         {isAdmin ? (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-2">
+              <label className="block text-xs font-semibold text-emerald-950 mb-2">
                 Simulate Road Obstruction or Traffic State:
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -91,8 +91,8 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
                   onClick={() => setCondition('NORMAL')}
                   className={`py-2 px-3 rounded-lg text-xs font-bold border transition-colors ${
                     condition === 'NORMAL'
-                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-sm'
-                      : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+                      ? 'bg-emerald-100 text-emerald-800 border-emerald-400 shadow-sm'
+                      : 'bg-white border-emerald-200 text-slate-600 hover:bg-emerald-50'
                   }`}
                 >
                   NORMAL (1.0×)
@@ -102,8 +102,8 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
                   onClick={() => setCondition('CONGESTED')}
                   className={`py-2 px-3 rounded-lg text-xs font-bold border transition-colors ${
                     condition === 'CONGESTED'
-                      ? 'bg-amber-500/20 text-amber-400 border-amber-500/40 shadow-sm'
-                      : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+                      ? 'bg-amber-100 text-amber-800 border-amber-400 shadow-sm'
+                      : 'bg-white border-emerald-200 text-slate-600 hover:bg-emerald-50'
                   }`}
                 >
                   CONGESTED
@@ -113,8 +113,8 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
                   onClick={() => setCondition('BLOCKED')}
                   className={`py-2 px-3 rounded-lg text-xs font-bold border transition-colors ${
                     condition === 'BLOCKED'
-                      ? 'bg-red-500/20 text-red-400 border-red-500/40 shadow-sm'
-                      : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+                      ? 'bg-red-100 text-red-800 border-red-400 shadow-sm'
+                      : 'bg-white border-emerald-200 text-slate-600 hover:bg-emerald-50'
                   }`}
                 >
                   BLOCKED (∞)
@@ -123,8 +123,8 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
             </div>
 
             {condition === 'CONGESTED' && (
-              <div className="p-3 bg-slate-950 rounded-lg border border-slate-800">
-                <label className="block text-xs font-medium text-slate-300 mb-1">
+              <div className="p-3 bg-emerald-50/50 rounded-lg border border-emerald-200">
+                <label className="block text-xs font-medium text-emerald-950 mb-1">
                   Congestion Delay Multiplier ({multiplier}×)
                 </label>
                 <input
@@ -148,14 +148,14 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700"
+                className="px-4 py-2 rounded-lg text-xs font-medium bg-emerald-50 text-emerald-900 hover:bg-emerald-100 border border-emerald-200 transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="px-4 py-2 rounded-lg text-xs font-semibold bg-cyan-600 hover:bg-cyan-500 text-white disabled:opacity-50 transition-colors"
+                className="px-4 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white disabled:opacity-50 transition-colors shadow-sm"
               >
                 {loading ? 'Applying...' : 'Apply Road State'}
               </button>
@@ -166,7 +166,7 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700"
+              className="px-4 py-2 rounded-lg text-xs font-medium bg-emerald-50 text-emerald-900 hover:bg-emerald-100 border border-emerald-200 transition-colors"
             >
               Close Window
             </button>

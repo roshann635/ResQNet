@@ -193,11 +193,11 @@ export default function AlgorithmLabPage() {
     try {
       const res = await api.loadSampleKeys();
       setSampleKeysStatus(res);
-      alert(`Success! Loaded ${res.keysLoaded} synthetic demonstration keys into HashTable and B+ Tree.`);
+      alert(`Success! Loaded ${res.keysLoaded} telemetry index records into HashTable and B+ Tree.`);
       await handleHashLookup();
       await handleBPlusQuery();
     } catch (err) {
-      alert(`Failed to load demo keys: ${err.message}`);
+      alert(`Failed to load telemetry keys: ${err.message}`);
     }
   };
 
@@ -213,7 +213,7 @@ export default function AlgorithmLabPage() {
             DSA Algorithm Lab & Stepper Playback
           </h1>
           <p className="text-xs text-slate-600">
-            Interactive step-by-step state playback, theoretical Big-O vs measured runtime, and custom data structure demos.
+            Interactive step-by-step state playback, theoretical Big-O vs measured runtime, and custom data structure engines.
           </p>
         </div>
 
@@ -296,7 +296,7 @@ export default function AlgorithmLabPage() {
                   ))
                 ) : (
                   <>
-                    <option value="default">Nashik Academic Campus (40 nodes)</option>
+                    <option value="default">Regional Sector Alpha (40 nodes)</option>
                     <option value="city-dense">City-Dense Metropolitan (1,520 nodes)</option>
                   </>
                 )}
@@ -683,7 +683,7 @@ export default function AlgorithmLabPage() {
             <div>
               <h2 className="text-base font-bold text-emerald-950 flex items-center gap-2">
                 <Database className="w-5 h-5 text-emerald-600" />
-                Custom Hash Table (Symbol Table) Demo
+                Custom Hash Table (Symbol Table) Engine
               </h2>
               <p className="text-xs text-slate-600">
                 Implemented with polynomial rolling hash, separate chaining collision resolution, and dynamic resizing (load factor &gt; 0.75).
@@ -695,7 +695,7 @@ export default function AlgorithmLabPage() {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors"
             >
               <Sparkles className="w-4 h-4" />
-              Load 200 Sample Demo Keys
+              Load 200 Telemetry Keys
             </button>
           </div>
 
@@ -763,7 +763,7 @@ export default function AlgorithmLabPage() {
             <div>
               <h2 className="text-base font-bold text-emerald-950 flex items-center gap-2">
                 <TableIcon className="w-5 h-5 text-emerald-600" />
-                Custom B+ Tree Index & Range Query Demo
+                Custom B+ Tree Index & Range Query Engine
               </h2>
               <p className="text-xs text-slate-600">
                 Order-4 balanced tree with recursive node splitting, internal routing keys, and linked leaf nodes for O(log N + K) range searches.

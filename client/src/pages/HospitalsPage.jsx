@@ -25,7 +25,7 @@ export default function HospitalsPage() {
 
   const handleUpdateSlots = async (hospitalId, delta) => {
     if (!isAdmin) {
-      alert('Read-only evaluator mode: Cannot update hospital bed availability.');
+      alert('Read-only auditor mode: Cannot update hospital bed availability.');
       return;
     }
     const hosp = hospitals.find((h) => h.hospitalId === hospitalId);

@@ -25,7 +25,7 @@ export default function FleetPage() {
 
   const handleStatusChange = async (ambulanceId, newStatus) => {
     if (!isAdmin) {
-      alert('Read-only evaluator mode: Cannot modify ambulance fleet state.');
+      alert('Read-only auditor mode: Cannot modify ambulance fleet state.');
       return;
     }
     try {

@@ -141,7 +141,7 @@ export default function MapPage() {
 
   const handleConfirmDispatch = async () => {
     if (!isAdmin) {
-      alert('Read-only evaluator account cannot confirm dispatches.');
+      alert('Read-only auditor account cannot confirm dispatches.');
       return;
     }
     if (!recommendation?.ambulanceSelection?.bestCandidate || !recommendation?.hospitalSelection?.bestHospital) {

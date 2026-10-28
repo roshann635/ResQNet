@@ -532,7 +532,7 @@ export default function CitizenPage() {
                 <div className="text-xs font-extrabold text-slate-900 uppercase tracking-wider flex items-center gap-2">
                   DSA Automated Triage Assessment
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-600">
-                    Priority Queue Evaluator
+                    Priority Queue Engine
                   </span>
                 </div>
                 <div className="text-xs text-slate-700 mt-0.5">{triageReason}</div>

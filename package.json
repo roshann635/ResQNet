@@ -33,5 +33,8 @@
     "bplus-tree"
   ],
   "author": "Computer Engineering PBL Team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
+  }
 }

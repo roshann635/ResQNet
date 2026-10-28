@@ -395,7 +395,7 @@ export default function RouteSimulationCanvas({
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-sm tracking-wide text-white">Route Simulation</span>
+              <span className="font-semibold text-sm tracking-wide text-white">Live Route Navigation</span>
               <span className="px-2 py-0.5 text-xs font-mono bg-blue-950 text-blue-300 border border-blue-800 rounded-full">
                 {algorithm}
               </span>

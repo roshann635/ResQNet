@@ -156,7 +156,7 @@ export default function IncidentsPage() {
   const handleCreateIncident = async (e) => {
     e.preventDefault();
     if (!canOperate) {
-      setFormError('Read-only evaluator mode: Cannot register new incidents.');
+      setFormError('Read-only auditor mode: Cannot register new incidents.');
       return;
     }
     if (!description.trim()) {
@@ -240,7 +240,7 @@ export default function IncidentsPage() {
   // Confirm Dispatch & Launch Route Simulation (Part F)
   const handleConfirmDispatch = async () => {
     if (!canOperate) {
-      alert('Read-only evaluator account cannot confirm dispatch.');
+      alert('Read-only auditor account cannot confirm dispatch.');
       return;
     }
     if (!selectedIncident || !selectedAmbulanceId) {
@@ -343,7 +343,7 @@ export default function IncidentsPage() {
   // Dynamic Road Block on Simulation Canvas (E4 Real-time Road Updates)
   const handleBlockEdge = async (edgeId) => {
     if (!canOperate) {
-      alert('Read-only evaluator account cannot modify road network conditions.');
+      alert('Read-only auditor account cannot modify road network conditions.');
       return;
     }
     try {
@@ -383,7 +383,7 @@ export default function IncidentsPage() {
 
   const handleStatusTransition = async (incidentId, newStatus) => {
     if (!canOperate) {
-      alert('Read-only evaluator account cannot change incident lifecycle status.');
+      alert('Read-only auditor account cannot change incident lifecycle status.');
       return;
     }
     try {
@@ -452,7 +452,7 @@ export default function IncidentsPage() {
               </span>
             </h1>
             <p className="text-xs text-slate-500 mt-0.5">
-              Intelligent greedy ambulance dispatch, real-time wavefront route simulation, and hospital triage.
+              Intelligent greedy ambulance dispatch, real-time wavefront route navigation, and hospital triage.
             </p>
           </div>
         </div>
@@ -467,7 +467,7 @@ export default function IncidentsPage() {
                 : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
-            Dispatch & Route Simulation
+            Dispatch Operations & Route Navigation
           </button>
           <button
             onClick={() => setActiveTab('lifecycle')}
@@ -825,7 +825,7 @@ export default function IncidentsPage() {
                     <div className="flex items-center justify-between">
                       <h3 className="text-xs font-bold text-emerald-950 uppercase tracking-wider flex items-center gap-1.5">
                         <Activity className="w-4 h-4 text-emerald-600" />
-                        Part F Route Simulation: Wavefront Expansion & Live Dispatch
+                        Live Route Navigation: Wavefront Expansion & Fleet Telemetry
                       </h3>
                       <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                         {simulationData.sourceNodeId} → {simulationData.destinationNodeId}
@@ -851,9 +851,9 @@ export default function IncidentsPage() {
                     <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mx-auto border border-emerald-200">
                       <Navigation className="w-6 h-6" />
                     </div>
-                    <h3 className="text-sm font-bold text-emerald-950">No Route Simulation Active</h3>
+                    <h3 className="text-sm font-bold text-emerald-950">No Active Dispatch Navigation</h3>
                     <p className="text-xs text-slate-500 max-w-md mx-auto">
-                      Click <strong>"Find Best Ambulance"</strong> and <strong>"Confirm Dispatch"</strong> above to trigger the electric blue wavefront expansion, bright green route polyline, and live ambulance tracking.
+                      Click <strong>"Find Best Ambulance"</strong> and <strong>"Confirm Dispatch"</strong> above to trigger the wavefront pathfinding engine, optimal route polyline, and real-time ambulance tracking.
                     </p>
                   </div>
                 )}
@@ -973,7 +973,7 @@ export default function IncidentsPage() {
                 Priority Queue DSA Inspector
               </h2>
               <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-900">
-                <span className="font-bold block mb-1">Evaluator Mode Active</span>
+                <span className="font-bold block mb-1">Auditor Mode Active</span>
                 <p className="text-[11px] text-slate-600">
                   Incident submission is restricted to Dispatchers. The hand-crafted Priority Queue order and tie-breaking metrics are rendered live from MongoDB.
                 </p>

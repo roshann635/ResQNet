@@ -74,10 +74,10 @@ export default function LoginPage() {
       color: 'border-emerald-300 text-emerald-700 bg-emerald-50/50'
     },
     {
-      role: 'Evaluator',
+      role: 'System Auditor',
       email: 'evaluator@resqnet.test',
       pass: 'Demo@1234',
-      badge: 'Read-Only Audit & Lab',
+      badge: 'Read-Only System Audit',
       color: 'border-amber-300 text-amber-700 bg-amber-50/50'
     }
   ];
@@ -94,7 +94,7 @@ export default function LoginPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
           <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-emerald-200 text-[10px] font-mono text-emerald-800 font-bold shadow-sm">
-            DISPATCH SIMULATION
+            ENTERPRISE PLATFORM
           </div>
         </div>
 
@@ -112,9 +112,9 @@ export default function LoginPage() {
             <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-600 flex items-center justify-center mx-auto mb-2 shadow-sm">
               <Cpu className="w-5 h-5" />
             </div>
-            <h2 className="text-xl font-black tracking-tight text-emerald-950">ResQNet Simulation Portal</h2>
+            <h2 className="text-xl font-black tracking-tight text-emerald-950">ResQNet Command Portal</h2>
             <p className="mt-0.5 text-xs text-slate-500 font-mono">
-              Role-Based Access Control · Academic Simulation
+              Role-Based Access Control · Emergency Operations Center
             </p>
           </div>
 
@@ -122,9 +122,9 @@ export default function LoginPage() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
-                1-Click Demo Accounts (5 Roles)
+                Authorized System Profiles (5 Roles)
               </label>
-              <span className="text-[10px] text-emerald-700 font-mono">Click to autofill</span>
+              <span className="text-[10px] text-emerald-700 font-mono">Select profile to sign in</span>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -193,13 +193,13 @@ export default function LoginPage() {
             className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
           >
             <LogIn className="w-4 h-4" />
-            {loading ? 'Authenticating...' : 'Sign In to Simulation'}
+            {loading ? 'Authenticating...' : 'Sign In to Command Portal'}
           </button>
         </form>
 
         {/* Security / RBAC notice */}
         <div className="pt-2 border-t border-emerald-100 text-[11px] text-slate-500 text-center font-mono">
-          Security policy: Evaluators are restricted from mutative actions (dispatch confirm, edge updates, scenario reset) by backend Express middleware.
+          Security policy: System Auditor accounts maintain strictly read-only access enforced by backend RBAC middleware.
         </div>
       </div>
     </div>

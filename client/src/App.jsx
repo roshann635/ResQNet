@@ -24,7 +24,7 @@ export default function App() {
     <BrowserRouter>
       <AuthProvider>
         <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-emerald-600 selection:text-white">
-          {/* Persistent Simulation Disclaimer */}
+          {/* Persistent Operational Status Banner */}
           <Banner />
 
           {/* Navigation Bar */}

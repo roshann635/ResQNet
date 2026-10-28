@@ -46,7 +46,7 @@ if (config.env === 'development') {
 
 // Academic simulation header
 app.use((req, res, next) => {
-  res.setHeader('X-Simulation-Mode', 'Academic-PBL-Synthetic');
+  res.setHeader('X-System-Engine', 'ResQNet-Enterprise-Routing');
   next();
 });
 
@@ -56,7 +56,7 @@ app.get('/api/health', async (req, res) => {
   try {
     const summary = {
       status: 'ONLINE',
-      mode: 'Academic Emergency Ops Simulation (Synthetic Data)',
+      mode: 'Emergency Operations Command & Fleet Routing Platform',
       database: dbStatus,
       counts: {
         users: await User.countDocuments(),
@@ -120,7 +120,7 @@ export async function startServer(port = config.port) {
       console.log(`\n====================================================`);
       console.log(`  ResQNet API Server running on port ${port}       `);
       console.log(`  Health Check: http://localhost:${port}/api/health `);
-      console.log(`  Mode: Academic Emergency Ops Simulation           `);
+      console.log(`  Mode: Emergency Operations Command Platform           `);
       console.log(`====================================================\n`);
     });
     return server;

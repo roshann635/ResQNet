@@ -13,7 +13,7 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isAdmin) {
-      alert('Read-only evaluator account cannot modify road network conditions.');
+      alert('Read-only auditor account cannot modify road network conditions.');
       return;
     }
     setLoading(true);
@@ -51,7 +51,7 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
         {isEvaluator && (
           <div className="mb-4 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center gap-2">
             <Lock className="w-3.5 h-3.5 shrink-0 text-emerald-700" />
-            <span>Read-Only Evaluator Mode: Road conditions can be inspected, but alterations require Dispatcher authorization.</span>
+            <span>Auditor Profile: Road conditions can be inspected, but alterations require Dispatcher authorization.</span>
           </div>
         )}
 
@@ -83,7 +83,7 @@ export default function EdgeModal({ edge, onClose, onUpdate }) {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-xs font-semibold text-emerald-950 mb-2">
-                Simulate Road Obstruction or Traffic State:
+                Update Road Incident / Traffic Condition:
               </label>
               <div className="grid grid-cols-3 gap-2">
                 <button

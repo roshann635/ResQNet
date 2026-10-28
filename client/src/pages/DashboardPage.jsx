@@ -104,7 +104,7 @@ export default function DashboardPage() {
                   ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
                   : 'bg-emerald-50 text-emerald-800 border-emerald-300'
               }`}>
-                {isAdmin ? 'Dispatcher Console' : 'Evaluator Audit View'}
+                {isAdmin ? 'Dispatcher Console' : 'Executive Audit View'}
               </span>
               <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
                 LIVE NETWORK
@@ -314,7 +314,7 @@ export default function DashboardPage() {
           <div className="bg-gradient-to-br from-emerald-50 to-green-50 border border-emerald-300 rounded-xl p-5 shadow-sm">
             <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs uppercase tracking-wider mb-2">
               <MapPin className="w-4 h-4" />
-              Evaluation Golden Path
+              Interactive Incident Showcase
             </div>
             <p className="text-xs text-slate-700 leading-relaxed">
               Test end-to-end: Select <strong>INC-001</strong> (Critical Arrhythmia at N-01), compute Dijkstra vs A*, then block bridge <strong>E-39-40</strong> to watch reroute and hospital availability change.
@@ -323,7 +323,7 @@ export default function DashboardPage() {
               onClick={() => navigate('/map?incidentId=INC-001')}
               className="mt-3 w-full py-2 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors shadow-md shadow-emerald-600/20"
             >
-              Launch Golden Path Demo
+              Launch Dispatch Workflow
             </button>
           </div>
         </div>

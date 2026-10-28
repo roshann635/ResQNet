@@ -113,7 +113,7 @@ export default function AdminPage() {
             ResQNet Control Console
           </h1>
           <p className="text-sm text-emerald-200 mt-1">
-            Full governance across users, algorithmic scoring weights, and academic deterministic scenarios.
+            Full governance across users, algorithmic scoring weights, and operational dispatch scenarios.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export default function AdminPage() {
         <div className="flex flex-col gap-5">
           <div className="flex items-center justify-between bg-white p-4 rounded-xl border border-emerald-200 shadow-sm">
             <div>
-              <h2 className="text-sm font-bold text-slate-800">Deterministic Evaluation Scenarios</h2>
+              <h2 className="text-sm font-bold text-slate-800">Standard Operating Incident Scenarios</h2>
               <p className="text-xs text-slate-500">Each scenario replays scripted dispatches with reproducible metrics from /data/scenarios</p>
             </div>
             <button
@@ -174,7 +174,7 @@ export default function AdminPage() {
                       <span className="font-mono text-xs font-bold px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded">
                         {sc.scenarioId}
                       </span>
-                      <span className="text-[11px] text-slate-400 font-mono">Academic Sim</span>
+                      <span className="text-[11px] text-slate-400 font-mono">EOC Protocol</span>
                     </div>
                     <h3 className="font-bold text-sm text-slate-900">{sc.name}</h3>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">{sc.description}</p>
@@ -213,7 +213,7 @@ export default function AdminPage() {
                     className="w-full py-2.5 bg-slate-900 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow transition flex items-center justify-center gap-2"
                   >
                     {isRunning ? <Activity className="w-3.5 h-3.5 animate-spin" /> : <Play className="w-3.5 h-3.5 fill-current" />}
-                    {isRunning ? 'Executing Scenario...' : 'Execute Scenario Demo'}
+                    {isRunning ? 'Executing Scenario...' : 'Execute Operating Protocol'}
                   </button>
                 </div>
               );
@@ -414,7 +414,7 @@ export default function AdminPage() {
                   <option value="operator">Operator</option>
                   <option value="hospital_staff">Hospital Staff</option>
                   <option value="admin">Admin</option>
-                  <option value="evaluator">Evaluator</option>
+                  <option value="evaluator">Auditor</option>
                   <option value="citizen">Citizen</option>
                 </select>
               </div>

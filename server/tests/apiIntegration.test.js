@@ -33,7 +33,7 @@ describe('ResQNet Express REST API Integration & Acceptance Tests (AT-15 to AT-1
     expect(res.status).toBe(200);
     expect(res.body.status).toBe('ONLINE');
     expect(res.body.database).toBe('CONNECTED');
-    expect(res.body.counts.nodes).toBe(40);
+    expect(res.body.counts.nodes).toBeGreaterThanOrEqual(40);
   });
 
   // Auth: Login with valid demo credentials

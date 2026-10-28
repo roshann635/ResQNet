@@ -1,0 +1,110 @@
+{
+  "datasetVersion": "1.0.0",
+  "prngSeed": 1337,
+  "generatorTimestamp": "2026-10-28T12:12:41.096Z",
+  "masterSha256": "7601764405f64bfd0c8019692627ec136a842930b26bc2f32c8daaf27bbbc1b0",
+  "recordCounts": {
+    "zones": 12,
+    "nodes": 2000,
+    "edges": 7550,
+    "hospitals": 30,
+    "hospitalCapacityTimeline": 5040,
+    "ambulances": 90,
+    "users": 602,
+    "incidentsHistory": 4000,
+    "incidentsActive": 25,
+    "dispatchesHistory": 3500,
+    "trafficProfiles": 864,
+    "roadEvents": 400,
+    "auditLogs": 8000,
+    "algorithmRuns": 1200,
+    "outboxNotifications": 2000,
+    "scenarios": 6
+  },
+  "files": {
+    "graph/zones.json": {
+      "sha256": "29991ff15e7ea765b96961d0b6a00ad392be1a0058516fd984f447c97e594c35",
+      "sizeBytes": 2095
+    },
+    "graph/nodes.json": {
+      "sha256": "6614eb64e0eb4e7ab147ba4bb163e2f9e9ba456b00b4ee08acf0c970b172089d",
+      "sizeBytes": 378489
+    },
+    "graph/edges.json": {
+      "sha256": "76b5ca570e2538c4ec4c6f6259224bfe3a06222f1d9fd41af27b4485389380e9",
+      "sizeBytes": 2020544
+    },
+    "hospitals/hospitals.json": {
+      "sha256": "7a092bdf03c1d19c6a655222f195eb790345696531a3b3bbbae643d04bba20e8",
+      "sizeBytes": 14289
+    },
+    "hospitals/hospital_capacity_timeline.json": {
+      "sha256": "e42221f7133ed7c7d2250702c5e69e9f9fb6294a58c6c0d3b2d6bf6492411b80",
+      "sizeBytes": 733630
+    },
+    "ambulances/ambulances.json": {
+      "sha256": "935146cc2323faea7a08b095685fcb73e7851f03b39a7175c04a5a76f7a2fcf0",
+      "sizeBytes": 57252
+    },
+    "users/users.json": {
+      "sha256": "df266497bf46e7f706251e641e25c5a3c15bf902be0592abc577151895241824",
+      "sizeBytes": 208248
+    },
+    "incidents/incidents_history.json": {
+      "sha256": "a25d72a862b664b61cba108ac0151547c5a7d078c683d4d0c9813de3b7aa78c8",
+      "sizeBytes": 2280508
+    },
+    "incidents/incidents_active.json": {
+      "sha256": "fd52af79a9a3a315e6fb529cf65d66e3f0122cac1c32d0fdc20c95d06daaffc3",
+      "sizeBytes": 14614
+    },
+    "dispatches/dispatches_history.json": {
+      "sha256": "cbb19e7cdb9f4f6b3c825cd5b7f9cf7f6778c4483b33772cb7fef0b82028c4e9",
+      "sizeBytes": 2095252
+    },
+    "traffic/traffic_profiles.json": {
+      "sha256": "9ed03e8e777f0f2c8984800226eee81a1a63e7b346e4723b12cbe46e36e3a2a0",
+      "sizeBytes": 122354
+    },
+    "traffic/road_events.json": {
+      "sha256": "971c55eac4894e3662aac8a59ec61b30ba57e87b7a50f4d9bc5e58b4715cadf7",
+      "sizeBytes": 123033
+    },
+    "audit/audit_seed.json": {
+      "sha256": "876595be1193045b5d0534024c224d5fc3b52fbb7132ad9397ef04e7c5c1b47f",
+      "sizeBytes": 2963293
+    },
+    "algorithm_runs/runs_seed.json": {
+      "sha256": "4a051fd4a1c044e942543773e46cdecf4d29d57dc7a1ed18ed874158bb45b2e6",
+      "sizeBytes": 402645
+    },
+    "notifications/outbox_seed.json": {
+      "sha256": "f063ad7f33cdad85bc7fd92d010c903a683647e5dc28531520bea0841cc08e69",
+      "sizeBytes": 710790
+    },
+    "scenarios/S1_basic_dispatch.json": {
+      "sha256": "5f0856163f62a154ac5c78b48f90beb3d4952449df4a60ba50bb6d4855ae11a5",
+      "sizeBytes": 378
+    },
+    "scenarios/S2_road_closure_reroute.json": {
+      "sha256": "920ddc428f0b16a4e6c2a21b69b6cace6134d94b53e36b46cc4029af1efca33c",
+      "sizeBytes": 382
+    },
+    "scenarios/S3_no_ambulance_pending_queue.json": {
+      "sha256": "98f50e8136d1c096452f5189534e2d5c40a639b9e1626dc51378db4ed6e40389",
+      "sizeBytes": 348
+    },
+    "scenarios/S4_hospital_full_redirect.json": {
+      "sha256": "2aa97e742bb72bf06fdfb29c049030f1615aeabe2052f744f759f107bd99f7ed",
+      "sizeBytes": 347
+    },
+    "scenarios/S5_mass_casualty_priority_queue.json": {
+      "sha256": "ff2235ed52033f1e5d61d1176492fe380d3a06f625f7dc999416f34cbc762b29",
+      "sizeBytes": 326
+    },
+    "scenarios/S6_astar_vs_dijkstra_long_route.json": {
+      "sha256": "c2cad7634ad362e8ceb3c155c1f0d91b0cf5aad54bfdd53beb0b99869734951b",
+      "sizeBytes": 347
+    }
+  }
+}

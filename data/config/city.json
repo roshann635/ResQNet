@@ -1,0 +1,22 @@
+{
+  "cityName": "Nashik Metrosphere (Simulation)",
+  "bounds": {
+    "minLat": 19.95,
+    "maxLat": 20.05,
+    "minLng": 73.72,
+    "maxLng": 73.85
+  },
+  "center": {
+    "lat": 20.00,
+    "lng": 73.78
+  },
+  "riverBarrier": {
+    "name": "Godavari River",
+    "lat": 19.995,
+    "bridges": [
+      { "name": "Holkar Bridge", "lng": 73.755 },
+      { "name": "Victoria Bridge", "lng": 73.785 },
+      { "name": "Kalaram Bridge", "lng": 73.815 }
+    ]
+  }
+}

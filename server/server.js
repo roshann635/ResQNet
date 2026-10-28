@@ -18,6 +18,9 @@ import indexDemoRoutes from './routes/indexDemo.js';
 import analyticsRoutes from './routes/analytics.js';
 import auditRoutes from './routes/audit.js';
 import scenarioRoutes from './routes/scenario.js';
+import eventsRoutes from './routes/events.js';
+import notificationsRoutes from './routes/notifications.js';
+import userRoutes from './routes/users.js';
 
 // Model imports for health check
 import {
@@ -57,11 +60,13 @@ app.get('/api/health', async (req, res) => {
       database: dbStatus,
       counts: {
         users: await User.countDocuments(),
-        nodes: await RoadNode.countDocuments(),
-        edges: await RoadEdge.countDocuments(),
-        ambulances: await Ambulance.countDocuments(),
-        hospitals: await Hospital.countDocuments(),
-        incidents: await Incident.countDocuments()
+        nodes: await RoadNode.countDocuments({ scenario: { $ne: 'city-dense' } }),
+        totalNodes: await RoadNode.countDocuments(),
+        edges: await RoadEdge.countDocuments({ scenario: { $ne: 'city-dense' } }),
+        totalEdges: await RoadEdge.countDocuments(),
+        ambulances: await Ambulance.countDocuments({ scenario: { $ne: 'city-dense' } }),
+        hospitals: await Hospital.countDocuments({ scenario: { $ne: 'city-dense' } }),
+        incidents: await Incident.countDocuments({ scenario: { $ne: 'city-dense' } })
       },
       timestamp: new Date()
     };
@@ -82,11 +87,16 @@ app.use('/api/roads', roadRoutes);
 app.use('/api/ambulances', ambulanceRoutes);
 app.use('/api/hospitals', hospitalRoutes);
 app.use('/api/routes', routeRoutes);
+app.use('/api/lab', routeRoutes);
 app.use('/api/dispatch', dispatchRoutes);
 app.use('/api/index', indexDemoRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/audit', auditRoutes);
 app.use('/api/scenario', scenarioRoutes);
+app.use('/api/admin/scenario', scenarioRoutes);
+app.use('/api/events', eventsRoutes);
+app.use('/api/notifications', notificationsRoutes);
+app.use('/api/users', userRoutes);
 
 // Catch-all 404 for unmapped API endpoints
 app.use('/api/*', (req, res) => {

@@ -1,0 +1,4 @@
+{
+  "seed": 1337,
+  "description": "Fixed PRNG seed for deterministic dataset reproducibility"
+}

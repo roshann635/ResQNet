@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import config from '../config/index.js';
 
 const hospitalSchema = new mongoose.Schema(
   {
@@ -15,30 +14,59 @@ const hospitalSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
+    tier: {
+      type: String,
+      default: 'Primary'
+    },
     nodeId: {
       type: String,
       required: true,
       index: true
     },
+    zone: {
+      type: String,
+      default: ''
+    },
     capabilities: {
       type: [String],
       default: []
     },
+    totalBeds: {
+      type: Number,
+      default: 100
+    },
+    icuBeds: {
+      type: Number,
+      default: 15
+    },
+    availableBeds: {
+      type: Number,
+      default: 20
+    },
+    availableIcu: {
+      type: Number,
+      default: 4
+    },
     capacity: {
       type: Number,
-      required: true,
-      min: 0
+      default: 100
     },
     availableSlots: {
       type: Number,
-      required: true,
-      min: 0
+      default: 20
     },
     status: {
       type: String,
-      enum: ['NORMAL_OPS', 'DIVERTING', 'AT_CAPACITY'],
-      default: 'NORMAL_OPS',
+      default: 'Open',
       index: true
+    },
+    address: {
+      type: String,
+      default: ''
+    },
+    phone: {
+      type: String,
+      default: ''
     },
     updatedAt: {
       type: Date,
@@ -47,6 +75,11 @@ const hospitalSchema = new mongoose.Schema(
     isSynthetic: {
       type: Boolean,
       default: false,
+      index: true
+    },
+    scenario: {
+      type: String,
+      default: 'default',
       index: true
     }
   },
@@ -57,11 +90,8 @@ const hospitalSchema = new mongoose.Schema(
 
 hospitalSchema.pre('save', function (next) {
   this.updatedAt = new Date();
-  if (this.availableSlots <= 0) {
-    this.status = 'AT_CAPACITY';
-  } else if (this.status === 'AT_CAPACITY' && this.availableSlots > 0) {
-    this.status = 'NORMAL_OPS';
-  }
+  if (this.totalBeds !== undefined) this.capacity = this.totalBeds;
+  if (this.availableBeds !== undefined) this.availableSlots = this.availableBeds;
   next();
 });
 

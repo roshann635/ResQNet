@@ -327,7 +327,7 @@ export default function LandingPage() {
       {/* =========================================================================
           KEY METRICS STRIP
           ========================================================================= */}
-      <section className="border-y border-emerald-200 bg-emerald-50/40 backdrop-blur-md -mx-4 px-6 py-6">
+      <section className="border-y border-emerald-200 bg-emerald-50/40 backdrop-blur-md -mx-3 sm:-mx-4 px-4 sm:px-6 py-6 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
           <div>
             <div className="text-2xl sm:text-3xl font-black text-emerald-950 font-mono">40</div>

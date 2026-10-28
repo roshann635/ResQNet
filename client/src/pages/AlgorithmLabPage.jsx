@@ -13,18 +13,29 @@ import {
   ArrowRight,
   CheckCircle,
   AlertTriangle,
-  Info
+  Info,
+  Layers,
+  Route,
+  Flag
 } from 'lucide-react';
 import { api } from '../api/client.js';
+import RouteSimulationCanvas from '../components/RouteSimulationCanvas.jsx';
 
 export default function AlgorithmLabPage() {
   const [nodes, setNodes] = useState([]);
+  const [edges, setEdges] = useState([]);
   const [algorithm, setAlgorithm] = useState('DIJKSTRA');
   const [source, setSource] = useState('N-01');
   const [destination, setDestination] = useState('N-15');
   const [heuristic, setHeuristic] = useState('EUCLIDEAN');
   const [maxHops, setMaxHops] = useState(12);
   const [maxCost, setMaxCost] = useState(50.0);
+
+  // Scenario and Showcase state (Phase A)
+  const [scenario, setScenario] = useState('default');
+  const [scenariosList, setScenariosList] = useState([]);
+  const [showcasePairs, setShowcasePairs] = useState([]);
+  const [selectedPairId, setSelectedPairId] = useState('');
 
   // Playback state
   const [executionResult, setExecutionResult] = useState(null);
@@ -47,16 +58,71 @@ export default function AlgorithmLabPage() {
   const [sampleKeysStatus, setSampleKeysStatus] = useState(null);
 
   useEffect(() => {
-    async function loadNodes() {
+    async function loadInitialData() {
       try {
-        const data = await api.getNodes();
+        const scenData = await api.getActiveScenario();
+        if (scenData && scenData.scenario) {
+          setScenario(scenData.scenario.id);
+          setShowcasePairs(scenData.showcasePairs || []);
+        }
+        const scenList = await api.getScenarios();
+        if (scenList && scenList.scenarios) {
+          setScenariosList(scenList.scenarios);
+        }
+        const [data, edgeData] = await Promise.all([api.getNodes(), api.getEdges()]);
         setNodes(data);
+        setEdges(edgeData);
+        if (scenData?.showcasePairs?.length > 0) {
+          setSource(scenData.showcasePairs[0].sourceNodeId);
+          setDestination(scenData.showcasePairs[0].destinationNodeId);
+          setSelectedPairId(scenData.showcasePairs[0].id);
+        } else if (data.length > 0) {
+          setSource(data[0].nodeId);
+          setDestination(data[Math.min(14, data.length - 1)].nodeId);
+        }
       } catch (err) {
-        console.error(err);
+        console.error('Failed to load lab initial data:', err);
       }
     }
-    loadNodes();
+    loadInitialData();
   }, []);
+
+  const handleScenarioChange = async (e) => {
+    const newScen = e.target.value;
+    try {
+      await api.switchScenario({ scenario: newScen });
+      setScenario(newScen);
+      const scenData = await api.getActiveScenario();
+      setShowcasePairs(scenData.showcasePairs || []);
+      const [data, edgeData] = await Promise.all([api.getNodes(), api.getEdges()]);
+      setNodes(data);
+      setEdges(edgeData);
+      if (scenData?.showcasePairs?.length > 0) {
+        setSource(scenData.showcasePairs[0].sourceNodeId);
+        setDestination(scenData.showcasePairs[0].destinationNodeId);
+        setSelectedPairId(scenData.showcasePairs[0].id);
+      } else if (data.length > 0) {
+        setSource(data[0].nodeId);
+        setDestination(data[Math.min(14, data.length - 1)].nodeId);
+        setSelectedPairId('');
+      }
+      setExecutionResult(null);
+      setComparisonData(null);
+    } catch (err) {
+      alert(`Failed to switch scenario: ${err.message}`);
+    }
+  };
+
+  const handleSelectShowcasePair = (e) => {
+    const pairId = e.target.value;
+    setSelectedPairId(pairId);
+    const pair = showcasePairs.find((p) => p.id === pairId);
+    if (pair) {
+      setSource(pair.sourceNodeId);
+      setDestination(pair.destinationNodeId);
+      setExecutionResult(null);
+    }
+  };
 
   // Stepper playback logic
   useEffect(() => {
@@ -85,7 +151,8 @@ export default function AlgorithmLabPage() {
         source,
         destination,
         heuristic,
-        limits: { maxHops, maxCost, maxResults: 5 }
+        limits: { maxHops, maxCost, maxResults: 5 },
+        trace: true
       });
       setExecutionResult(res);
       setCurrentStepIndex(0);
@@ -151,10 +218,10 @@ export default function AlgorithmLabPage() {
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex items-center bg-emerald-50/60 p-1 rounded-xl border border-emerald-200 text-xs">
+        <div className="w-full sm:w-auto flex items-center overflow-x-auto p-1 bg-emerald-50/60 rounded-xl border border-emerald-200 text-xs no-scrollbar">
           <button
             onClick={() => setActiveTab('runner')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
               activeTab === 'runner' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
@@ -165,7 +232,7 @@ export default function AlgorithmLabPage() {
               setActiveTab('comparison');
               if (!comparisonData) handleRunComparison();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
               activeTab === 'comparison' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
@@ -176,7 +243,7 @@ export default function AlgorithmLabPage() {
               setActiveTab('hashtable');
               if (!hashResult) handleHashLookup();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
               activeTab === 'hashtable' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
@@ -187,7 +254,7 @@ export default function AlgorithmLabPage() {
               setActiveTab('bplustree');
               if (!bplusResult) handleBPlusQuery();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
               activeTab === 'bplustree' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
@@ -204,6 +271,64 @@ export default function AlgorithmLabPage() {
             <h2 className="text-sm font-bold text-emerald-950 uppercase tracking-wider text-xs">
               Search Parameters
             </h2>
+
+            {/* Scenario Selector */}
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="text-xs font-semibold text-emerald-950 flex items-center gap-1">
+                  <Layers className="w-3.5 h-3.5 text-emerald-700" />
+                  Road Network Scenario
+                </label>
+                <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                  {nodes.length} nodes
+                </span>
+              </div>
+              <select
+                value={scenario}
+                onChange={handleScenarioChange}
+                className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-emerald-600"
+              >
+                {scenariosList.length > 0 ? (
+                  scenariosList.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.name} ({s.nodeCount} nodes, {s.edgeCount} edges)
+                    </option>
+                  ))
+                ) : (
+                  <>
+                    <option value="default">Nashik Academic Campus (40 nodes)</option>
+                    <option value="city-dense">City-Dense Metropolitan (1,520 nodes)</option>
+                  </>
+                )}
+              </select>
+            </div>
+
+            {/* Preset Showcase Pairs */}
+            {showcasePairs.length > 0 && (
+              <div className="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200 space-y-2">
+                <label className="block text-xs font-bold text-emerald-950 flex items-center gap-1">
+                  <Flag className="w-3.5 h-3.5 text-amber-600" />
+                  Preset Showcase Pairs
+                </label>
+                <select
+                  value={selectedPairId}
+                  onChange={handleSelectShowcasePair}
+                  className="w-full bg-white border border-emerald-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-emerald-600 font-medium"
+                >
+                  <option value="">-- Choose Evaluation Challenge --</option>
+                  {showcasePairs.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.name} ({p.sourceNodeId} → {p.destinationNodeId})
+                    </option>
+                  ))}
+                </select>
+                {selectedPairId && (
+                  <p className="text-[11px] text-emerald-900 leading-snug bg-white/80 p-2 rounded-md border border-emerald-200">
+                    {showcasePairs.find((p) => p.id === selectedPairId)?.description}
+                  </p>
+                )}
+              </div>
+            )}
 
             <div>
               <label className="block text-xs font-semibold text-emerald-950 mb-1">Select Algorithm</label>
@@ -319,6 +444,20 @@ export default function AlgorithmLabPage() {
           <div className="lg:col-span-2 space-y-4">
             {executionResult ? (
               <>
+                {/* Part F Signature Route Simulation Canvas */}
+                <RouteSimulationCanvas
+                  nodes={nodes}
+                  edges={edges}
+                  sourceNodeId={source}
+                  destinationNodeId={destination}
+                  algorithm={algorithm}
+                  simulationSteps={executionResult.steps || []}
+                  finalPath={executionResult.route || executionResult.path || []}
+                  finalCost={executionResult.cost || 0}
+                  graphVersion={executionResult.graphVersion || 1}
+                  ambulanceCallSign="Lab-Probe-1"
+                />
+
                 {/* Playback Controls & Progress Bar */}
                 <div className="bg-white border border-emerald-200 rounded-xl p-4 shadow-sm space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-3">

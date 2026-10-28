@@ -9,10 +9,10 @@ export default function Banner() {
   return (
     <header className="w-full bg-emerald-50 border-b border-emerald-200 text-xs">
       <div className="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between gap-2">
-        <div className="flex items-center gap-2 text-emerald-900 font-medium tracking-wide">
-          <AlertTriangle className="w-4 h-4 text-emerald-700 animate-pulse shrink-0" />
+        <div className="flex items-center gap-2 text-emerald-900 font-medium tracking-wide text-[11px] sm:text-xs">
+          <AlertTriangle className="w-3.5 h-3.5 text-emerald-700 animate-pulse shrink-0" />
           <span>
-            <strong>ACADEMIC SIMULATION:</strong> Pure DSA Project-Based Learning Demo. Synthetic data only. Not for real emergency dispatch.
+            <strong>ACADEMIC SIMULATION:</strong> Pure DSA Project-Based Learning Demo (Synthetic Data).
           </span>
         </div>
 

@@ -41,6 +41,24 @@ export default function DashboardPage() {
       }
     }
     loadData();
+
+    // Real-time SSE listener
+    const token = localStorage.getItem('resqnet_token') || '';
+    const eventSource = new EventSource(`/api/events?token=${token}`);
+
+    const handleEvent = () => {
+      loadData();
+    };
+
+    eventSource.onmessage = handleEvent;
+    eventSource.addEventListener('INCIDENT_UPDATE', handleEvent);
+    eventSource.addEventListener('AMBULANCE_MOVED', handleEvent);
+    eventSource.addEventListener('REROUTE_EVENT', handleEvent);
+    eventSource.addEventListener('ROAD_CONDITION_CHANGED', handleEvent);
+
+    return () => {
+      eventSource.close();
+    };
   }, []);
 
   if (loading) {

@@ -14,9 +14,11 @@ export async function getDispatchRecommendation(req, res, next) {
       return res.status(404).json({ error: `Incident ${incidentId} not found`, code: 'NOT_FOUND' });
     }
 
-    const graph = getGraph();
-    const ambulances = await Ambulance.find();
-    const hospitals = await Hospital.find();
+    const scenario = incident.scenario || 'default';
+    const graph = getGraph(scenario);
+    const scenarioFilter = scenario === 'city-dense' ? { scenario: 'city-dense' } : { scenario: { $ne: 'city-dense' } };
+    const ambulances = await Ambulance.find(scenarioFilter);
+    const hospitals = await Hospital.find(scenarioFilter);
 
     // 1. Ambulance scoring and candidate filtering
     const ambulanceRecommendation = scoreAmbulanceCandidates(graph, incident, ambulances);
@@ -80,7 +82,8 @@ export async function confirmDispatch(req, res, next) {
       });
     }
 
-    const graph = getGraph();
+    const scenario = incident.scenario || ambulance.scenario || 'default';
+    const graph = getGraph(scenario);
     // Compute primary response route from ambulance location to incident
     const routeResult = dijkstra(graph, ambulance.currentNodeId, incident.locationNodeId);
     if (!routeResult.found) {

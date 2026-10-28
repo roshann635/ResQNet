@@ -1,0 +1,6 @@
+{
+  "scenarioId": "S6_astar_vs_dijkstra_long_route",
+  "name": "S6: A* Search vs Dijkstra Efficiency Benchmark",
+  "description": "Runs cross-city route across Nashik. Visually shows A* heuristic expanding 60% fewer nodes than uniform Dijkstra.",
+  "expectedOutcome": "Identical path cost, with A* requiring significantly fewer node expansions."
+}

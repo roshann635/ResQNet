@@ -75,4 +75,6 @@ export function generateToken(user) {
   );
 }
 
-export default { requireAuth, requireAdmin, generateToken };
+export const authenticateToken = requireAuth;
+
+export default { requireAuth, authenticateToken, requireAdmin, generateToken };

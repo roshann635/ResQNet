@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Polyline, Popup, Marker, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import SvgGraphView from './SvgGraphView.jsx';
-import { Map as MapIcon, Network, Layers, AlertTriangle, Truck, Building2 } from 'lucide-react';
+import { Map as MapIcon, Network, Layers, AlertTriangle, Truck, Building2, Hospital } from 'lucide-react';
 
 export default function MapView({
   nodes = [],
@@ -14,11 +14,13 @@ export default function MapView({
   alternativeRoutes = [],
   onEdgeClick,
   onNodeClick,
+  onHospitalClick,
+  selectedHospitalId,
   selectedNodeId
 }) {
   const [viewMode, setViewMode] = useState('svg'); // 'svg' (offline default) or 'leaflet'
 
-  // Center coordinate
+  // Center coordinate for Nashik
   const center = [19.9860, 73.7810];
 
   // Map node lookup
@@ -32,10 +34,10 @@ export default function MapView({
         <div className="flex items-center gap-2">
           <Layers className="w-4 h-4 text-emerald-600" />
           <span className="text-xs font-semibold text-emerald-950 uppercase tracking-wider">
-            Network Visualization
+            Network Topology & Geographic Routing
           </span>
           <span className="text-xs text-slate-500">
-            ({nodes.length} Vertices, {edges.length} Directed Edges)
+            ({nodes.length} Vertices, {edges.length} Directed Edges, {hospitals.length} Hospitals)
           </span>
         </div>
 
@@ -50,7 +52,7 @@ export default function MapView({
             }`}
           >
             <Network className="w-3.5 h-3.5" />
-            Offline SVG Graph
+            Interactive SVG Graph
           </button>
           <button
             onClick={() => setViewMode('leaflet')}
@@ -78,10 +80,12 @@ export default function MapView({
           alternativeRoutes={alternativeRoutes}
           onEdgeClick={onEdgeClick}
           onNodeClick={onNodeClick}
+          onHospitalClick={onHospitalClick}
+          selectedHospitalId={selectedHospitalId}
           selectedNodeId={selectedNodeId}
         />
       ) : (
-        <div className="h-[650px] w-full rounded-xl overflow-hidden border border-emerald-200 shadow-inner z-0">
+        <div className="h-[380px] sm:h-[480px] md:h-[550px] lg:h-[650px] w-full rounded-xl overflow-hidden border border-emerald-200 shadow-inner z-0 relative">
           <MapContainer
             center={center}
             zoom={14}
@@ -119,7 +123,7 @@ export default function MapView({
                 weight = 3;
               } else if (inRoute) {
                 color = '#059669';
-                weight = 4;
+                weight = 5;
               }
 
               return (
@@ -147,16 +151,16 @@ export default function MapView({
               );
             })}
 
-            {/* Node markers */}
+            {/* Road Network Nodes */}
             {nodes.map((node) => {
               const inRoute = highlightedRoute.includes(node.nodeId);
               return (
                 <CircleMarker
                   key={node.nodeId}
                   center={[node.latitude, node.longitude]}
-                  radius={inRoute ? 7 : 5}
+                  radius={inRoute ? 6 : 4}
                   pathOptions={{
-                    color: inRoute ? '#059669' : '#10b981',
+                    color: inRoute ? '#059669' : '#94a3b8',
                     fillColor: inRoute ? '#10b981' : '#ffffff',
                     fillOpacity: 0.9,
                     weight: 2
@@ -169,6 +173,71 @@ export default function MapView({
                     <div className="text-xs font-sans">
                       <div className="font-bold text-emerald-700">{node.nodeId}: {node.label}</div>
                       <div className="text-slate-600">Zone: {node.zone}</div>
+                    </div>
+                  </Tooltip>
+                </CircleMarker>
+              );
+            })}
+
+            {/* Hospital Markers on Leaflet Map */}
+            {hospitals.map((h) => {
+              const hNode = nodeMap.get(h.nodeId);
+              if (!hNode) return null;
+              const isSelected = selectedHospitalId === h.hospitalId;
+
+              return (
+                <CircleMarker
+                  key={h.hospitalId}
+                  center={[hNode.latitude, hNode.longitude]}
+                  radius={isSelected ? 12 : 9}
+                  pathOptions={{
+                    color: isSelected ? '#4338ca' : '#7c3aed',
+                    fillColor: isSelected ? '#a855f7' : '#8b5cf6',
+                    fillOpacity: 0.95,
+                    weight: isSelected ? 4 : 2
+                  }}
+                  eventHandlers={{
+                    click: () => onHospitalClick && onHospitalClick(h)
+                  }}
+                >
+                  <Tooltip direction="top" offset={[0, -8]} permanent={isSelected}>
+                    <div className="text-xs font-sans p-1">
+                      <div className="font-bold text-purple-900 flex items-center gap-1">
+                        🏥 {h.name}
+                      </div>
+                      <div className="text-[11px] text-slate-600">
+                        Beds: <strong>{h.capacity?.availableBeds ?? h.availableBeds ?? 0}</strong> free • Status: <strong className="text-emerald-700">{h.status || 'OPEN'}</strong>
+                      </div>
+                      <div className="text-[10px] text-purple-700 font-semibold mt-0.5">
+                        👉 Click to inspect hospital details
+                      </div>
+                    </div>
+                  </Tooltip>
+                </CircleMarker>
+              );
+            })}
+
+            {/* Incident Markers */}
+            {incidents.map((inc) => {
+              const iNode = nodeMap.get(inc.locationNodeId);
+              if (!iNode) return null;
+              return (
+                <CircleMarker
+                  key={inc.incidentId}
+                  center={[iNode.latitude, iNode.longitude]}
+                  radius={8}
+                  pathOptions={{
+                    color: '#dc2626',
+                    fillColor: inc.severity === 'CRITICAL' ? '#ef4444' : '#f59e0b',
+                    fillOpacity: 1,
+                    weight: 3
+                  }}
+                >
+                  <Tooltip direction="top" offset={[0, -8]}>
+                    <div className="text-xs font-sans">
+                      <div className="font-bold text-red-700">🚨 {inc.incidentId} [{inc.severity}]</div>
+                      <div>Type: {inc.type} • Patients: {inc.patientCount || 1}</div>
+                      <div>Status: {inc.status}</div>
                     </div>
                   </Tooltip>
                 </CircleMarker>
@@ -199,8 +268,8 @@ export default function MapView({
             <span>Optimal Route</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-4 h-4 rounded bg-emerald-50 border border-emerald-400 flex items-center justify-center font-bold text-[9px] text-emerald-700">H</span>
-            <span>Hospital</span>
+            <span className="w-4 h-4 rounded bg-purple-100 border border-purple-500 flex items-center justify-center font-bold text-[9px] text-purple-800 shadow-xs">H</span>
+            <span className="font-semibold text-purple-900">Hospital (Click for Info)</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-4 h-4 rounded-full bg-emerald-100 border border-emerald-500 flex items-center justify-center font-bold text-[9px] text-emerald-800">A</span>
@@ -208,12 +277,12 @@ export default function MapView({
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-4 h-4 rounded-full bg-red-100 border border-red-500 flex items-center justify-center font-bold text-[9px] text-red-700">!</span>
-            <span>Incident</span>
+            <span>Emergency Incident</span>
           </div>
         </div>
 
         <div className="text-[11px] text-slate-500">
-          Tip: Click on any road segment to toggle its state (Normal / Congested / Blocked).
+          Tip: Tap on any hospital name or marker to view real-time bed capacity and specialty capabilities.
         </div>
       </div>
     </div>

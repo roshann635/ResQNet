@@ -14,6 +14,10 @@ import HospitalsPage from './pages/HospitalsPage.jsx';
 import AlgorithmLabPage from './pages/AlgorithmLabPage.jsx';
 import AnalyticsAuditPage from './pages/AnalyticsAuditPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
+import CitizenPage from './pages/CitizenPage.jsx';
+import HospitalConsolePage from './pages/HospitalConsolePage.jsx';
+import AdminPage from './pages/AdminPage.jsx';
+import OutboxPage from './pages/OutboxPage.jsx';
 
 export default function App() {
   return (
@@ -27,13 +31,53 @@ export default function App() {
           <Navbar />
 
           {/* Primary Page Content */}
-          <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6">
+          <main className="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
             <Routes>
               {/* Public Routes */}
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
 
-              {/* Protected Operational & Algorithm Routes (Login Required) */}
+              {/* Citizen Portal (Report Emergency & Track My Requests) */}
+              <Route
+                path="/citizen"
+                element={
+                  <ProtectedRoute allowedRoles={['citizen', 'admin']}>
+                    <CitizenPage />
+                  </ProtectedRoute>
+                }
+              />
+
+              {/* Hospital Console (Bed/ICU Capacity & Incoming Dispatches) */}
+              <Route
+                path="/hospital-console"
+                element={
+                  <ProtectedRoute allowedRoles={['hospital_staff', 'admin']}>
+                    <HospitalConsolePage />
+                  </ProtectedRoute>
+                }
+              />
+
+              {/* System Admin Dashboard (Scenarios, Users, Scoring Weights) */}
+              <Route
+                path="/admin"
+                element={
+                  <ProtectedRoute allowedRoles={['admin']}>
+                    <AdminPage />
+                  </ProtectedRoute>
+                }
+              />
+
+              {/* Notifications Outbox (Simulated SMS & Email Gateway Feed) */}
+              <Route
+                path="/outbox"
+                element={
+                  <ProtectedRoute>
+                    <OutboxPage />
+                  </ProtectedRoute>
+                }
+              />
+
+              {/* Protected Operational & Algorithm Routes */}
               <Route
                 path="/dashboard"
                 element={

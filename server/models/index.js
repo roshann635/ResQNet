@@ -7,3 +7,4 @@ export { Hospital } from './Hospital.js';
 export { Dispatch } from './Dispatch.js';
 export { AlgorithmRun } from './AlgorithmRun.js';
 export { AuditLog } from './AuditLog.js';
+export { Notification } from './Notification.js';

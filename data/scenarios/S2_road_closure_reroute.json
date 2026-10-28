@@ -1,0 +1,8 @@
+{
+  "scenarioId": "S2_road_closure_reroute",
+  "name": "S2: Dynamic Road Closure & Live Rerouting",
+  "description": "Ambulance is en route when Holkar Bridge is blocked. Triggers immediate graph version bump and dynamic alternate search.",
+  "blockedEdgeId": "E-00001",
+  "rerouteRequired": true,
+  "expectedOutcome": "Stale route flagged; vehicle re-routes via Victoria Bridge."
+}

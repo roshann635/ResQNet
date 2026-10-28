@@ -1,0 +1,6050 @@
+[
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2.2
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekday",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 8,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 9,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 10,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 17,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 18,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 19,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 20,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.3
+  },
+  {
+    "dayType": "Weekend/Festival",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-01",
+    "zoneName": "Panchavati",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-02",
+    "zoneName": "Gangapur",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-03",
+    "zoneName": "CIDCO",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-04",
+    "zoneName": "Satpur Industrial",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-05",
+    "zoneName": "Nashik Road",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-06",
+    "zoneName": "Indira Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-07",
+    "zoneName": "Ambad MIDC",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-08",
+    "zoneName": "College Road",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-09",
+    "zoneName": "Govind Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-10",
+    "zoneName": "Dwarka Central",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-11",
+    "zoneName": "Adgaon Express",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 0,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 1,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 2,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 3,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 4,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 5,
+    "congestionMultiplier": 1.4
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 6,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 7,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 8,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 9,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 10,
+    "congestionMultiplier": 2
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 11,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 12,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 13,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 14,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 15,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 16,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 17,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 18,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 19,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 20,
+    "congestionMultiplier": 2.5
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 21,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 22,
+    "congestionMultiplier": 1.8
+  },
+  {
+    "dayType": "Monsoon/Rain Day",
+    "zoneId": "Z-12",
+    "zoneName": "Mahatma Nagar",
+    "hour": 23,
+    "congestionMultiplier": 1.4
+  }
+]

@@ -4,7 +4,11 @@ import { dfs } from '../dsa/dfs.js';
 import { dijkstra } from '../dsa/dijkstra.js';
 import { astar } from '../dsa/astar.js';
 import { findAlternativeRoutes } from '../dsa/backtracking.js';
+import { bidirectionalDijkstra } from '../dsa/bidirectional.js';
+import { bfsTraversal, dfsTraversal } from '../dsa/traversal.js';
 import { AlgorithmRun } from '../models/index.js';
+
+let runSeqCounter = 0;
 
 export async function computeRoute(req, res, next) {
   try {
@@ -28,7 +32,7 @@ export async function computeRoute(req, res, next) {
       });
     }
 
-    const graph = getGraph();
+    const graph = getGraph(req.body.scenario);
     let result = null;
 
     switch (algorithm.toUpperCase()) {
@@ -53,15 +57,19 @@ export async function computeRoute(req, res, next) {
         result = findAlternativeRoutes(graph, source, destination, limits);
         break;
 
+      case 'BIDIRECTIONAL':
+        result = bidirectionalDijkstra(graph, source, destination);
+        break;
+
       default:
         return res.status(400).json({
-          error: `Unsupported algorithm: '${algorithm}'. Choose from BFS, DFS, DIJKSTRA, ASTAR, BACKTRACKING.`,
+          error: `Unsupported algorithm: '${algorithm}'. Choose from BFS, DFS, DIJKSTRA, ASTAR, BIDIRECTIONAL, BACKTRACKING.`,
           code: 'UNSUPPORTED_ALGORITHM'
         });
     }
 
-    // Persist AlgorithmRun to database
-    const runId = `RUN-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+    runSeqCounter++;
+    const runId = `RUN-${Date.now()}-${runSeqCounter}`;
     const algoRun = new AlgorithmRun({
       runId,
       algorithm: algorithm.toUpperCase(),
@@ -103,7 +111,7 @@ export async function compareAlgorithms(req, res, next) {
       });
     }
 
-    const graph = getGraph();
+    const graph = getGraph(req.body.scenario);
 
     // Run all 5 algorithms on identical graph snapshot
     const bfsRes = bfs(graph, source, destination);
@@ -198,4 +206,37 @@ export async function compareAlgorithms(req, res, next) {
   }
 }
 
-export default { computeRoute, compareAlgorithms };
+export async function findAlternatives(req, res, next) {
+  try {
+    const { source, destination, limits } = req.body;
+    if (!source || !destination) {
+      return res.status(400).json({ error: 'source and destination are required', code: 'MISSING_PARAMS' });
+    }
+    const graph = getGraph(req.body.scenario);
+    const result = findAlternativeRoutes(graph, source, destination, limits);
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function traverseGraph(req, res, next) {
+  try {
+    const { algorithm = 'BFS', startNodeId, maxDepth } = req.body;
+    if (!startNodeId) {
+      return res.status(400).json({ error: 'startNodeId is required', code: 'MISSING_PARAMS' });
+    }
+    const graph = getGraph(req.body.scenario);
+    let result = null;
+    if (algorithm.toUpperCase() === 'DFS') {
+      result = dfsTraversal(graph, startNodeId, maxDepth);
+    } else {
+      result = bfsTraversal(graph, startNodeId, maxDepth);
+    }
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export default { computeRoute, compareAlgorithms, findAlternatives, traverseGraph };

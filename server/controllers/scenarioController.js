@@ -1,6 +1,12 @@
 import { resetScenario } from '../seed/seedReset.js';
 import { runSeed } from '../seed/seed.js';
-import { initializeGraphService } from '../services/graphService.js';
+import {
+  initializeGraphService,
+  getAvailableScenarios,
+  getActiveScenario,
+  setActiveScenario,
+  getShowcasePairs
+} from '../services/graphService.js';
 import {
   User,
   RoadNode,
@@ -12,13 +18,77 @@ import {
   AlgorithmRun
 } from '../models/index.js';
 
+export async function listScenariosEndpoint(req, res, next) {
+  try {
+    const scenarios = getAvailableScenarios();
+    const active = getActiveScenario();
+    res.json({
+      success: true,
+      activeScenario: active,
+      scenarios
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function getActiveScenarioEndpoint(req, res, next) {
+  try {
+    const active = getActiveScenario();
+    const scenarios = getAvailableScenarios();
+    const current = scenarios.find((s) => s.id === active) || scenarios[0];
+    const showcasePairs = getShowcasePairs(active);
+
+    res.json({
+      success: true,
+      scenario: current,
+      showcasePairs
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function switchScenarioEndpoint(req, res, next) {
+  try {
+    const { scenario } = req.body;
+    if (!scenario) {
+      return res.status(400).json({
+        error: 'Missing required field: scenario',
+        code: 'MISSING_SCENARIO'
+      });
+    }
+
+    const available = getAvailableScenarios().map((s) => s.id);
+    if (!available.includes(scenario)) {
+      return res.status(400).json({
+        error: `Invalid scenario '${scenario}'. Available: ${available.join(', ')}`,
+        code: 'INVALID_SCENARIO'
+      });
+    }
+
+    const newActive = setActiveScenario(scenario);
+    const scenarios = getAvailableScenarios();
+    const current = scenarios.find((s) => s.id === newActive);
+    const showcasePairs = getShowcasePairs(newActive);
+
+    res.json({
+      success: true,
+      message: `Active scenario successfully switched to '${newActive}'.`,
+      scenario: current,
+      showcasePairs
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
 export async function resetScenarioEndpoint(req, res, next) {
   try {
     const { confirmed } = req.body;
     const actorId = req.user ? req.user.userId : 'ADMIN_USER';
 
     if (!confirmed) {
-      // Return preview of what will be reset
       const preview = {
         users: await User.countDocuments({ isSynthetic: true }),
         roadNodes: await RoadNode.countDocuments({ isSynthetic: true }),
@@ -39,7 +109,6 @@ export async function resetScenarioEndpoint(req, res, next) {
     }
 
     const result = await resetScenario(true, actorId);
-    // Re-initialize in-memory graph
     await initializeGraphService();
 
     res.json({
@@ -76,4 +145,37 @@ export async function seedScenarioEndpoint(req, res, next) {
   }
 }
 
-export default { resetScenarioEndpoint, seedScenarioEndpoint };
+import { getScriptedScenarios, executeScriptedScenario } from '../services/scenarioService.js';
+
+export async function listScriptedScenariosEndpoint(req, res, next) {
+  try {
+    const list = getScriptedScenarios();
+    res.json(list);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function loadScenarioEndpoint(req, res, next) {
+  try {
+    const { scenarioId } = req.body;
+    if (!scenarioId) {
+      return res.status(400).json({ error: 'scenarioId is required', code: 'MISSING_PARAM' });
+    }
+    const actorId = req.user ? req.user.userId : 'ADMIN';
+    const result = await executeScriptedScenario(scenarioId, actorId);
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export default {
+  listScenariosEndpoint,
+  getActiveScenarioEndpoint,
+  switchScenarioEndpoint,
+  resetScenarioEndpoint,
+  seedScenarioEndpoint,
+  listScriptedScenariosEndpoint,
+  loadScenarioEndpoint
+};

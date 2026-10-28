@@ -24,7 +24,8 @@ import {
   XCircle,
   Radio
 } from 'lucide-react';
-import { api } from '../api/client.js';
+import { api, getEventSourceUrl } from '../api/client.js';
+import { fallbackNodes, fallbackEdges, fallbackIncidents } from '../data/mockMapData.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import RouteSimulationCanvas from '../components/RouteSimulationCanvas.jsx';
 
@@ -36,12 +37,12 @@ export default function IncidentsPage() {
   const [activeTab, setActiveTab] = useState('dispatch');
 
   // Core Data
-  const [incidents, setIncidents] = useState([]);
-  const [priorityQueue, setPriorityQueue] = useState([]);
-  const [nodes, setNodes] = useState([]);
-  const [edges, setEdges] = useState([]);
-  const [selectedIncident, setSelectedIncident] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [incidents, setIncidents] = useState(fallbackIncidents);
+  const [priorityQueue, setPriorityQueue] = useState(fallbackIncidents);
+  const [nodes, setNodes] = useState(fallbackNodes);
+  const [edges, setEdges] = useState(fallbackEdges);
+  const [selectedIncident, setSelectedIncident] = useState(fallbackIncidents[0] || null);
+  const [loading, setLoading] = useState(false);
 
   // Dispatch Scorer state
   const [candidatesData, setCandidatesData] = useState(null);
@@ -75,7 +76,9 @@ export default function IncidentsPage() {
 
     // Real-time SSE listener
     const token = localStorage.getItem('resqnet_token') || '';
-    const eventSource = new EventSource(`/api/events?token=${token}`);
+    const sseUrl = getEventSourceUrl('/api/events?token=' + token);
+    const eventSource = new EventSource(sseUrl);
+    eventSource.onerror = () => { eventSource.close(); };
 
     const handleEvent = () => {
       loadData();

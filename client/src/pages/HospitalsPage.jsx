@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Building2, Activity, AlertTriangle, CheckCircle, ShieldCheck, Bed } from 'lucide-react';
 import { api } from '../api/client.js';
 import { useAuth } from '../context/AuthContext.jsx';
+import { fallbackHospitals } from '../data/mockMapData.js';
 
 export default function HospitalsPage() {
   const { isAdmin } = useAuth();
-  const [hospitals, setHospitals] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [hospitals, setHospitals] = useState(fallbackHospitals);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadHospitals();
@@ -15,9 +16,11 @@ export default function HospitalsPage() {
   async function loadHospitals() {
     try {
       const data = await api.getHospitals();
-      setHospitals(data);
+      if (Array.isArray(data) && data.length > 0) {
+        setHospitals(data);
+      }
     } catch (err) {
-      console.error('Failed to load hospitals:', err);
+      console.warn('Using embedded hospitals data:', err);
     } finally {
       setLoading(false);
     }

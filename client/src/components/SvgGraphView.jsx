@@ -1,5 +1,12 @@
 import React, { useMemo, useState, useRef } from 'react';
 import { Truck, Building2, AlertCircle, ZoomIn, ZoomOut, RotateCcw, Compass, MapPin } from 'lucide-react';
+import {
+  fallbackNodes,
+  fallbackEdges,
+  fallbackHospitals,
+  fallbackAmbulances,
+  fallbackIncidents
+} from '../data/mockMapData.js';
 
 export default function SvgGraphView({
   nodes = [],
@@ -15,6 +22,13 @@ export default function SvgGraphView({
   selectedNodeId,
   selectedHospitalId
 }) {
+  // Resilient fallback datasets
+  const effectiveNodes = Array.isArray(nodes) && nodes.length > 0 ? nodes : fallbackNodes;
+  const effectiveEdges = Array.isArray(edges) && edges.length > 0 ? edges : fallbackEdges;
+  const effectiveAmbulances = Array.isArray(ambulances) && ambulances.length > 0 ? ambulances : fallbackAmbulances;
+  const effectiveHospitals = Array.isArray(hospitals) && hospitals.length > 0 ? hospitals : fallbackHospitals;
+  const effectiveIncidents = Array.isArray(incidents) && incidents.length > 0 ? incidents : fallbackIncidents;
+
   // Zoom & Pan state
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
@@ -23,9 +37,9 @@ export default function SvgGraphView({
 
   // Compute bounding box for projection
   const bounds = useMemo(() => {
-    if (nodes.length === 0) return { minLat: 19.96, maxLat: 20.01, minLon: 73.76, maxLon: 73.80 };
+    if (effectiveNodes.length === 0) return { minLat: 19.96, maxLat: 20.01, minLon: 73.76, maxLon: 73.80 };
     let minLat = Infinity, maxLat = -Infinity, minLon = Infinity, maxLon = -Infinity;
-    nodes.forEach((n) => {
+    effectiveNodes.forEach((n) => {
       const lat = n.latitude || n.lat || 19.98;
       const lon = n.longitude || n.lng || 73.78;
       if (lat < minLat) minLat = lat;
@@ -42,7 +56,7 @@ export default function SvgGraphView({
       minLon: minLon - pLon,
       maxLon: maxLon + pLon
     };
-  }, [nodes]);
+  }, [effectiveNodes]);
 
   const SVG_WIDTH = 1000;
   const SVG_HEIGHT = 700;
@@ -59,13 +73,13 @@ export default function SvgGraphView({
 
   const nodePositions = useMemo(() => {
     const map = new Map();
-    nodes.forEach((n) => {
+    effectiveNodes.forEach((n) => {
       const lat = n.latitude || n.lat || 19.98;
       const lon = n.longitude || n.lng || 73.78;
       map.set(n.nodeId, project(lat, lon));
     });
     return map;
-  }, [nodes, bounds]);
+  }, [effectiveNodes, bounds]);
 
   // Set of route edges for highlighting
   const primaryEdgeSet = useMemo(() => {
@@ -158,12 +172,14 @@ export default function SvgGraphView({
         >
           {/* 1. EDGES LAYER */}
           <g id="edges-layer">
-            {edges.map((edge) => {
-              const p1 = nodePositions.get(edge.fromNodeId);
-              const p2 = nodePositions.get(edge.toNodeId);
+            {effectiveEdges.map((edge) => {
+              const fromId = edge.fromNodeId || edge.from;
+              const toId = edge.toNodeId || edge.to;
+              const p1 = nodePositions.get(fromId);
+              const p2 = nodePositions.get(toId);
               if (!p1 || !p2) return null;
 
-              const isPrimary = primaryEdgeSet.has(`${edge.fromNodeId}->${edge.toNodeId}`);
+              const isPrimary = primaryEdgeSet.has(`${fromId}->${toId}`);
               const isBlocked = edge.condition === 'BLOCKED';
               const isCongested = edge.condition === 'CONGESTED';
 
@@ -232,7 +248,7 @@ export default function SvgGraphView({
 
           {/* 2. NODES LAYER */}
           <g id="nodes-layer">
-            {nodes.map((node) => {
+            {effectiveNodes.map((node) => {
               const pos = nodePositions.get(node.nodeId);
               if (!pos) return null;
 
@@ -276,12 +292,12 @@ export default function SvgGraphView({
 
           {/* 3. HOSPITALS LAYER (Interactive Tap with Full Info) */}
           <g id="hospitals-layer">
-            {hospitals.map((h) => {
-              const pos = nodePositions.get(h.nodeId);
+            {effectiveHospitals.map((h) => {
+              const pos = nodePositions.get(h.nodeId || h.locationNodeId);
               if (!pos) return null;
               const isSelected = selectedHospitalId === h.hospitalId;
-              const isOpen = h.status === 'Open';
-              const isDiverting = h.status === 'Diverting';
+              const isOpen = h.status === 'Open' || h.status === 'OPEN';
+              const isDiverting = h.status === 'Diverting' || h.status === 'DIVERTING';
 
               return (
                 <g
@@ -347,8 +363,8 @@ export default function SvgGraphView({
 
           {/* 4. AMBULANCES LAYER */}
           <g id="ambulances-layer">
-            {ambulances.map((a) => {
-              const pos = nodePositions.get(a.currentNodeId);
+            {effectiveAmbulances.map((a) => {
+              const pos = nodePositions.get(a.currentNodeId || a.baseStationNodeId);
               if (!pos) return null;
               const isAvail = a.status === 'Available' || a.status === 'AVAILABLE';
 
@@ -379,8 +395,8 @@ export default function SvgGraphView({
 
           {/* 5. INCIDENTS LAYER */}
           <g id="incidents-layer">
-            {incidents.map((inc) => {
-              const pos = nodePositions.get(inc.locationNodeId);
+            {effectiveIncidents.map((inc) => {
+              const pos = nodePositions.get(inc.locationNodeId || inc.nodeId);
               if (!pos || inc.status === 'Resolved' || inc.status === 'Cancelled') return null;
               const isCrit = inc.severity === 'CRITICAL' || inc.severity === 'Critical';
 

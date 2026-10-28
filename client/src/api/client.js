@@ -19,12 +19,11 @@ export async function apiRequest(endpoint, options = {}) {
   });
 
   const contentType = response.headers.get('content-type') || '';
-  let data;
-  if (contentType.includes('application/json')) {
-    data = await response.json();
-  } else {
-    data = await response.text();
+  if (!contentType.includes('application/json')) {
+    throw new Error(`API returned non-JSON response (${contentType || 'empty'}). Please ensure backend service is running.`);
   }
+
+  const data = await response.json();
 
   if (!response.ok) {
     const errorMsg = data?.error || (typeof data === 'string' ? data : `Request failed with status ${response.status}`);

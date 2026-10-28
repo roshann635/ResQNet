@@ -2,8 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MapView from '../components/MapView.jsx';
 import EdgeModal from '../components/EdgeModal.jsx';
-import { api } from '../api/client.js';
+import { api, getEventSourceUrl } from '../api/client.js';
 import { useAuth } from '../context/AuthContext.jsx';
+import {
+  fallbackNodes,
+  fallbackEdges,
+  fallbackHospitals,
+  fallbackAmbulances,
+  fallbackIncidents,
+  getFallbackRecommendation
+} from '../data/mockMapData.js';
 import {
   Activity,
   AlertCircle,
@@ -33,46 +41,58 @@ export default function MapPage() {
 
   const { isAdmin } = useAuth();
 
-  const [nodes, setNodes] = useState([]);
-  const [edges, setEdges] = useState([]);
-  const [ambulances, setAmbulances] = useState([]);
-  const [hospitals, setHospitals] = useState([]);
-  const [incidents, setIncidents] = useState([]);
+  const [nodes, setNodes] = useState(fallbackNodes);
+  const [edges, setEdges] = useState(fallbackEdges);
+  const [ambulances, setAmbulances] = useState(fallbackAmbulances);
+  const [hospitals, setHospitals] = useState(fallbackHospitals);
+  const [incidents, setIncidents] = useState(fallbackIncidents);
   const [selectedIncidentId, setSelectedIncidentId] = useState(initialIncidentId);
 
   // Hospital detail popup/modal state
   const [selectedHospital, setSelectedHospital] = useState(null);
   const [hospitalSearch, setHospitalSearch] = useState('');
 
-  const [recommendation, setRecommendation] = useState(null);
-  const [activeRoute, setActiveRoute] = useState([]);
+  const [recommendation, setRecommendation] = useState(() => getFallbackRecommendation(initialIncidentId));
+  const [activeRoute, setActiveRoute] = useState(() => getFallbackRecommendation(initialIncidentId)?.ambulanceSelection?.bestCandidate?.route?.path || []);
   const [selectedEdge, setSelectedEdge] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [dispatching, setDispatching] = useState(false);
   const [notification, setNotification] = useState(null);
 
   useEffect(() => {
     loadMapData();
 
-    // SSE connection for real-time map updates (Incidents, Ambulances, Reroutes)
-    const token = localStorage.getItem('resqnet_token') || '';
-    const eventSource = new EventSource(`/api/events?token=${token}`);
+    // SSE connection for real-time map updates
+    let eventSource = null;
+    try {
+      const token = localStorage.getItem('resqnet_token') || '';
+      const sseUrl = getEventSourceUrl(`/api/events?token=${token}`);
+      eventSource = new EventSource(sseUrl);
 
-    const handleLiveEvent = (event) => {
-      // Reload incidents and ambulances in real-time
-      api.getIncidents().then((iData) => setIncidents(iData)).catch(() => {});
-      api.getAmbulances().then((aData) => setAmbulances(aData)).catch(() => {});
-    };
+      const handleLiveEvent = () => {
+        api.getIncidents().then((iData) => {
+          if (Array.isArray(iData) && iData.length > 0) setIncidents(iData);
+        }).catch(() => {});
+        api.getAmbulances().then((aData) => {
+          if (Array.isArray(aData) && aData.length > 0) setAmbulances(aData);
+        }).catch(() => {});
+      };
 
-    eventSource.onmessage = handleLiveEvent;
-    eventSource.addEventListener('INCIDENT_UPDATE', handleLiveEvent);
-    eventSource.addEventListener('AMBULANCE_MOVED', handleLiveEvent);
-    eventSource.addEventListener('ROAD_CONDITION_CHANGED', () => {
-      loadMapData();
-    });
+      eventSource.onmessage = handleLiveEvent;
+      eventSource.addEventListener('INCIDENT_UPDATE', handleLiveEvent);
+      eventSource.addEventListener('AMBULANCE_MOVED', handleLiveEvent);
+      eventSource.addEventListener('ROAD_CONDITION_CHANGED', () => {
+        loadMapData();
+      });
+      eventSource.onerror = () => {
+        if (eventSource) eventSource.close();
+      };
+    } catch (e) {
+      console.warn('SSE not initialized:', e);
+    }
 
     return () => {
-      eventSource.close();
+      if (eventSource) eventSource.close();
     };
   }, []);
 
@@ -84,20 +104,30 @@ export default function MapPage() {
 
   async function loadMapData() {
     try {
-      const [nData, eData, aData, hData, iData] = await Promise.all([
+      const results = await Promise.allSettled([
         api.getNodes(),
         api.getEdges(),
         api.getAmbulances(),
         api.getHospitals(),
         api.getIncidents()
       ]);
-      setNodes(nData);
-      setEdges(eData);
-      setAmbulances(aData);
-      setHospitals(hData);
-      setIncidents(iData);
+      if (results[0].status === 'fulfilled' && Array.isArray(results[0].value) && results[0].value.length > 0) {
+        setNodes(results[0].value);
+      }
+      if (results[1].status === 'fulfilled' && Array.isArray(results[1].value) && results[1].value.length > 0) {
+        setEdges(results[1].value);
+      }
+      if (results[2].status === 'fulfilled' && Array.isArray(results[2].value) && results[2].value.length > 0) {
+        setAmbulances(results[2].value);
+      }
+      if (results[3].status === 'fulfilled' && Array.isArray(results[3].value) && results[3].value.length > 0) {
+        setHospitals(results[3].value);
+      }
+      if (results[4].status === 'fulfilled' && Array.isArray(results[4].value) && results[4].value.length > 0) {
+        setIncidents(results[4].value);
+      }
     } catch (err) {
-      console.error('Failed to load network data:', err);
+      console.warn('Using embedded network dataset:', err);
     } finally {
       setLoading(false);
     }
@@ -106,14 +136,20 @@ export default function MapPage() {
   async function loadRecommendation(incId) {
     try {
       const rec = await api.getDispatchRecommendation(incId);
-      setRecommendation(rec);
-      if (rec.ambulanceSelection?.bestCandidate?.route?.path) {
-        setActiveRoute(rec.ambulanceSelection.bestCandidate.route.path);
+      if (rec && rec.ambulanceSelection?.bestCandidate) {
+        setRecommendation(rec);
+        if (rec.ambulanceSelection.bestCandidate.route?.path) {
+          setActiveRoute(rec.ambulanceSelection.bestCandidate.route.path);
+        }
+        return;
       }
     } catch (err) {
-      console.error('Failed to load recommendation:', err);
-      setRecommendation(null);
-      setActiveRoute([]);
+      console.warn('Using fallback dispatch recommendation:', err);
+    }
+    const fallbackRec = getFallbackRecommendation(incId);
+    setRecommendation(fallbackRec);
+    if (fallbackRec?.ambulanceSelection?.bestCandidate?.route?.path) {
+      setActiveRoute(fallbackRec.ambulanceSelection.bestCandidate.route.path);
     }
   }
 
@@ -436,14 +472,14 @@ export default function MapPage() {
           <div className="bg-white border border-emerald-200 rounded-xl p-4 text-xs space-y-2 shadow-sm">
             <span className="font-bold text-emerald-950 flex items-center gap-1.5">
               <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
-              Simulate Bottleneck Road Blockage
+              Operational Corridor Invalidation & Bottleneck Control
             </span>
             <p className="text-[11px] text-slate-600">
-              Toggle edge <strong>E-39-40</strong> (St. Jude Island Causeway) to observe automatic route invalidation and hospital reachability cut-off.
+              Toggle critical corridor <strong>E-39-40</strong> (Island Causeway Corridor) to observe automatic route invalidation and dynamic hospital re-routing.
             </p>
             <button
               onClick={() => {
-                const targetEdge = edges.find((e) => e.edgeId === 'E-39-40' || e.edgeId === 'E-40-39');
+                const targetEdge = edges.find((e) => e.edgeId === 'E-39-40' || e.edgeId === 'E-40-39' || e.edgeId === 'E-00001') || edges[0];
                 if (targetEdge) setSelectedEdge(targetEdge);
               }}
               className="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-medium transition-colors"

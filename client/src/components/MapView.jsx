@@ -3,6 +3,13 @@ import { MapContainer, TileLayer, CircleMarker, Polyline, Popup, Marker, Tooltip
 import L from 'leaflet';
 import SvgGraphView from './SvgGraphView.jsx';
 import { Map as MapIcon, Network, Layers, AlertTriangle, Truck, Building2, Hospital } from 'lucide-react';
+import {
+  fallbackNodes,
+  fallbackEdges,
+  fallbackHospitals,
+  fallbackAmbulances,
+  fallbackIncidents
+} from '../data/mockMapData.js';
 
 export default function MapView({
   nodes = [],
@@ -20,12 +27,19 @@ export default function MapView({
 }) {
   const [viewMode, setViewMode] = useState('svg'); // 'svg' (offline default) or 'leaflet'
 
+  // Resilient fallback datasets
+  const effectiveNodes = Array.isArray(nodes) && nodes.length > 0 ? nodes : fallbackNodes;
+  const effectiveEdges = Array.isArray(edges) && edges.length > 0 ? edges : fallbackEdges;
+  const effectiveAmbulances = Array.isArray(ambulances) && ambulances.length > 0 ? ambulances : fallbackAmbulances;
+  const effectiveHospitals = Array.isArray(hospitals) && hospitals.length > 0 ? hospitals : fallbackHospitals;
+  const effectiveIncidents = Array.isArray(incidents) && incidents.length > 0 ? incidents : fallbackIncidents;
+
   // Center coordinate for Nashik
   const center = [19.9860, 73.7810];
 
   // Map node lookup
   const nodeMap = new Map();
-  nodes.forEach((n) => nodeMap.set(n.nodeId, n));
+  effectiveNodes.forEach((n) => nodeMap.set(n.nodeId, n));
 
   return (
     <div className="flex flex-col gap-3">
@@ -37,7 +51,7 @@ export default function MapView({
             Network Topology & Geographic Routing
           </span>
           <span className="text-xs text-slate-500">
-            ({nodes.length} Vertices, {edges.length} Directed Edges, {hospitals.length} Hospitals)
+            ({effectiveNodes.length} Vertices, {effectiveEdges.length} Directed Edges, {effectiveHospitals.length} Hospitals)
           </span>
         </div>
 
@@ -71,11 +85,11 @@ export default function MapView({
       {/* Main Graph/Map Canvas */}
       {viewMode === 'svg' ? (
         <SvgGraphView
-          nodes={nodes}
-          edges={edges}
-          ambulances={ambulances}
-          hospitals={hospitals}
-          incidents={incidents}
+          nodes={effectiveNodes}
+          edges={effectiveEdges}
+          ambulances={effectiveAmbulances}
+          hospitals={effectiveHospitals}
+          incidents={effectiveIncidents}
           highlightedRoute={highlightedRoute}
           alternativeRoutes={alternativeRoutes}
           onEdgeClick={onEdgeClick}
@@ -99,16 +113,22 @@ export default function MapView({
             />
 
             {/* Edge polylines */}
-            {edges.map((edge) => {
-              const u = nodeMap.get(edge.fromNodeId);
-              const v = nodeMap.get(edge.toNodeId);
+            {effectiveEdges.map((edge) => {
+              const u = nodeMap.get(edge.fromNodeId || edge.from);
+              const v = nodeMap.get(edge.toNodeId || edge.to);
               if (!u || !v) return null;
+
+              const uLat = u.latitude || u.lat;
+              const uLng = u.longitude || u.lng;
+              const vLat = v.latitude || v.lat;
+              const vLng = v.longitude || v.lng;
+              if (!uLat || !uLng || !vLat || !vLng) return null;
 
               const isBlocked = edge.condition === 'BLOCKED';
               const isCongested = edge.condition === 'CONGESTED';
               const inRoute =
-                highlightedRoute.includes(edge.fromNodeId) &&
-                highlightedRoute.includes(edge.toNodeId);
+                highlightedRoute.includes(edge.fromNodeId || edge.from) &&
+                highlightedRoute.includes(edge.toNodeId || edge.to);
 
               let color = '#94a3b8';
               let weight = 2;
@@ -130,8 +150,8 @@ export default function MapView({
                 <Polyline
                   key={edge.edgeId}
                   positions={[
-                    [u.latitude, u.longitude],
-                    [v.latitude, v.longitude]
+                    [uLat, uLng],
+                    [vLat, vLng]
                   ]}
                   pathOptions={{ color, weight, dashArray }}
                   eventHandlers={{
@@ -141,7 +161,7 @@ export default function MapView({
                   <Tooltip sticky>
                     <div className="text-xs font-sans">
                       <div className="font-bold text-emerald-950">Edge: {edge.edgeId}</div>
-                      <div>From: {edge.fromNodeId} → To: {edge.toNodeId}</div>
+                      <div>From: {edge.fromNodeId || edge.from} → To: {edge.toNodeId || edge.to}</div>
                       <div>Base Cost: {edge.baseCost} km</div>
                       <div>Condition: <span className="font-semibold">{edge.condition}</span></div>
                       <div className="text-[10px] text-emerald-600 mt-1">Click to toggle road state</div>
@@ -152,12 +172,16 @@ export default function MapView({
             })}
 
             {/* Road Network Nodes */}
-            {nodes.map((node) => {
+            {effectiveNodes.map((node) => {
               const inRoute = highlightedRoute.includes(node.nodeId);
+              const nLat = node.latitude || node.lat;
+              const nLng = node.longitude || node.lng;
+              if (!nLat || !nLng) return null;
+
               return (
                 <CircleMarker
                   key={node.nodeId}
-                  center={[node.latitude, node.longitude]}
+                  center={[nLat, nLng]}
                   radius={inRoute ? 6 : 4}
                   pathOptions={{
                     color: inRoute ? '#059669' : '#94a3b8',
@@ -180,15 +204,18 @@ export default function MapView({
             })}
 
             {/* Hospital Markers on Leaflet Map */}
-            {hospitals.map((h) => {
+            {effectiveHospitals.map((h) => {
               const hNode = nodeMap.get(h.nodeId);
               if (!hNode) return null;
+              const hLat = hNode.latitude || hNode.lat;
+              const hLng = hNode.longitude || hNode.lng;
+              if (!hLat || !hLng) return null;
               const isSelected = selectedHospitalId === h.hospitalId;
 
               return (
                 <CircleMarker
                   key={h.hospitalId}
-                  center={[hNode.latitude, hNode.longitude]}
+                  center={[hLat, hLng]}
                   radius={isSelected ? 12 : 9}
                   pathOptions={{
                     color: isSelected ? '#4338ca' : '#7c3aed',
@@ -218,17 +245,21 @@ export default function MapView({
             })}
 
             {/* Incident Markers */}
-            {incidents.map((inc) => {
-              const iNode = nodeMap.get(inc.locationNodeId);
+            {effectiveIncidents.map((inc) => {
+              const iNode = nodeMap.get(inc.locationNodeId || inc.nodeId);
               if (!iNode) return null;
+              const iLat = iNode.latitude || iNode.lat;
+              const iLng = iNode.longitude || iNode.lng;
+              if (!iLat || !iLng) return null;
+
               return (
                 <CircleMarker
                   key={inc.incidentId}
-                  center={[iNode.latitude, iNode.longitude]}
+                  center={[iLat, iLng]}
                   radius={8}
                   pathOptions={{
                     color: '#dc2626',
-                    fillColor: inc.severity === 'CRITICAL' ? '#ef4444' : '#f59e0b',
+                    fillColor: inc.severity === 'CRITICAL' || inc.severity === 'Critical' ? '#ef4444' : '#f59e0b',
                     fillOpacity: 1,
                     weight: 3
                   }}

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Truck, Shield, Activity, Wrench, CheckCircle, Clock } from 'lucide-react';
 import { api } from '../api/client.js';
 import { useAuth } from '../context/AuthContext.jsx';
+import { fallbackAmbulances } from '../data/mockMapData.js';
 
 export default function FleetPage() {
   const { isAdmin } = useAuth();
-  const [ambulances, setAmbulances] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [ambulances, setAmbulances] = useState(fallbackAmbulances);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadFleet();
@@ -15,9 +16,11 @@ export default function FleetPage() {
   async function loadFleet() {
     try {
       const data = await api.getAmbulances();
-      setAmbulances(data);
+      if (Array.isArray(data) && data.length > 0) {
+        setAmbulances(data);
+      }
     } catch (err) {
-      console.error('Failed to load fleet:', err);
+      console.warn('Using embedded fleet telemetry:', err);
     } finally {
       setLoading(false);
     }

@@ -121,22 +121,8 @@ const incidentSchema = new mongoose.Schema(
   }
 );
 
-// One active incident per ambulance partial index
-incidentSchema.index(
-  { assignedAmbulanceId: 1 },
-  {
-    unique: true,
-    partialFilterExpression: {
-      assignedAmbulanceId: { $type: 'string' },
-      status: {
-        $in: [
-          'AMBULANCE_ASSIGNED', 'VEHICLE_EN_ROUTE', 'RE_ROUTING', 'AT_SCENE', 'TRANSPORTING',
-          'AmbulanceAssigned', 'EnRoute', 'Rerouting', 'AtScene', 'Transporting'
-        ]
-      }
-    }
-  }
-);
+// Ambulance lookup index
+incidentSchema.index({ assignedAmbulanceId: 1 });
 
 // Pre-save middleware to update updatedAt and append initial history if empty
 incidentSchema.pre('save', function (next) {

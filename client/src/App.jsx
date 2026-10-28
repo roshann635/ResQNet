@@ -23,7 +23,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-emerald-600 selection:text-white">
+        <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-emerald-600 selection:text-white overflow-x-hidden w-full max-w-full">
           {/* Persistent Operational Status Banner */}
           <Banner />
 

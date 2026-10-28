@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   body {
     @apply bg-white text-slate-800 font-sans selection:bg-emerald-600 selection:text-white antialiased;
     background-color: #ffffff;

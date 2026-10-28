@@ -37,7 +37,7 @@ export default function Banner() {
             </span>
           )}
 
-          <span className="text-emerald-700 text-[11px] hidden sm:inline">
+          <span className="text-emerald-700 text-[11px] hidden lg:inline">
             Nashik Operational Sector (19.99°N, 73.78°E)
           </span>
         </div>

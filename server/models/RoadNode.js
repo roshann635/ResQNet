@@ -22,6 +22,16 @@ const roadNodeSchema = new mongoose.Schema(
       type: Number,
       required: true
     },
+    lat: {
+      type: Number
+    },
+    lng: {
+      type: Number
+    },
+    type: {
+      type: String,
+      default: 'junction'
+    },
     zone: {
       type: String,
       required: true,
@@ -36,6 +46,15 @@ const roadNodeSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
       index: true
+    },
+    scenario: {
+      type: String,
+      default: 'default',
+      index: true
+    },
+    landmark: {
+      type: Boolean,
+      default: false
     }
   },
   {

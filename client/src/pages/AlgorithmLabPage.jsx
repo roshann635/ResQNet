@@ -13,18 +13,29 @@ import {
   ArrowRight,
   CheckCircle,
   AlertTriangle,
-  Info
+  Info,
+  Layers,
+  Route,
+  Flag
 } from 'lucide-react';
 import { api } from '../api/client.js';
+import RouteSimulationCanvas from '../components/RouteSimulationCanvas.jsx';
 
 export default function AlgorithmLabPage() {
   const [nodes, setNodes] = useState([]);
+  const [edges, setEdges] = useState([]);
   const [algorithm, setAlgorithm] = useState('DIJKSTRA');
   const [source, setSource] = useState('N-01');
   const [destination, setDestination] = useState('N-15');
   const [heuristic, setHeuristic] = useState('EUCLIDEAN');
   const [maxHops, setMaxHops] = useState(12);
   const [maxCost, setMaxCost] = useState(50.0);
+
+  // Scenario and Showcase state (Phase A)
+  const [scenario, setScenario] = useState('default');
+  const [scenariosList, setScenariosList] = useState([]);
+  const [showcasePairs, setShowcasePairs] = useState([]);
+  const [selectedPairId, setSelectedPairId] = useState('');
 
   // Playback state
   const [executionResult, setExecutionResult] = useState(null);
@@ -47,16 +58,71 @@ export default function AlgorithmLabPage() {
   const [sampleKeysStatus, setSampleKeysStatus] = useState(null);
 
   useEffect(() => {
-    async function loadNodes() {
+    async function loadInitialData() {
       try {
-        const data = await api.getNodes();
+        const scenData = await api.getActiveScenario();
+        if (scenData && scenData.scenario) {
+          setScenario(scenData.scenario.id);
+          setShowcasePairs(scenData.showcasePairs || []);
+        }
+        const scenList = await api.getScenarios();
+        if (scenList && scenList.scenarios) {
+          setScenariosList(scenList.scenarios);
+        }
+        const [data, edgeData] = await Promise.all([api.getNodes(), api.getEdges()]);
         setNodes(data);
+        setEdges(edgeData);
+        if (scenData?.showcasePairs?.length > 0) {
+          setSource(scenData.showcasePairs[0].sourceNodeId);
+          setDestination(scenData.showcasePairs[0].destinationNodeId);
+          setSelectedPairId(scenData.showcasePairs[0].id);
+        } else if (data.length > 0) {
+          setSource(data[0].nodeId);
+          setDestination(data[Math.min(14, data.length - 1)].nodeId);
+        }
       } catch (err) {
-        console.error(err);
+        console.error('Failed to load lab initial data:', err);
       }
     }
-    loadNodes();
+    loadInitialData();
   }, []);
+
+  const handleScenarioChange = async (e) => {
+    const newScen = e.target.value;
+    try {
+      await api.switchScenario({ scenario: newScen });
+      setScenario(newScen);
+      const scenData = await api.getActiveScenario();
+      setShowcasePairs(scenData.showcasePairs || []);
+      const [data, edgeData] = await Promise.all([api.getNodes(), api.getEdges()]);
+      setNodes(data);
+      setEdges(edgeData);
+      if (scenData?.showcasePairs?.length > 0) {
+        setSource(scenData.showcasePairs[0].sourceNodeId);
+        setDestination(scenData.showcasePairs[0].destinationNodeId);
+        setSelectedPairId(scenData.showcasePairs[0].id);
+      } else if (data.length > 0) {
+        setSource(data[0].nodeId);
+        setDestination(data[Math.min(14, data.length - 1)].nodeId);
+        setSelectedPairId('');
+      }
+      setExecutionResult(null);
+      setComparisonData(null);
+    } catch (err) {
+      alert(`Failed to switch scenario: ${err.message}`);
+    }
+  };
+
+  const handleSelectShowcasePair = (e) => {
+    const pairId = e.target.value;
+    setSelectedPairId(pairId);
+    const pair = showcasePairs.find((p) => p.id === pairId);
+    if (pair) {
+      setSource(pair.sourceNodeId);
+      setDestination(pair.destinationNodeId);
+      setExecutionResult(null);
+    }
+  };
 
   // Stepper playback logic
   useEffect(() => {
@@ -85,7 +151,8 @@ export default function AlgorithmLabPage() {
         source,
         destination,
         heuristic,
-        limits: { maxHops, maxCost, maxResults: 5 }
+        limits: { maxHops, maxCost, maxResults: 5 },
+        trace: true
       });
       setExecutionResult(res);
       setCurrentStepIndex(0);
@@ -139,23 +206,23 @@ export default function AlgorithmLabPage() {
   return (
     <div className="space-y-6">
       {/* Header & Sub-Tabs */}
-      <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-white border border-emerald-200 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
-            <Cpu className="w-5 h-5 text-cyan-400" />
+          <h1 className="text-xl font-bold text-emerald-950 flex items-center gap-2">
+            <Cpu className="w-5 h-5 text-emerald-600" />
             DSA Algorithm Lab & Stepper Playback
           </h1>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-600">
             Interactive step-by-step state playback, theoretical Big-O vs measured runtime, and custom data structure demos.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs">
+        <div className="w-full sm:w-auto flex items-center overflow-x-auto p-1 bg-emerald-50/60 rounded-xl border border-emerald-200 text-xs no-scrollbar">
           <button
             onClick={() => setActiveTab('runner')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
-              activeTab === 'runner' ? 'bg-cyan-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
+              activeTab === 'runner' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
             Algorithm Stepper
@@ -165,8 +232,8 @@ export default function AlgorithmLabPage() {
               setActiveTab('comparison');
               if (!comparisonData) handleRunComparison();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
-              activeTab === 'comparison' ? 'bg-cyan-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
+              activeTab === 'comparison' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
             5-Way Comparison
@@ -176,8 +243,8 @@ export default function AlgorithmLabPage() {
               setActiveTab('hashtable');
               if (!hashResult) handleHashLookup();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
-              activeTab === 'hashtable' ? 'bg-cyan-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
+              activeTab === 'hashtable' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
             Hash Table
@@ -187,8 +254,8 @@ export default function AlgorithmLabPage() {
               setActiveTab('bplustree');
               if (!bplusResult) handleBPlusQuery();
             }}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
-              activeTab === 'bplustree' ? 'bg-cyan-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-colors shrink-0 ${
+              activeTab === 'bplustree' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-emerald-950'
             }`}
           >
             B+ Tree
@@ -200,17 +267,75 @@ export default function AlgorithmLabPage() {
       {activeTab === 'runner' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Controls Panel (1 Col) */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-bold text-white uppercase tracking-wider text-xs">
+          <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-4">
+            <h2 className="text-sm font-bold text-emerald-950 uppercase tracking-wider text-xs">
               Search Parameters
             </h2>
 
+            {/* Scenario Selector */}
             <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-1">Select Algorithm</label>
+              <div className="flex items-center justify-between mb-1">
+                <label className="text-xs font-semibold text-emerald-950 flex items-center gap-1">
+                  <Layers className="w-3.5 h-3.5 text-emerald-700" />
+                  Road Network Scenario
+                </label>
+                <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                  {nodes.length} nodes
+                </span>
+              </div>
+              <select
+                value={scenario}
+                onChange={handleScenarioChange}
+                className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-emerald-600"
+              >
+                {scenariosList.length > 0 ? (
+                  scenariosList.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.name} ({s.nodeCount} nodes, {s.edgeCount} edges)
+                    </option>
+                  ))
+                ) : (
+                  <>
+                    <option value="default">Nashik Academic Campus (40 nodes)</option>
+                    <option value="city-dense">City-Dense Metropolitan (1,520 nodes)</option>
+                  </>
+                )}
+              </select>
+            </div>
+
+            {/* Preset Showcase Pairs */}
+            {showcasePairs.length > 0 && (
+              <div className="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200 space-y-2">
+                <label className="block text-xs font-bold text-emerald-950 flex items-center gap-1">
+                  <Flag className="w-3.5 h-3.5 text-amber-600" />
+                  Preset Showcase Pairs
+                </label>
+                <select
+                  value={selectedPairId}
+                  onChange={handleSelectShowcasePair}
+                  className="w-full bg-white border border-emerald-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-emerald-600 font-medium"
+                >
+                  <option value="">-- Choose Evaluation Challenge --</option>
+                  {showcasePairs.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.name} ({p.sourceNodeId} → {p.destinationNodeId})
+                    </option>
+                  ))}
+                </select>
+                {selectedPairId && (
+                  <p className="text-[11px] text-emerald-900 leading-snug bg-white/80 p-2 rounded-md border border-emerald-200">
+                    {showcasePairs.find((p) => p.id === selectedPairId)?.description}
+                  </p>
+                )}
+              </div>
+            )}
+
+            <div>
+              <label className="block text-xs font-semibold text-emerald-950 mb-1">Select Algorithm</label>
               <select
                 value={algorithm}
                 onChange={(e) => setAlgorithm(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
+                className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
               >
                 <option value="DIJKSTRA">Dijkstra's Algorithm (MinHeap)</option>
                 <option value="ASTAR">A* Heuristic Search</option>
@@ -222,11 +347,11 @@ export default function AlgorithmLabPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Source Vertex</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Source Vertex</label>
                 <select
                   value={source}
                   onChange={(e) => setSource(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-2 text-xs text-white"
+                  className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-2.5 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
                 >
                   {nodes.map((n) => (
                     <option key={n.nodeId} value={n.nodeId}>
@@ -237,11 +362,11 @@ export default function AlgorithmLabPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Target Vertex</label>
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">Target Vertex</label>
                 <select
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-2 text-xs text-white"
+                  className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-2.5 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
                 >
                   {nodes.map((n) => (
                     <option key={n.nodeId} value={n.nodeId}>
@@ -254,13 +379,13 @@ export default function AlgorithmLabPage() {
 
             {algorithm === 'ASTAR' && (
               <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">
+                <label className="block text-xs font-semibold text-emerald-950 mb-1">
                   A* Heuristic Strategy
                 </label>
                 <select
                   value={heuristic}
                   onChange={(e) => setHeuristic(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
                 >
                   <option value="EUCLIDEAN">Euclidean Projected Distance (Admissible)</option>
                   <option value="HAVERSINE">Haversine Great-Circle (Admissible)</option>
@@ -272,18 +397,18 @@ export default function AlgorithmLabPage() {
             {algorithm === 'BACKTRACKING' && (
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Max Hops ({maxHops})</label>
+                  <label className="block text-xs font-semibold text-emerald-950 mb-1">Max Hops ({maxHops})</label>
                   <input
                     type="range"
                     min="4"
                     max="18"
                     value={maxHops}
                     onChange={(e) => setMaxHops(parseInt(e.target.value))}
-                    className="w-full accent-cyan-500"
+                    className="w-full accent-emerald-600"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Max Cost ({maxCost} km)</label>
+                  <label className="block text-xs font-semibold text-emerald-950 mb-1">Max Cost ({maxCost} km)</label>
                   <input
                     type="range"
                     min="10"
@@ -291,7 +416,7 @@ export default function AlgorithmLabPage() {
                     step="5"
                     value={maxCost}
                     onChange={(e) => setMaxCost(parseFloat(e.target.value))}
-                    className="w-full accent-cyan-500"
+                    className="w-full accent-emerald-600"
                   />
                 </div>
               </div>
@@ -300,16 +425,16 @@ export default function AlgorithmLabPage() {
             <div className="pt-2 flex flex-col gap-2">
               <button
                 onClick={handleRunAlgorithm}
-                className="w-full py-2.5 rounded-lg text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white shadow transition-all flex items-center justify-center gap-1.5"
+                className="w-full py-2.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all flex items-center justify-center gap-1.5"
               >
                 <Play className="w-3.5 h-3.5" />
                 Execute & Trace Exploration
               </button>
               <button
                 onClick={handleRunComparison}
-                className="w-full py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-colors flex items-center justify-center gap-1.5"
+                className="w-full py-2 rounded-lg text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition-colors flex items-center justify-center gap-1.5"
               >
-                <BarChart2 className="w-3.5 h-3.5 text-cyan-400" />
+                <BarChart2 className="w-3.5 h-3.5 text-emerald-600" />
                 Compare All 5 Algorithms
               </button>
             </div>
@@ -319,16 +444,30 @@ export default function AlgorithmLabPage() {
           <div className="lg:col-span-2 space-y-4">
             {executionResult ? (
               <>
+                {/* Part F Signature Route Simulation Canvas */}
+                <RouteSimulationCanvas
+                  nodes={nodes}
+                  edges={edges}
+                  sourceNodeId={source}
+                  destinationNodeId={destination}
+                  algorithm={algorithm}
+                  simulationSteps={executionResult.steps || []}
+                  finalPath={executionResult.route || executionResult.path || []}
+                  finalCost={executionResult.cost || 0}
+                  graphVersion={executionResult.graphVersion || 1}
+                  ambulanceCallSign="Lab-Probe-1"
+                />
+
                 {/* Playback Controls & Progress Bar */}
-                <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-sm space-y-3">
+                <div className="bg-white border border-emerald-200 rounded-xl p-4 shadow-sm space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setIsPlaying(!isPlaying)}
                         className={`p-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
                           isPlaying
-                            ? 'bg-amber-500 text-slate-950 shadow-md'
-                            : 'bg-cyan-600 text-white hover:bg-cyan-500'
+                            ? 'bg-amber-500 text-white shadow-sm'
+                            : 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm'
                         }`}
                       >
                         {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -341,7 +480,7 @@ export default function AlgorithmLabPage() {
                           setCurrentStepIndex((p) => Math.min((executionResult.steps?.length || 1) - 1, p + 1));
                         }}
                         disabled={currentStepIndex >= (executionResult.steps?.length || 1) - 1}
-                        className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 disabled:opacity-40 text-xs font-semibold flex items-center gap-1"
+                        className="p-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 disabled:opacity-40 text-xs font-semibold flex items-center gap-1 transition-colors"
                       >
                         <SkipForward className="w-4 h-4" />
                         Step
@@ -352,15 +491,15 @@ export default function AlgorithmLabPage() {
                           setIsPlaying(false);
                           setCurrentStepIndex(0);
                         }}
-                        className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs font-semibold"
+                        className="p-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-semibold transition-colors"
                         title="Reset to step 0"
                       >
                         <RotateCcw className="w-4 h-4" />
                       </button>
                     </div>
 
-                    <div className="text-xs font-mono text-slate-400">
-                      Step <span className="font-bold text-cyan-400">{currentStepIndex + 1}</span> of{' '}
+                    <div className="text-xs font-mono text-slate-600">
+                      Step <span className="font-bold text-emerald-700">{currentStepIndex + 1}</span> of{' '}
                       {executionResult.steps?.length || 0}
                     </div>
                   </div>
@@ -375,51 +514,51 @@ export default function AlgorithmLabPage() {
                       setIsPlaying(false);
                       setCurrentStepIndex(parseInt(e.target.value, 10));
                     }}
-                    className="w-full accent-cyan-500"
+                    className="w-full accent-emerald-600"
                   />
                 </div>
 
                 {/* Plain-English Step Explanation Card */}
                 {currentStep && (
-                  <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-3">
+                  <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-cyan-400 font-mono uppercase tracking-wider flex items-center gap-1.5">
+                      <span className="text-xs font-bold text-emerald-700 font-mono uppercase tracking-wider flex items-center gap-1.5">
                         <Info className="w-4 h-4" />
                         Action: {currentStep.action}
                       </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">
+                      <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
                         Node: {currentStep.nodeId}
                       </span>
                     </div>
 
-                    <div className="bg-slate-950 p-4 rounded-xl border border-slate-800/80 text-sm text-slate-200 leading-relaxed font-sans">
+                    <div className="bg-emerald-50/40 p-4 rounded-xl border border-emerald-200 text-sm text-slate-800 leading-relaxed font-sans">
                       {currentStep.explanation}
                     </div>
 
                     {/* Step details */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                       {currentStep.g !== undefined && (
-                        <div className="bg-slate-950 p-2 rounded-lg border border-slate-800">
-                          <span className="text-slate-400 text-[10px]">g(n) (Cumulative):</span>
-                          <div className="font-bold text-white">{currentStep.g} km</div>
+                        <div className="bg-emerald-50/50 p-2 rounded-lg border border-emerald-200">
+                          <span className="text-slate-600 text-[10px]">g(n) (Cumulative):</span>
+                          <div className="font-bold text-emerald-950">{currentStep.g} km</div>
                         </div>
                       )}
                       {currentStep.h !== undefined && (
-                        <div className="bg-slate-950 p-2 rounded-lg border border-slate-800">
-                          <span className="text-slate-400 text-[10px]">h(n) (Heuristic):</span>
-                          <div className="font-bold text-amber-400">{currentStep.h} km</div>
+                        <div className="bg-emerald-50/50 p-2 rounded-lg border border-emerald-200">
+                          <span className="text-slate-600 text-[10px]">h(n) (Heuristic):</span>
+                          <div className="font-bold text-amber-700">{currentStep.h} km</div>
                         </div>
                       )}
                       {currentStep.f !== undefined && (
-                        <div className="bg-slate-950 p-2 rounded-lg border border-slate-800">
-                          <span className="text-slate-400 text-[10px]">f(n) = g + h:</span>
-                          <div className="font-bold text-cyan-400">{currentStep.f} km</div>
+                        <div className="bg-emerald-50/50 p-2 rounded-lg border border-emerald-200">
+                          <span className="text-slate-600 text-[10px]">f(n) = g + h:</span>
+                          <div className="font-bold text-emerald-700">{currentStep.f} km</div>
                         </div>
                       )}
                       {currentStep.cost !== undefined && (
-                        <div className="bg-slate-950 p-2 rounded-lg border border-slate-800">
-                          <span className="text-slate-400 text-[10px]">Settled Cost:</span>
-                          <div className="font-bold text-emerald-400">{currentStep.cost} km</div>
+                        <div className="bg-emerald-50/50 p-2 rounded-lg border border-emerald-200">
+                          <span className="text-slate-600 text-[10px]">Settled Cost:</span>
+                          <div className="font-bold text-emerald-700">{currentStep.cost} km</div>
                         </div>
                       )}
                     </div>
@@ -427,41 +566,41 @@ export default function AlgorithmLabPage() {
                 )}
 
                 {/* Final Execution Summary */}
-                <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-3">
-                  <h3 className="text-xs font-bold text-white uppercase tracking-wider">
+                <div className="bg-white border border-emerald-200 rounded-xl p-5 shadow-sm space-y-3">
+                  <h3 className="text-xs font-bold text-emerald-950 uppercase tracking-wider">
                     Execution Metrics & Result
                   </h3>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
-                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
-                      <span className="text-slate-400 text-[10px]">Total Route Cost:</span>
-                      <div className="text-base font-bold text-cyan-400">
+                    <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200">
+                      <span className="text-slate-600 text-[10px]">Total Route Cost:</span>
+                      <div className="text-base font-bold text-emerald-700">
                         {executionResult.cost !== undefined ? `${executionResult.cost} km` : 'N/A'}
                       </div>
                     </div>
-                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
-                      <span className="text-slate-400 text-[10px]">Nodes Expanded:</span>
-                      <div className="text-base font-bold text-white">{executionResult.nodesExpanded}</div>
+                    <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200">
+                      <span className="text-slate-600 text-[10px]">Nodes Expanded:</span>
+                      <div className="text-base font-bold text-emerald-950">{executionResult.nodesExpanded}</div>
                     </div>
-                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
-                      <span className="text-slate-400 text-[10px]">Edges Examined:</span>
-                      <div className="text-base font-bold text-white">{executionResult.edgesExamined}</div>
+                    <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200">
+                      <span className="text-slate-600 text-[10px]">Edges Examined:</span>
+                      <div className="text-base font-bold text-emerald-950">{executionResult.edgesExamined}</div>
                     </div>
-                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
-                      <span className="text-slate-400 text-[10px]">Measured Runtime:</span>
-                      <div className="text-base font-bold text-emerald-400">{executionResult.runtimeMs} ms</div>
+                    <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200">
+                      <span className="text-slate-600 text-[10px]">Measured Runtime:</span>
+                      <div className="text-base font-bold text-emerald-700">{executionResult.runtimeMs} ms</div>
                     </div>
                   </div>
 
                   {executionResult.path && (
-                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs font-mono">
-                      <span className="text-slate-400 block mb-1">Resulting Path Sequence:</span>
-                      <span className="text-cyan-400 font-bold">{executionResult.path.join(' → ')}</span>
+                    <div className="bg-emerald-50/50 p-3 rounded-lg border border-emerald-200 text-xs font-mono">
+                      <span className="text-slate-600 block mb-1">Resulting Path Sequence:</span>
+                      <span className="text-emerald-800 font-bold">{executionResult.path.join(' → ')}</span>
                     </div>
                   )}
                 </div>
               </>
             ) : (
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-12 text-center text-slate-400 text-xs">
+              <div className="bg-white border border-emerald-200 rounded-xl p-12 text-center text-slate-600 text-xs shadow-sm">
                 Select an algorithm and click <strong>"Execute & Trace Exploration"</strong> to launch the step-by-step playback engine.
               </div>
             )}
@@ -471,20 +610,20 @@ export default function AlgorithmLabPage() {
 
       {/* TAB 2: SIDE-BY-SIDE 5-WAY COMPARISON (AT-17) */}
       {activeTab === 'comparison' && (
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm space-y-5">
+        <div className="bg-white border border-emerald-200 rounded-xl p-6 shadow-sm space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <BarChart2 className="w-5 h-5 text-cyan-400" />
+              <h2 className="text-base font-bold text-emerald-950 flex items-center gap-2">
+                <BarChart2 className="w-5 h-5 text-emerald-600" />
                 Algorithm Performance & Complexity Comparison (AT-17)
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-600">
                 Executed simultaneously on the identical road network snapshot from {source} to {destination}.
               </p>
             </div>
             <button
               onClick={handleRunComparison}
-              className="px-4 py-2 rounded-lg text-xs font-semibold bg-cyan-600 hover:bg-cyan-500 text-white"
+              className="px-4 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors"
             >
               Re-run Comparative Benchmark
             </button>
@@ -494,7 +633,7 @@ export default function AlgorithmLabPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="border-b border-slate-800 text-slate-400 uppercase text-[10px] font-mono">
+                  <tr className="border-b border-emerald-200 text-slate-600 bg-emerald-50/60 uppercase text-[10px] font-mono">
                     <th className="py-3 px-3">Algorithm</th>
                     <th className="py-3 px-3">Paradigm</th>
                     <th className="py-3 px-3">Theoretical Time Complexity</th>
@@ -505,23 +644,23 @@ export default function AlgorithmLabPage() {
                     <th className="py-3 px-3">Optimal?</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/60 font-mono">
+                <tbody className="divide-y divide-emerald-100 font-mono">
                   {comparisonData.map((item) => (
-                    <tr key={item.algorithm} className="hover:bg-slate-800/40">
-                      <td className="py-3 px-3 font-bold text-white font-sans">{item.algorithm}</td>
-                      <td className="py-3 px-3 text-slate-400 font-sans">{item.paradigm}</td>
-                      <td className="py-3 px-3 text-cyan-400 font-semibold">{item.theoreticalComplexity}</td>
-                      <td className="py-3 px-3 text-emerald-400 font-bold">{item.measuredRuntimeMs} ms</td>
-                      <td className="py-3 px-3 text-slate-200">{item.nodesExpanded}</td>
-                      <td className="py-3 px-3 text-slate-200">{item.edgesExamined}</td>
-                      <td className="py-3 px-3 text-amber-400 font-bold">{item.routeCost}</td>
+                    <tr key={item.algorithm} className="hover:bg-emerald-50/40">
+                      <td className="py-3 px-3 font-bold text-emerald-950 font-sans">{item.algorithm}</td>
+                      <td className="py-3 px-3 text-slate-600 font-sans">{item.paradigm}</td>
+                      <td className="py-3 px-3 text-emerald-700 font-semibold">{item.theoreticalComplexity}</td>
+                      <td className="py-3 px-3 text-emerald-700 font-bold">{item.measuredRuntimeMs} ms</td>
+                      <td className="py-3 px-3 text-slate-700">{item.nodesExpanded}</td>
+                      <td className="py-3 px-3 text-slate-700">{item.edgesExamined}</td>
+                      <td className="py-3 px-3 text-slate-800 font-bold">{item.routeCost}</td>
                       <td className="py-3 px-3">
                         {item.isOptimal ? (
-                          <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300">
                             YES (Guaranteed)
                           </span>
                         ) : (
-                          <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-300">
                             NO (Heuristic / Traversal)
                           </span>
                         )}
@@ -532,28 +671,28 @@ export default function AlgorithmLabPage() {
               </table>
             </div>
           ) : (
-            <div className="text-center p-8 text-xs text-slate-400">Loading benchmark...</div>
+            <div className="text-center p-8 text-xs text-slate-600">Loading benchmark...</div>
           )}
         </div>
       )}
 
       {/* TAB 3: CUSTOM HASH TABLE DEMO (Section 3.10) */}
       {activeTab === 'hashtable' && (
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm space-y-6">
+        <div className="bg-white border border-emerald-200 rounded-xl p-6 shadow-sm space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <Database className="w-5 h-5 text-cyan-400" />
+              <h2 className="text-base font-bold text-emerald-950 flex items-center gap-2">
+                <Database className="w-5 h-5 text-emerald-600" />
                 Custom Hash Table (Symbol Table) Demo
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-600">
                 Implemented with polynomial rolling hash, separate chaining collision resolution, and dynamic resizing (load factor &gt; 0.75).
               </p>
             </div>
 
             <button
               onClick={handleLoadSampleKeys}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-600 hover:bg-cyan-500 text-white"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors"
             >
               <Sparkles className="w-4 h-4" />
               Load 200 Sample Demo Keys
@@ -566,11 +705,11 @@ export default function AlgorithmLabPage() {
               value={hashSearchKey}
               onChange={(e) => setHashSearchKey(e.target.value)}
               placeholder="Search key (e.g. HOS-001, AMB-001, COLLIDE-A-01)..."
-              className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
+              className="flex-1 bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-emerald-600"
             />
             <button
               onClick={handleHashLookup}
-              className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold border border-slate-700"
+              className="px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-semibold border border-emerald-200 transition-colors"
             >
               Lookup
             </button>
@@ -578,37 +717,37 @@ export default function AlgorithmLabPage() {
 
           {hashResult && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2 text-xs font-mono">
-                <div className="text-slate-400 font-sans font-bold text-sm mb-2">Hash Metrics:</div>
+              <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-200 space-y-2 text-xs font-mono">
+                <div className="text-slate-600 font-sans font-bold text-sm mb-2">Hash Metrics:</div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Target Key:</span>
-                  <span className="text-white font-bold">{hashResult.key}</span>
+                  <span className="text-slate-600">Target Key:</span>
+                  <span className="text-emerald-950 font-bold">{hashResult.key}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Computed Hash Bucket Index:</span>
-                  <span className="text-cyan-400 font-bold">{hashResult.hashIndex}</span>
+                  <span className="text-slate-600">Computed Hash Bucket Index:</span>
+                  <span className="text-emerald-700 font-bold">{hashResult.hashIndex}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Bucket Chain Length:</span>
-                  <span className="text-slate-200 font-bold">{hashResult.bucketChainLength}</span>
+                  <span className="text-slate-600">Bucket Chain Length:</span>
+                  <span className="text-slate-800 font-bold">{hashResult.bucketChainLength}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Table Capacity:</span>
-                  <span className="text-slate-200">{hashResult.tableMetrics.capacity} buckets</span>
+                  <span className="text-slate-600">Table Capacity:</span>
+                  <span className="text-slate-800">{hashResult.tableMetrics.capacity} buckets</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Current Load Factor:</span>
-                  <span className="text-emerald-400 font-bold">{hashResult.tableMetrics.loadFactor}</span>
+                  <span className="text-slate-600">Current Load Factor:</span>
+                  <span className="text-emerald-700 font-bold">{hashResult.tableMetrics.loadFactor}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Total Recorded Collisions:</span>
-                  <span className="text-amber-400">{hashResult.tableMetrics.totalCollisions}</span>
+                  <span className="text-slate-600">Total Recorded Collisions:</span>
+                  <span className="text-amber-700 font-bold">{hashResult.tableMetrics.totalCollisions}</span>
                 </div>
               </div>
 
-              <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono">
-                <div className="text-slate-400 font-sans font-bold text-sm mb-2">Retrieved Record:</div>
-                <pre className="text-slate-300 text-[11px] overflow-x-auto p-2 bg-slate-900 rounded border border-slate-800 max-h-48">
+              <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-200 text-xs font-mono">
+                <div className="text-slate-600 font-sans font-bold text-sm mb-2">Retrieved Record:</div>
+                <pre className="text-slate-800 text-[11px] overflow-x-auto p-2 bg-white rounded border border-emerald-200 max-h-48">
                   {JSON.stringify(hashResult.value, null, 2)}
                 </pre>
               </div>
@@ -619,21 +758,21 @@ export default function AlgorithmLabPage() {
 
       {/* TAB 4: CUSTOM B+ TREE DEMO (Section 3.11) */}
       {activeTab === 'bplustree' && (
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm space-y-6">
+        <div className="bg-white border border-emerald-200 rounded-xl p-6 shadow-sm space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <TableIcon className="w-5 h-5 text-cyan-400" />
+              <h2 className="text-base font-bold text-emerald-950 flex items-center gap-2">
+                <TableIcon className="w-5 h-5 text-emerald-600" />
                 Custom B+ Tree Index & Range Query Demo
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-600">
                 Order-4 balanced tree with recursive node splitting, internal routing keys, and linked leaf nodes for O(log N + K) range searches.
               </p>
             </div>
 
             <button
               onClick={handleLoadSampleKeys}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-600 hover:bg-cyan-500 text-white"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors"
             >
               <Sparkles className="w-4 h-4" />
               Load Sample Keys
@@ -641,25 +780,25 @@ export default function AlgorithmLabPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-xs text-slate-400">Range Query [From → To]:</span>
+            <span className="text-xs text-slate-600">Range Query [From → To]:</span>
             <input
               type="text"
               value={bplusFrom}
               onChange={(e) => setBplusFrom(e.target.value)}
               placeholder="From Key (e.g. HOS-001)"
-              className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white font-mono w-32"
+              className="bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 font-mono w-32 focus:outline-none focus:border-emerald-600"
             />
-            <span className="text-slate-500">→</span>
+            <span className="text-slate-400">→</span>
             <input
               type="text"
               value={bplusTo}
               onChange={(e) => setBplusTo(e.target.value)}
               placeholder="To Key (e.g. HOS-005)"
-              className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white font-mono w-32"
+              className="bg-emerald-50/50 border border-emerald-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 font-mono w-32 focus:outline-none focus:border-emerald-600"
             />
             <button
               onClick={handleBPlusQuery}
-              className="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg text-xs font-semibold"
+              className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold shadow-sm transition-colors"
             >
               Execute Range Scan
             </button>
@@ -667,35 +806,35 @@ export default function AlgorithmLabPage() {
 
           {bplusResult && (
             <div className="space-y-4">
-              <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-wrap gap-6 text-xs font-mono">
+              <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-200 flex flex-wrap gap-6 text-xs font-mono">
                 <div>
-                  <span className="text-slate-400">Tree Order (M):</span>
-                  <div className="font-bold text-white">{bplusResult.treeMetrics.order}</div>
+                  <span className="text-slate-600">Tree Order (M):</span>
+                  <div className="font-bold text-emerald-950">{bplusResult.treeMetrics.order}</div>
                 </div>
                 <div>
-                  <span className="text-slate-400">Tree Height:</span>
-                  <div className="font-bold text-cyan-400">{bplusResult.treeMetrics.height} levels</div>
+                  <span className="text-slate-600">Tree Height:</span>
+                  <div className="font-bold text-emerald-700">{bplusResult.treeMetrics.height} levels</div>
                 </div>
                 <div>
-                  <span className="text-slate-400">Total Indexed Items:</span>
-                  <div className="font-bold text-white">{bplusResult.treeMetrics.size}</div>
+                  <span className="text-slate-600">Total Indexed Items:</span>
+                  <div className="font-bold text-emerald-950">{bplusResult.treeMetrics.size}</div>
                 </div>
                 <div>
-                  <span className="text-slate-400">Matches in Range [{bplusFrom}..{bplusTo}]:</span>
-                  <div className="font-bold text-emerald-400">{bplusResult.count} items</div>
+                  <span className="text-slate-600">Matches in Range [{bplusFrom}..{bplusTo}]:</span>
+                  <div className="font-bold text-emerald-700">{bplusResult.count} items</div>
                 </div>
               </div>
 
               {/* Range Results Table */}
-              <div className="bg-slate-950 rounded-xl border border-slate-800 overflow-hidden">
-                <div className="p-3 bg-slate-900 border-b border-slate-800 text-xs font-bold text-slate-300">
+              <div className="bg-white rounded-xl border border-emerald-200 overflow-hidden shadow-sm">
+                <div className="p-3 bg-emerald-50/80 border-b border-emerald-200 text-xs font-bold text-emerald-950">
                   Sequential Leaf Scan Results:
                 </div>
-                <div className="divide-y divide-slate-800 max-h-60 overflow-y-auto">
+                <div className="divide-y divide-emerald-100 max-h-60 overflow-y-auto">
                   {bplusResult.results.map((item, idx) => (
-                    <div key={idx} className="p-2.5 text-xs font-mono flex items-center justify-between">
-                      <span className="font-bold text-cyan-400">{item.key}</span>
-                      <span className="text-slate-400">{item.value?.name || item.value?.label || item.value?.facility || 'Record'}</span>
+                    <div key={idx} className="p-2.5 text-xs font-mono flex items-center justify-between hover:bg-emerald-50/40">
+                      <span className="font-bold text-emerald-700">{item.key}</span>
+                      <span className="text-slate-600">{item.value?.name || item.value?.label || item.value?.facility || 'Record'}</span>
                     </div>
                   ))}
                 </div>

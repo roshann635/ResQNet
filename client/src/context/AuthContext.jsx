@@ -39,10 +39,27 @@ export function AuthProvider({ children }) {
   };
 
   const isAdmin = user?.role === 'admin';
+  const isOperator = user?.role === 'operator';
+  const isHospitalStaff = user?.role === 'hospital_staff';
+  const isCitizen = user?.role === 'citizen';
   const isEvaluator = user?.role === 'evaluator';
+  const hospitalId = user?.hospitalId || null;
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout, isAdmin, isEvaluator }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        loading,
+        login,
+        logout,
+        isAdmin,
+        isOperator,
+        isHospitalStaff,
+        isCitizen,
+        isEvaluator,
+        hospitalId
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

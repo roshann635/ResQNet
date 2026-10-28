@@ -68,6 +68,7 @@ export class HashTable {
   }
 
   get(key) {
+    if (key === undefined || key === null) return null;
     const index = this._hash(key);
     const bucket = this.buckets[index];
     for (const item of bucket) {
@@ -75,6 +76,18 @@ export class HashTable {
         return item.value;
       }
     }
+
+    // Normalized alias fallback (e.g. HOS-001 -> HOSP-001 or N-01 -> N-0001)
+    const str = String(key);
+    if (/^HOS-(\d+)$/i.test(str)) {
+      const altKey = str.replace(/^HOS-/i, 'HOSP-');
+      return this.get(altKey);
+    } else if (/^N-(\d{1,3})$/i.test(str)) {
+      const match = str.match(/^N-(\d+)$/i);
+      const altKey = `N-${match[1].padStart(4, '0')}`;
+      return this.get(altKey);
+    }
+
     return null;
   }
 

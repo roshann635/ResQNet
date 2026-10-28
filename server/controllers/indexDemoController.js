@@ -10,9 +10,19 @@ export function getHashItem(req, res, next) {
       return res.status(503).json({ error: 'Hash Table symbol table not initialized' });
     }
 
-    const value = ht.get(id);
+    let searchKey = id;
+    let value = ht.get(searchKey);
+    if (!value && /^HOS-(\d+)$/i.test(id)) {
+      searchKey = id.replace(/^HOS-/i, 'HOSP-');
+      value = ht.get(searchKey);
+    } else if (!value && /^N-(\d{1,3})$/i.test(id)) {
+      const match = id.match(/^N-(\d+)$/i);
+      searchKey = `N-${match[1].padStart(4, '0')}`;
+      value = ht.get(searchKey);
+    }
+
     const diagnostics = ht.getDiagnostics();
-    const hashIndex = ht._hash(id);
+    const hashIndex = ht._hash(searchKey);
     const bucket = ht.buckets[hashIndex] || [];
 
     res.json({
@@ -36,14 +46,20 @@ export function getHashItem(req, res, next) {
 
 export function getBPlusRange(req, res, next) {
   try {
-    const { from = 'HOS-001', to = 'HOS-005' } = req.query;
+    let { from = 'HOSP-001', to = 'HOSP-005' } = req.query;
     const tree = getBPlusTree();
 
     if (!tree) {
       return res.status(503).json({ error: 'B+ Tree index not initialized' });
     }
 
-    const results = tree.rangeQuery(String(from), String(to));
+    const normFrom = String(from).replace(/^HOS-(\d+)$/i, 'HOSP-$1');
+    const normTo = String(to).replace(/^HOS-(\d+)$/i, 'HOSP-$1');
+
+    let results = tree.rangeQuery(normFrom, normTo);
+    if (results.length === 0 && normFrom !== String(from)) {
+      results = tree.rangeQuery(String(from), String(to));
+    }
     const structure = tree.getTreeStructure();
 
     res.json({

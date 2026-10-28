@@ -1,0 +1,610 @@
+[
+  {
+    "hospitalId": "HOSP-001",
+    "name": "Hospital Panchavati Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0001",
+    "zone": "Panchavati",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 356,
+    "icuBeds": 55,
+    "availableBeds": 103,
+    "availableIcu": 19,
+    "status": "Open",
+    "address": "Panchavati Emergency Corridor, Street 1, Nashik",
+    "phone": "+91 253 2500001",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-002",
+    "name": "Hospital Gangapur Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0002",
+    "zone": "Gangapur",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 289,
+    "icuBeds": 47,
+    "availableBeds": 29,
+    "availableIcu": 13,
+    "status": "Open",
+    "address": "Gangapur Emergency Corridor, Street 2, Nashik",
+    "phone": "+91 253 2500002",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-003",
+    "name": "Hospital CIDCO Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0003",
+    "zone": "CIDCO",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 326,
+    "icuBeds": 60,
+    "availableBeds": 43,
+    "availableIcu": 8,
+    "status": "Open",
+    "address": "CIDCO Emergency Corridor, Street 3, Nashik",
+    "phone": "+91 253 2500003",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-004",
+    "name": "Hospital Satpur Industrial Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0004",
+    "zone": "Satpur Industrial",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 319,
+    "icuBeds": 57,
+    "availableBeds": 79,
+    "availableIcu": 5,
+    "status": "Open",
+    "address": "Satpur Industrial Emergency Corridor, Street 4, Nashik",
+    "phone": "+91 253 2500004",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-005",
+    "name": "Hospital Nashik Road Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0005",
+    "zone": "Nashik Road",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 309,
+    "icuBeds": 44,
+    "availableBeds": 49,
+    "availableIcu": 10,
+    "status": "Open",
+    "address": "Nashik Road Emergency Corridor, Street 5, Nashik",
+    "phone": "+91 253 2500005",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-006",
+    "name": "Hospital Indira Nagar Trauma Hub",
+    "tier": "Trauma",
+    "nodeId": "N-0006",
+    "zone": "Indira Nagar",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Ventilator",
+      "Neuro"
+    ],
+    "totalBeds": 378,
+    "icuBeds": 48,
+    "availableBeds": 88,
+    "availableIcu": 4,
+    "status": "Open",
+    "address": "Indira Nagar Emergency Corridor, Street 6, Nashik",
+    "phone": "+91 253 2500006",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-007",
+    "name": "Nashik Metro Central Trauma Center",
+    "tier": "Trauma",
+    "nodeId": "N-0007",
+    "zone": "Ambad MIDC",
+    "capabilities": [
+      "ICU",
+      "Trauma",
+      "Cardiac",
+      "Burns",
+      "Pediatrics",
+      "Maternity",
+      "Neuro",
+      "Ventilator"
+    ],
+    "totalBeds": 343,
+    "icuBeds": 53,
+    "availableBeds": 134,
+    "availableIcu": 6,
+    "status": "Open",
+    "address": "Ambad MIDC Emergency Corridor, Street 7, Nashik",
+    "phone": "+91 253 2500007",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-008",
+    "name": "Hospital College Road Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0008",
+    "zone": "College Road",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 233,
+    "icuBeds": 39,
+    "availableBeds": 25,
+    "availableIcu": 8,
+    "status": "Open",
+    "address": "College Road Emergency Corridor, Street 8, Nashik",
+    "phone": "+91 253 2500008",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-009",
+    "name": "Hospital Govind Nagar Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0009",
+    "zone": "Govind Nagar",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 239,
+    "icuBeds": 25,
+    "availableBeds": 75,
+    "availableIcu": 8,
+    "status": "Open",
+    "address": "Govind Nagar Emergency Corridor, Street 9, Nashik",
+    "phone": "+91 253 2500009",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-010",
+    "name": "Hospital Dwarka Central Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0010",
+    "zone": "Dwarka Central",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 171,
+    "icuBeds": 20,
+    "availableBeds": 53,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "Dwarka Central Emergency Corridor, Street 10, Nashik",
+    "phone": "+91 253 2500010",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-011",
+    "name": "Hospital Adgaon Express Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0011",
+    "zone": "Adgaon Express",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 203,
+    "icuBeds": 25,
+    "availableBeds": 34,
+    "availableIcu": 6,
+    "status": "Open",
+    "address": "Adgaon Express Emergency Corridor, Street 11, Nashik",
+    "phone": "+91 253 2500011",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-012",
+    "name": "Hospital Mahatma Nagar Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0012",
+    "zone": "Mahatma Nagar",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 235,
+    "icuBeds": 38,
+    "availableBeds": 37,
+    "availableIcu": 10,
+    "status": "Open",
+    "address": "Mahatma Nagar Emergency Corridor, Street 12, Nashik",
+    "phone": "+91 253 2500012",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-013",
+    "name": "Hospital Panchavati Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0013",
+    "zone": "Panchavati",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 192,
+    "icuBeds": 27,
+    "availableBeds": 24,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "Panchavati Emergency Corridor, Street 13, Nashik",
+    "phone": "+91 253 2500013",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-014",
+    "name": "Hospital Gangapur Tertiary Hub",
+    "tier": "Tertiary",
+    "nodeId": "N-0014",
+    "zone": "Gangapur",
+    "capabilities": [
+      "ICU",
+      "Cardiac",
+      "Ventilator",
+      "Pediatrics"
+    ],
+    "totalBeds": 165,
+    "icuBeds": 29,
+    "availableBeds": 24,
+    "availableIcu": 9,
+    "status": "Open",
+    "address": "Gangapur Emergency Corridor, Street 14, Nashik",
+    "phone": "+91 253 2500014",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-015",
+    "name": "Hospital CIDCO Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0015",
+    "zone": "CIDCO",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 57,
+    "icuBeds": 10,
+    "availableBeds": 20,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "CIDCO Emergency Corridor, Street 15, Nashik",
+    "phone": "+91 253 2500015",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-016",
+    "name": "Hospital Satpur Industrial Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0016",
+    "zone": "Satpur Industrial",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 68,
+    "icuBeds": 10,
+    "availableBeds": 7,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "Satpur Industrial Emergency Corridor, Street 16, Nashik",
+    "phone": "+91 253 2500016",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-017",
+    "name": "Hospital Nashik Road Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0017",
+    "zone": "Nashik Road",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 51,
+    "icuBeds": 8,
+    "availableBeds": 5,
+    "availableIcu": 0,
+    "status": "Open",
+    "address": "Nashik Road Emergency Corridor, Street 17, Nashik",
+    "phone": "+91 253 2500017",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-018",
+    "name": "Hospital Indira Nagar Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0018",
+    "zone": "Indira Nagar",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 101,
+    "icuBeds": 4,
+    "availableBeds": 13,
+    "availableIcu": 1,
+    "status": "Open",
+    "address": "Indira Nagar Emergency Corridor, Street 18, Nashik",
+    "phone": "+91 253 2500018",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-019",
+    "name": "Hospital Ambad MIDC Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0019",
+    "zone": "Ambad MIDC",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 80,
+    "icuBeds": 9,
+    "availableBeds": 27,
+    "availableIcu": 2,
+    "status": "Open",
+    "address": "Ambad MIDC Emergency Corridor, Street 19, Nashik",
+    "phone": "+91 253 2500019",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-020",
+    "name": "Hospital College Road Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0020",
+    "zone": "College Road",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 54,
+    "icuBeds": 6,
+    "availableBeds": 18,
+    "availableIcu": 0,
+    "status": "Open",
+    "address": "College Road Emergency Corridor, Street 20, Nashik",
+    "phone": "+91 253 2500020",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-021",
+    "name": "Hospital Govind Nagar Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0021",
+    "zone": "Govind Nagar",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 120,
+    "icuBeds": 5,
+    "availableBeds": 36,
+    "availableIcu": 1,
+    "status": "Open",
+    "address": "Govind Nagar Emergency Corridor, Street 21, Nashik",
+    "phone": "+91 253 2500021",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-022",
+    "name": "Hospital Dwarka Central Secondary Hub",
+    "tier": "Secondary",
+    "nodeId": "N-0022",
+    "zone": "Dwarka Central",
+    "capabilities": [
+      "ICU",
+      "Maternity",
+      "Pediatrics"
+    ],
+    "totalBeds": 111,
+    "icuBeds": 11,
+    "availableBeds": 24,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "Dwarka Central Emergency Corridor, Street 22, Nashik",
+    "phone": "+91 253 2500022",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-023",
+    "name": "Hospital Adgaon Express Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0023",
+    "zone": "Adgaon Express",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 55,
+    "icuBeds": 13,
+    "availableBeds": 22,
+    "availableIcu": 1,
+    "status": "Open",
+    "address": "Adgaon Express Emergency Corridor, Street 23, Nashik",
+    "phone": "+91 253 2500023",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-024",
+    "name": "Hospital Mahatma Nagar Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0024",
+    "zone": "Mahatma Nagar",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 85,
+    "icuBeds": 13,
+    "availableBeds": 13,
+    "availableIcu": 1,
+    "status": "Open",
+    "address": "Mahatma Nagar Emergency Corridor, Street 24, Nashik",
+    "phone": "+91 253 2500024",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-025",
+    "name": "Hospital Panchavati Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0025",
+    "zone": "Panchavati",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 55,
+    "icuBeds": 4,
+    "availableBeds": 9,
+    "availableIcu": 1,
+    "status": "Open",
+    "address": "Panchavati Emergency Corridor, Street 25, Nashik",
+    "phone": "+91 253 2500025",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-026",
+    "name": "Hospital Gangapur Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0026",
+    "zone": "Gangapur",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 45,
+    "icuBeds": 6,
+    "availableBeds": 4,
+    "availableIcu": 2,
+    "status": "Open",
+    "address": "Gangapur Emergency Corridor, Street 26, Nashik",
+    "phone": "+91 253 2500026",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-027",
+    "name": "Hospital CIDCO Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0027",
+    "zone": "CIDCO",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 105,
+    "icuBeds": 12,
+    "availableBeds": 15,
+    "availableIcu": 3,
+    "status": "Open",
+    "address": "CIDCO Emergency Corridor, Street 27, Nashik",
+    "phone": "+91 253 2500027",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-028",
+    "name": "Hospital Satpur Industrial Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0028",
+    "zone": "Satpur Industrial",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 58,
+    "icuBeds": 15,
+    "availableBeds": 23,
+    "availableIcu": 2,
+    "status": "Open",
+    "address": "Satpur Industrial Emergency Corridor, Street 28, Nashik",
+    "phone": "+91 253 2500028",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-029",
+    "name": "Hospital Nashik Road Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0029",
+    "zone": "Nashik Road",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 108,
+    "icuBeds": 13,
+    "availableBeds": 41,
+    "availableIcu": 4,
+    "status": "Open",
+    "address": "Nashik Road Emergency Corridor, Street 29, Nashik",
+    "phone": "+91 253 2500029",
+    "active": true
+  },
+  {
+    "hospitalId": "HOSP-030",
+    "name": "Hospital Indira Nagar Primary Hub",
+    "tier": "Primary",
+    "nodeId": "N-0030",
+    "zone": "Indira Nagar",
+    "capabilities": [
+      "Maternity"
+    ],
+    "totalBeds": 44,
+    "icuBeds": 13,
+    "availableBeds": 16,
+    "availableIcu": 4,
+    "status": "Open",
+    "address": "Indira Nagar Emergency Corridor, Street 30, Nashik",
+    "phone": "+91 253 2500030",
+    "active": true
+  }
+]

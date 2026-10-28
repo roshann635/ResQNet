@@ -1,0 +1,27 @@
+{
+  "weights": {
+    "w1_routeCost": 0.40,
+    "w2_fuelDeficit": 0.20,
+    "w3_typeMismatch": 0.20,
+    "w4_crewFatigue": 0.10,
+    "w5_severityMatchBonus": 0.10
+  },
+  "severityRules": [
+    { "condition": "Cardiac arrest, severe stroke, major trauma or unconscious", "priority": "Critical", "rank": 4 },
+    { "condition": "Severe bleeding, respiratory distress, 2nd+ burns", "priority": "High", "rank": 3 },
+    { "condition": "Fractures, moderate pain, non-critical poisoning", "priority": "Medium", "rank": 2 },
+    { "condition": "Minor cuts, stable patient", "priority": "Low", "rank": 1 }
+  ],
+  "limits": {
+    "backtracking": {
+      "maxHops": 12,
+      "maxCost": 120.0,
+      "maxResults": 5,
+      "workBudget": 50000
+    },
+    "astar": {
+      "heuristic": "haversine_admissible",
+      "maxSpeedKmh": 80
+    }
+  }
+}

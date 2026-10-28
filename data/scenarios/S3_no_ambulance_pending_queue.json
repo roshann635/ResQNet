@@ -1,0 +1,6 @@
+{
+  "scenarioId": "S3_no_ambulance_pending_queue",
+  "name": "S3: Resource Exhaustion & Pending Queue",
+  "description": "High-severity call comes in while all zone ambulances are busy. Incident waits in priority queue with live timer.",
+  "expectedOutcome": "Incident prioritized as AwaitingResource; auto-assigns immediately upon unit release."
+}

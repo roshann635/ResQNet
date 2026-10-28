@@ -86,6 +86,9 @@ export const config = {
     'general'
   ],
   userRoles: {
+    CITIZEN: 'citizen',
+    OPERATOR: 'operator',
+    HOSPITAL_STAFF: 'hospital_staff',
     ADMIN: 'admin',
     EVALUATOR: 'evaluator'
   }

@@ -1,0 +1,6 @@
+{
+  "scenarioId": "S4_hospital_full_redirect",
+  "name": "S4: Hospital Capacity Redirection",
+  "description": "Nearest hospital ICU is 100% full. System transparently redirects transport to Metro Central Trauma Center.",
+  "expectedOutcome": "Hospital selector rejects full facility with explicit reason and picks next highest ranked hospital."
+}

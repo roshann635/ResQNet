@@ -18,7 +18,8 @@ export function recommendHospital(graph, incidentLocationNodeId, requiredHospita
     const hospCaps = new Set(hospital.capabilities || []);
 
     // Filter 1: Available bed slots
-    if (hospital.availableSlots <= 0 || hospital.status === 'AT_CAPACITY') {
+    const available = hospital.availableBeds !== undefined ? hospital.availableBeds : hospital.availableSlots;
+    if (available <= 0 || hospital.status === 'AT_CAPACITY' || hospital.status === 'Full' || hospital.status === 'Closed') {
       excluded.push({
         hospitalId: hospital.hospitalId,
         name: hospital.name,
@@ -83,7 +84,13 @@ export function recommendHospital(graph, incidentLocationNodeId, requiredHospita
       availableSlots: hospital.availableSlots,
       status: hospital.status,
       routeCost: routeResult.cost,
-      route: routeResult
+      route: {
+        path: routeResult.path,
+        cost: routeResult.cost,
+        nodesExpanded: routeResult.nodesExpanded,
+        edgesExamined: routeResult.edgesExamined,
+        runtimeMs: routeResult.runtimeMs
+      }
     });
   }
 

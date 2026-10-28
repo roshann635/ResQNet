@@ -1,0 +1,2745 @@
+[
+  {
+    "ambulanceId": "AMB-01",
+    "callSign": "MEDIC-01",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0032",
+    "currentNodeId": "N-0032",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 1"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 1"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 1"
+      }
+    ],
+    "fuelPct": 0.77,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-02",
+    "callSign": "MEDIC-02",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0033",
+    "currentNodeId": "N-0033",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 2"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 2"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 2"
+      }
+    ],
+    "fuelPct": 0.57,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-03",
+    "callSign": "MEDIC-03",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0034",
+    "currentNodeId": "N-0034",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 3"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 3"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 3"
+      }
+    ],
+    "fuelPct": 0.6,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-04",
+    "callSign": "MEDIC-04",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0035",
+    "currentNodeId": "N-0035",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 4"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 4"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 4"
+      }
+    ],
+    "fuelPct": 0.74,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-05",
+    "callSign": "MEDIC-05",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0036",
+    "currentNodeId": "N-0036",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 5"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 5"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 5"
+      }
+    ],
+    "fuelPct": 0.85,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-06",
+    "callSign": "MEDIC-06",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0037",
+    "currentNodeId": "N-0037",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 6"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 6"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 6"
+      }
+    ],
+    "fuelPct": 0.78,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-07",
+    "callSign": "MEDIC-07",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0038",
+    "currentNodeId": "N-0038",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 7"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 7"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 7"
+      }
+    ],
+    "fuelPct": 0.95,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-08",
+    "callSign": "MEDIC-08",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0039",
+    "currentNodeId": "N-0039",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 8"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 8"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 8"
+      }
+    ],
+    "fuelPct": 0.76,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-09",
+    "callSign": "MEDIC-09",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0040",
+    "currentNodeId": "N-0040",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 9"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 9"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 9"
+      }
+    ],
+    "fuelPct": 0.88,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-10",
+    "callSign": "MEDIC-10",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0041",
+    "currentNodeId": "N-0041",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 10"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 10"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 10"
+      }
+    ],
+    "fuelPct": 0.91,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-11",
+    "callSign": "MEDIC-11",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0042",
+    "currentNodeId": "N-0042",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 11"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 11"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 11"
+      }
+    ],
+    "fuelPct": 0.5,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-12",
+    "callSign": "MEDIC-12",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0043",
+    "currentNodeId": "N-0043",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 12"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 12"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 12"
+      }
+    ],
+    "fuelPct": 0.81,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-13",
+    "callSign": "MEDIC-13",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0044",
+    "currentNodeId": "N-0044",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 13"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 13"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 13"
+      }
+    ],
+    "fuelPct": 0.78,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-14",
+    "callSign": "MEDIC-14",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0045",
+    "currentNodeId": "N-0045",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 14"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 14"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 14"
+      }
+    ],
+    "fuelPct": 0.94,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-15",
+    "callSign": "MEDIC-15",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0046",
+    "currentNodeId": "N-0046",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 15"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 15"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 15"
+      }
+    ],
+    "fuelPct": 0.72,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-16",
+    "callSign": "MEDIC-16",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0047",
+    "currentNodeId": "N-0047",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 16"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 16"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 16"
+      }
+    ],
+    "fuelPct": 0.51,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-17",
+    "callSign": "MEDIC-17",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0048",
+    "currentNodeId": "N-0048",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 17"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 17"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 17"
+      }
+    ],
+    "fuelPct": 0.58,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-18",
+    "callSign": "MEDIC-18",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0049",
+    "currentNodeId": "N-0049",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 18"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 18"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 18"
+      }
+    ],
+    "fuelPct": 0.53,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-19",
+    "callSign": "MEDIC-19",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0050",
+    "currentNodeId": "N-0050",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 19"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 19"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 19"
+      }
+    ],
+    "fuelPct": 0.82,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-20",
+    "callSign": "MEDIC-20",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0051",
+    "currentNodeId": "N-0051",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 20"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 20"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 20"
+      }
+    ],
+    "fuelPct": 0.67,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-21",
+    "callSign": "MEDIC-21",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0052",
+    "currentNodeId": "N-0052",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 21"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 21"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 21"
+      }
+    ],
+    "fuelPct": 0.73,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-22",
+    "callSign": "MEDIC-22",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0053",
+    "currentNodeId": "N-0053",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 22"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 22"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 22"
+      }
+    ],
+    "fuelPct": 0.74,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-23",
+    "callSign": "MEDIC-23",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0054",
+    "currentNodeId": "N-0054",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 23"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 23"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 23"
+      }
+    ],
+    "fuelPct": 0.93,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-24",
+    "callSign": "MEDIC-24",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0055",
+    "currentNodeId": "N-0055",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 24"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 24"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 24"
+      }
+    ],
+    "fuelPct": 0.77,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-25",
+    "callSign": "MEDIC-25",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0056",
+    "currentNodeId": "N-0056",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 25"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 25"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 25"
+      }
+    ],
+    "fuelPct": 0.82,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-26",
+    "callSign": "MEDIC-26",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0057",
+    "currentNodeId": "N-0057",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 26"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 26"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 26"
+      }
+    ],
+    "fuelPct": 0.64,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-27",
+    "callSign": "MEDIC-27",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0058",
+    "currentNodeId": "N-0058",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 27"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 27"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 27"
+      }
+    ],
+    "fuelPct": 0.9,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-28",
+    "callSign": "MEDIC-28",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0059",
+    "currentNodeId": "N-0059",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 28"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 28"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 28"
+      }
+    ],
+    "fuelPct": 0.93,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-29",
+    "callSign": "MEDIC-29",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0060",
+    "currentNodeId": "N-0060",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 29"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 29"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 29"
+      }
+    ],
+    "fuelPct": 0.79,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-30",
+    "callSign": "MEDIC-30",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0061",
+    "currentNodeId": "N-0061",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 30"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 30"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 30"
+      }
+    ],
+    "fuelPct": 0.55,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-31",
+    "callSign": "MEDIC-31",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0062",
+    "currentNodeId": "N-0062",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 31"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 31"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 31"
+      }
+    ],
+    "fuelPct": 0.8,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-32",
+    "callSign": "MEDIC-32",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0063",
+    "currentNodeId": "N-0063",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 32"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 32"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 32"
+      }
+    ],
+    "fuelPct": 0.55,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-33",
+    "callSign": "MEDIC-33",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0064",
+    "currentNodeId": "N-0064",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 33"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 33"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 33"
+      }
+    ],
+    "fuelPct": 0.96,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-34",
+    "callSign": "MEDIC-34",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0065",
+    "currentNodeId": "N-0065",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 34"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 34"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 34"
+      }
+    ],
+    "fuelPct": 0.58,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-35",
+    "callSign": "MEDIC-35",
+    "type": "ALS",
+    "capabilities": [
+      "advanced-life-support",
+      "defibrillator",
+      "ventilator",
+      "telemetry"
+    ],
+    "baseStationNodeId": "N-0066",
+    "currentNodeId": "N-0066",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 35"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 35"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 35"
+      }
+    ],
+    "fuelPct": 0.97,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-36",
+    "callSign": "MEDIC-36",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0067",
+    "currentNodeId": "N-0067",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 36"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 36"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 36"
+      }
+    ],
+    "fuelPct": 0.58,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-37",
+    "callSign": "MEDIC-37",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0068",
+    "currentNodeId": "N-0068",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 37"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 37"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 37"
+      }
+    ],
+    "fuelPct": 0.91,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-38",
+    "callSign": "MEDIC-38",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0069",
+    "currentNodeId": "N-0069",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 38"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 38"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 38"
+      }
+    ],
+    "fuelPct": 0.66,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-39",
+    "callSign": "MEDIC-39",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0070",
+    "currentNodeId": "N-0070",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 39"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 39"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 39"
+      }
+    ],
+    "fuelPct": 0.58,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-40",
+    "callSign": "MEDIC-40",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0071",
+    "currentNodeId": "N-0071",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 40"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 40"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 40"
+      }
+    ],
+    "fuelPct": 0.59,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-41",
+    "callSign": "MEDIC-41",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0072",
+    "currentNodeId": "N-0072",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 41"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 41"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 41"
+      }
+    ],
+    "fuelPct": 0.71,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-42",
+    "callSign": "MEDIC-42",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0073",
+    "currentNodeId": "N-0073",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 42"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 42"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 42"
+      }
+    ],
+    "fuelPct": 0.74,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-43",
+    "callSign": "MEDIC-43",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0074",
+    "currentNodeId": "N-0074",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 43"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 43"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 43"
+      }
+    ],
+    "fuelPct": 0.56,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-44",
+    "callSign": "MEDIC-44",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0075",
+    "currentNodeId": "N-0075",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 44"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 44"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 44"
+      }
+    ],
+    "fuelPct": 0.8,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-45",
+    "callSign": "MEDIC-45",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0031",
+    "currentNodeId": "N-0031",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 45"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 45"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 45"
+      }
+    ],
+    "fuelPct": 0.74,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-46",
+    "callSign": "MEDIC-46",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0032",
+    "currentNodeId": "N-0032",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 46"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 46"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 46"
+      }
+    ],
+    "fuelPct": 0.78,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-47",
+    "callSign": "MEDIC-47",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0033",
+    "currentNodeId": "N-0033",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 47"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 47"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 47"
+      }
+    ],
+    "fuelPct": 0.56,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-48",
+    "callSign": "MEDIC-48",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0034",
+    "currentNodeId": "N-0034",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 48"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 48"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 48"
+      }
+    ],
+    "fuelPct": 0.72,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-49",
+    "callSign": "MEDIC-49",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0035",
+    "currentNodeId": "N-0035",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 49"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 49"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 49"
+      }
+    ],
+    "fuelPct": 0.56,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-50",
+    "callSign": "MEDIC-50",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0036",
+    "currentNodeId": "N-0036",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 50"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 50"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 50"
+      }
+    ],
+    "fuelPct": 0.74,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-51",
+    "callSign": "MEDIC-51",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0037",
+    "currentNodeId": "N-0037",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 51"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 51"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 51"
+      }
+    ],
+    "fuelPct": 0.54,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-52",
+    "callSign": "MEDIC-52",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0038",
+    "currentNodeId": "N-0038",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 52"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 52"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 52"
+      }
+    ],
+    "fuelPct": 0.86,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-53",
+    "callSign": "MEDIC-53",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0039",
+    "currentNodeId": "N-0039",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 53"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 53"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 53"
+      }
+    ],
+    "fuelPct": 0.75,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-54",
+    "callSign": "MEDIC-54",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0040",
+    "currentNodeId": "N-0040",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 54"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 54"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 54"
+      }
+    ],
+    "fuelPct": 0.84,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-55",
+    "callSign": "MEDIC-55",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0041",
+    "currentNodeId": "N-0041",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 55"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 55"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 55"
+      }
+    ],
+    "fuelPct": 0.97,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-56",
+    "callSign": "MEDIC-56",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0042",
+    "currentNodeId": "N-0042",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 56"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 56"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 56"
+      }
+    ],
+    "fuelPct": 0.59,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-57",
+    "callSign": "MEDIC-57",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0043",
+    "currentNodeId": "N-0043",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 57"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 57"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 57"
+      }
+    ],
+    "fuelPct": 0.79,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-58",
+    "callSign": "MEDIC-58",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0044",
+    "currentNodeId": "N-0044",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 58"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 58"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 58"
+      }
+    ],
+    "fuelPct": 0.67,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-59",
+    "callSign": "MEDIC-59",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0045",
+    "currentNodeId": "N-0045",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 59"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 59"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 59"
+      }
+    ],
+    "fuelPct": 0.71,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-60",
+    "callSign": "MEDIC-60",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0046",
+    "currentNodeId": "N-0046",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 60"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 60"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 60"
+      }
+    ],
+    "fuelPct": 0.88,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-61",
+    "callSign": "MEDIC-61",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0047",
+    "currentNodeId": "N-0047",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 61"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 61"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 61"
+      }
+    ],
+    "fuelPct": 0.64,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-62",
+    "callSign": "MEDIC-62",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0048",
+    "currentNodeId": "N-0048",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 62"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 62"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 62"
+      }
+    ],
+    "fuelPct": 0.71,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-63",
+    "callSign": "MEDIC-63",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0049",
+    "currentNodeId": "N-0049",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 63"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 63"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 63"
+      }
+    ],
+    "fuelPct": 0.55,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-64",
+    "callSign": "MEDIC-64",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0050",
+    "currentNodeId": "N-0050",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 64"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 64"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 64"
+      }
+    ],
+    "fuelPct": 0.75,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-65",
+    "callSign": "MEDIC-65",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0051",
+    "currentNodeId": "N-0051",
+    "status": "Available",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 65"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 65"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 65"
+      }
+    ],
+    "fuelPct": 0.64,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-66",
+    "callSign": "MEDIC-66",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0052",
+    "currentNodeId": "N-0746",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 66"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 66"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 66"
+      }
+    ],
+    "fuelPct": 0.62,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-67",
+    "callSign": "MEDIC-67",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0053",
+    "currentNodeId": "N-0654",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 67"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 67"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 67"
+      }
+    ],
+    "fuelPct": 0.96,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-68",
+    "callSign": "MEDIC-68",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0054",
+    "currentNodeId": "N-1100",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 68"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 68"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 68"
+      }
+    ],
+    "fuelPct": 0.78,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-69",
+    "callSign": "MEDIC-69",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0055",
+    "currentNodeId": "N-0769",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 69"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 69"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 69"
+      }
+    ],
+    "fuelPct": 0.96,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-70",
+    "callSign": "MEDIC-70",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0056",
+    "currentNodeId": "N-0750",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 70"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 70"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 70"
+      }
+    ],
+    "fuelPct": 0.68,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-71",
+    "callSign": "MEDIC-71",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0057",
+    "currentNodeId": "N-1875",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 71"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 71"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 71"
+      }
+    ],
+    "fuelPct": 0.87,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-72",
+    "callSign": "MEDIC-72",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0058",
+    "currentNodeId": "N-1165",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 72"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 72"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 72"
+      }
+    ],
+    "fuelPct": 0.55,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-73",
+    "callSign": "MEDIC-73",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0059",
+    "currentNodeId": "N-1111",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 73"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 73"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 73"
+      }
+    ],
+    "fuelPct": 0.68,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-74",
+    "callSign": "MEDIC-74",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0060",
+    "currentNodeId": "N-0562",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 74"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 74"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 74"
+      }
+    ],
+    "fuelPct": 0.99,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-75",
+    "callSign": "MEDIC-75",
+    "type": "BLS",
+    "capabilities": [
+      "basic-life-support",
+      "oxygen",
+      "first-aid"
+    ],
+    "baseStationNodeId": "N-0061",
+    "currentNodeId": "N-1640",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 75"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 75"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 75"
+      }
+    ],
+    "fuelPct": 0.53,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-76",
+    "callSign": "MEDIC-76",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0062",
+    "currentNodeId": "N-1261",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 76"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 76"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 76"
+      }
+    ],
+    "fuelPct": 0.85,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-77",
+    "callSign": "MEDIC-77",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0063",
+    "currentNodeId": "N-0794",
+    "status": "EnRoute",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 77"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 77"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 77"
+      }
+    ],
+    "fuelPct": 0.97,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-78",
+    "callSign": "MEDIC-78",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0064",
+    "currentNodeId": "N-1023",
+    "status": "AtScene",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 78"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 78"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 78"
+      }
+    ],
+    "fuelPct": 0.97,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-79",
+    "callSign": "MEDIC-79",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0065",
+    "currentNodeId": "N-0852",
+    "status": "AtScene",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 79"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 79"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 79"
+      }
+    ],
+    "fuelPct": 0.77,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-80",
+    "callSign": "MEDIC-80",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0066",
+    "currentNodeId": "N-1792",
+    "status": "AtScene",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 80"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 80"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 80"
+      }
+    ],
+    "fuelPct": 0.56,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-81",
+    "callSign": "MEDIC-81",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0067",
+    "currentNodeId": "N-1465",
+    "status": "AtScene",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 81"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 81"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 81"
+      }
+    ],
+    "fuelPct": 0.62,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-82",
+    "callSign": "MEDIC-82",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0068",
+    "currentNodeId": "N-0627",
+    "status": "AtScene",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 82"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 82"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 82"
+      }
+    ],
+    "fuelPct": 0.6,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-83",
+    "callSign": "MEDIC-83",
+    "type": "NICU",
+    "capabilities": [
+      "basic-life-support",
+      "advanced-life-support",
+      "incubator",
+      "pediatric-icu"
+    ],
+    "baseStationNodeId": "N-0069",
+    "currentNodeId": "N-1784",
+    "status": "Transporting",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 83"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 83"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 83"
+      }
+    ],
+    "fuelPct": 0.83,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-84",
+    "callSign": "MEDIC-84",
+    "type": "Neonatal",
+    "capabilities": [
+      "basic-life-support",
+      "incubator",
+      "oxygen"
+    ],
+    "baseStationNodeId": "N-0070",
+    "currentNodeId": "N-0414",
+    "status": "Transporting",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 84"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 84"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 84"
+      }
+    ],
+    "fuelPct": 0.65,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-85",
+    "callSign": "MEDIC-85",
+    "type": "Neonatal",
+    "capabilities": [
+      "basic-life-support",
+      "incubator",
+      "oxygen"
+    ],
+    "baseStationNodeId": "N-0071",
+    "currentNodeId": "N-0168",
+    "status": "Transporting",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 85"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 85"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 85"
+      }
+    ],
+    "fuelPct": 0.59,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-86",
+    "callSign": "MEDIC-86",
+    "type": "Neonatal",
+    "capabilities": [
+      "basic-life-support",
+      "incubator",
+      "oxygen"
+    ],
+    "baseStationNodeId": "N-0072",
+    "currentNodeId": "N-1628",
+    "status": "Transporting",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 86"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 86"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 86"
+      }
+    ],
+    "fuelPct": 0.77,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-87",
+    "callSign": "MEDIC-87",
+    "type": "Neonatal",
+    "capabilities": [
+      "basic-life-support",
+      "incubator",
+      "oxygen"
+    ],
+    "baseStationNodeId": "N-0073",
+    "currentNodeId": "N-1665",
+    "status": "Transporting",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 87"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 87"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 87"
+      }
+    ],
+    "fuelPct": 0.67,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-88",
+    "callSign": "MEDIC-88",
+    "type": "Neonatal",
+    "capabilities": [
+      "basic-life-support",
+      "incubator",
+      "oxygen"
+    ],
+    "baseStationNodeId": "N-0074",
+    "currentNodeId": "N-0459",
+    "status": "OutOfService",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 88"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 88"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 88"
+      }
+    ],
+    "fuelPct": 0.75,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-89",
+    "callSign": "MEDIC-89",
+    "type": "Air-sim",
+    "capabilities": [
+      "advanced-life-support",
+      "rapid-airlift",
+      "icu"
+    ],
+    "baseStationNodeId": "N-0075",
+    "currentNodeId": "N-1128",
+    "status": "OutOfService",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 89"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 89"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 89"
+      }
+    ],
+    "fuelPct": 0.61,
+    "activeIncidentId": null,
+    "active": true
+  },
+  {
+    "ambulanceId": "AMB-90",
+    "callSign": "MEDIC-90",
+    "type": "Air-sim",
+    "capabilities": [
+      "advanced-life-support",
+      "rapid-airlift",
+      "icu"
+    ],
+    "baseStationNodeId": "N-0031",
+    "currentNodeId": "N-0364",
+    "status": "OutOfService",
+    "crew": [
+      {
+        "role": "Lead Paramedic",
+        "name": "Paramedic Officer 90"
+      },
+      {
+        "role": "Emergency Driver",
+        "name": "Pilot Officer 90"
+      },
+      {
+        "role": "Medical EMT",
+        "name": "EMT Specialist 90"
+      }
+    ],
+    "fuelPct": 0.84,
+    "activeIncidentId": null,
+    "active": true
+  }
+]

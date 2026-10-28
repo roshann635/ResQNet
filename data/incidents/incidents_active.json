@@ -1,0 +1,463 @@
+[
+  {
+    "incidentId": "INC-001",
+    "type": "Severe Stroke",
+    "severity": "Critical",
+    "locationNodeId": "N-0419",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Severe Stroke reported at Mahatma Nagar Intersection 419",
+    "status": "Prioritized",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "telemetry"
+    ],
+    "reportedBy": "USR-CTZ-002",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:53:00.000Z",
+    "updatedAt": "2026-10-28T11:58:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-002",
+    "type": "Major Road Accident",
+    "severity": "High",
+    "locationNodeId": "N-1365",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Major Road Accident reported at Dwarka Central Intersection 1365",
+    "status": "AwaitingResource",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "ventilator"
+    ],
+    "reportedBy": "USR-CTZ-003",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": "HOSP-003",
+    "createdAt": "2026-10-28T11:50:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-003",
+    "type": "Respiratory Distress",
+    "severity": "High",
+    "locationNodeId": "N-1454",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Respiratory Distress reported at CIDCO Intersection 1454",
+    "status": "AmbulanceAssigned",
+    "requiredCapabilities": [
+      "basic-life-support",
+      "oxygen"
+    ],
+    "reportedBy": "USR-CTZ-004",
+    "assignedAmbulanceId": "AMB-04",
+    "destinationHospitalId": "HOSP-004",
+    "createdAt": "2026-10-28T11:38:00.000Z",
+    "updatedAt": "2026-10-28T11:58:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-004",
+    "type": "Severe Burns",
+    "severity": "High",
+    "locationNodeId": "N-1431",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Severe Burns reported at Satpur Industrial Intersection 1431",
+    "status": "EnRoute",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-005",
+    "assignedAmbulanceId": "AMB-05",
+    "destinationHospitalId": "HOSP-005",
+    "createdAt": "2026-10-28T11:26:00.000Z",
+    "updatedAt": "2026-10-28T11:58:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-005",
+    "type": "Fracture / Trauma",
+    "severity": "Medium",
+    "locationNodeId": "N-1675",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Fracture / Trauma reported at College Road Intersection 1675",
+    "status": "AtScene",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-006",
+    "assignedAmbulanceId": "AMB-06",
+    "destinationHospitalId": "HOSP-006",
+    "createdAt": "2026-10-28T11:47:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-006",
+    "type": "Allergic Reaction",
+    "severity": "Medium",
+    "locationNodeId": "N-1691",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Allergic Reaction reported at Mahatma Nagar Intersection 1691",
+    "status": "Transporting",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-007",
+    "assignedAmbulanceId": "AMB-07",
+    "destinationHospitalId": "HOSP-007",
+    "createdAt": "2026-10-28T11:43:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-007",
+    "type": "Minor Lacerations",
+    "severity": "Low",
+    "locationNodeId": "N-1328",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Minor Lacerations reported at Govind Nagar Intersection 1328",
+    "status": "Registered",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-008",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:18:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-008",
+    "type": "Sprain / Soft Tissue Injury",
+    "severity": "Low",
+    "locationNodeId": "N-1476",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Sprain / Soft Tissue Injury reported at Panchavati Intersection 1476",
+    "status": "Prioritized",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-009",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:29:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-009",
+    "type": "Cardiac Arrest",
+    "severity": "Critical",
+    "locationNodeId": "N-0935",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Cardiac Arrest reported at Mahatma Nagar Intersection 935",
+    "status": "AwaitingResource",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "defibrillator"
+    ],
+    "reportedBy": "USR-CTZ-010",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": "HOSP-010",
+    "createdAt": "2026-10-28T11:55:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-010",
+    "type": "Severe Stroke",
+    "severity": "Critical",
+    "locationNodeId": "N-1453",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Severe Stroke reported at Gangapur Intersection 1453",
+    "status": "AmbulanceAssigned",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "telemetry"
+    ],
+    "reportedBy": "USR-CTZ-011",
+    "assignedAmbulanceId": "AMB-11",
+    "destinationHospitalId": "HOSP-001",
+    "createdAt": "2026-10-28T11:35:00.000Z",
+    "updatedAt": "2026-10-28T11:55:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-011",
+    "type": "Major Road Accident",
+    "severity": "High",
+    "locationNodeId": "N-1350",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Major Road Accident reported at Ambad MIDC Intersection 1350",
+    "status": "EnRoute",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "ventilator"
+    ],
+    "reportedBy": "USR-CTZ-012",
+    "assignedAmbulanceId": "AMB-12",
+    "destinationHospitalId": "HOSP-002",
+    "createdAt": "2026-10-28T11:44:00.000Z",
+    "updatedAt": "2026-10-28T11:58:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-012",
+    "type": "Respiratory Distress",
+    "severity": "High",
+    "locationNodeId": "N-0370",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Respiratory Distress reported at Adgaon Express Intersection 370",
+    "status": "AtScene",
+    "requiredCapabilities": [
+      "basic-life-support",
+      "oxygen"
+    ],
+    "reportedBy": "USR-CTZ-013",
+    "assignedAmbulanceId": "AMB-13",
+    "destinationHospitalId": "HOSP-003",
+    "createdAt": "2026-10-28T11:55:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-013",
+    "type": "Severe Burns",
+    "severity": "High",
+    "locationNodeId": "N-0803",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Severe Burns reported at Mahatma Nagar Intersection 803",
+    "status": "Transporting",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-014",
+    "assignedAmbulanceId": "AMB-14",
+    "destinationHospitalId": "HOSP-004",
+    "createdAt": "2026-10-28T11:22:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-014",
+    "type": "Fracture / Trauma",
+    "severity": "Medium",
+    "locationNodeId": "N-1032",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Fracture / Trauma reported at Panchavati Intersection 1032",
+    "status": "Registered",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-015",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:43:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-015",
+    "type": "Allergic Reaction",
+    "severity": "Medium",
+    "locationNodeId": "N-0530",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Allergic Reaction reported at CIDCO Intersection 530",
+    "status": "Prioritized",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-016",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:29:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-016",
+    "type": "Minor Lacerations",
+    "severity": "Low",
+    "locationNodeId": "N-0446",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Minor Lacerations reported at CIDCO Intersection 446",
+    "status": "AwaitingResource",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-017",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": "HOSP-007",
+    "createdAt": "2026-10-28T11:47:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-017",
+    "type": "Sprain / Soft Tissue Injury",
+    "severity": "Low",
+    "locationNodeId": "N-0100",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Sprain / Soft Tissue Injury reported at ABB Circle",
+    "status": "AmbulanceAssigned",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-018",
+    "assignedAmbulanceId": "AMB-03",
+    "destinationHospitalId": "HOSP-008",
+    "createdAt": "2026-10-28T11:33:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-018",
+    "type": "Cardiac Arrest",
+    "severity": "Critical",
+    "locationNodeId": "N-0266",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Cardiac Arrest reported at CIDCO Intersection 266",
+    "status": "EnRoute",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "defibrillator"
+    ],
+    "reportedBy": "USR-CTZ-019",
+    "assignedAmbulanceId": "AMB-04",
+    "destinationHospitalId": "HOSP-009",
+    "createdAt": "2026-10-28T11:42:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-019",
+    "type": "Severe Stroke",
+    "severity": "Critical",
+    "locationNodeId": "N-1292",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Severe Stroke reported at Govind Nagar Intersection 1292",
+    "status": "AtScene",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "telemetry"
+    ],
+    "reportedBy": "USR-CTZ-020",
+    "assignedAmbulanceId": "AMB-05",
+    "destinationHospitalId": "HOSP-010",
+    "createdAt": "2026-10-28T11:45:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-020",
+    "type": "Major Road Accident",
+    "severity": "High",
+    "locationNodeId": "N-1112",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Major Road Accident reported at Govind Nagar Intersection 1112",
+    "status": "Transporting",
+    "requiredCapabilities": [
+      "advanced-life-support",
+      "ventilator"
+    ],
+    "reportedBy": "USR-CTZ-021",
+    "assignedAmbulanceId": "AMB-06",
+    "destinationHospitalId": "HOSP-001",
+    "createdAt": "2026-10-28T11:30:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-021",
+    "type": "Respiratory Distress",
+    "severity": "High",
+    "locationNodeId": "N-1682",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Respiratory Distress reported at CIDCO Intersection 1682",
+    "status": "Registered",
+    "requiredCapabilities": [
+      "basic-life-support",
+      "oxygen"
+    ],
+    "reportedBy": "USR-CTZ-022",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:42:00.000Z",
+    "updatedAt": "2026-10-28T11:56:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-022",
+    "type": "Severe Burns",
+    "severity": "High",
+    "locationNodeId": "N-0449",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Severe Burns reported at Indira Nagar Intersection 449",
+    "status": "Prioritized",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-023",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": null,
+    "createdAt": "2026-10-28T11:21:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-023",
+    "type": "Fracture / Trauma",
+    "severity": "Medium",
+    "locationNodeId": "N-1269",
+    "patientCount": 1,
+    "description": "Active operations dispatch: Fracture / Trauma reported at Dwarka Central Intersection 1269",
+    "status": "AwaitingResource",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-024",
+    "assignedAmbulanceId": null,
+    "destinationHospitalId": "HOSP-004",
+    "createdAt": "2026-10-28T11:41:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-024",
+    "type": "Allergic Reaction",
+    "severity": "Medium",
+    "locationNodeId": "N-0488",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Allergic Reaction reported at Govind Nagar Intersection 488",
+    "status": "AmbulanceAssigned",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-025",
+    "assignedAmbulanceId": "AMB-10",
+    "destinationHospitalId": "HOSP-005",
+    "createdAt": "2026-10-28T11:34:00.000Z",
+    "updatedAt": "2026-10-28T11:57:00.000Z",
+    "isSynthetic": true
+  },
+  {
+    "incidentId": "INC-025",
+    "type": "Minor Lacerations",
+    "severity": "Low",
+    "locationNodeId": "N-1207",
+    "patientCount": 2,
+    "description": "Active operations dispatch: Minor Lacerations reported at College Road Intersection 1207",
+    "status": "EnRoute",
+    "requiredCapabilities": [
+      "basic-life-support"
+    ],
+    "reportedBy": "USR-CTZ-026",
+    "assignedAmbulanceId": "AMB-11",
+    "destinationHospitalId": "HOSP-006",
+    "createdAt": "2026-10-28T11:15:00.000Z",
+    "updatedAt": "2026-10-28T11:59:00.000Z",
+    "isSynthetic": true
+  }
+]

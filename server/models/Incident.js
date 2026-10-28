@@ -5,8 +5,7 @@ const statusHistorySchema = new mongoose.Schema(
   {
     status: {
       type: String,
-      required: true,
-      enum: Object.values(config.incidentStates)
+      required: true
     },
     timestamp: {
       type: Date,
@@ -45,7 +44,6 @@ const incidentSchema = new mongoose.Schema(
     severity: {
       type: String,
       required: true,
-      enum: ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW'],
       index: true
     },
     locationNodeId: {
@@ -61,8 +59,7 @@ const incidentSchema = new mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: Object.values(config.incidentStates),
-      default: config.incidentStates.REGISTERED,
+      default: 'Registered',
       index: true
     },
     requiredCapabilities: {
@@ -71,13 +68,29 @@ const incidentSchema = new mongoose.Schema(
     },
     assignedAmbulanceId: {
       type: String,
-      default: null,
-      index: true
+      default: null
     },
     destinationHospitalId: {
       type: String,
       default: null,
       index: true
+    },
+    reportedBy: {
+      type: String,
+      default: null,
+      index: true
+    },
+    patientCount: {
+      type: Number,
+      default: 1
+    },
+    symptoms: {
+      type: [String],
+      default: []
+    },
+    triageExplanation: {
+      type: String,
+      default: ''
     },
     createdAt: {
       type: Date,
@@ -96,10 +109,32 @@ const incidentSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
       index: true
+    },
+    scenario: {
+      type: String,
+      default: 'default',
+      index: true
     }
   },
   {
     timestamps: false
+  }
+);
+
+// One active incident per ambulance partial index
+incidentSchema.index(
+  { assignedAmbulanceId: 1 },
+  {
+    unique: true,
+    partialFilterExpression: {
+      assignedAmbulanceId: { $type: 'string' },
+      status: {
+        $in: [
+          'AMBULANCE_ASSIGNED', 'VEHICLE_EN_ROUTE', 'RE_ROUTING', 'AT_SCENE', 'TRANSPORTING',
+          'AmbulanceAssigned', 'EnRoute', 'Rerouting', 'AtScene', 'Transporting'
+        ]
+      }
+    }
   }
 );
 

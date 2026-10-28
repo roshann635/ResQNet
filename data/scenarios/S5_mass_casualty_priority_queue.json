@@ -1,0 +1,6 @@
+{
+  "scenarioId": "S5_mass_casualty_priority_queue",
+  "name": "S5: Mass Casualty Incident Multi-Triage",
+  "description": "Major collision generates 5 simultaneous calls. Priority queue reorders dispatch by severity rank and wait-time.",
+  "expectedOutcome": "Critical triage processed first ahead of Low/Medium incidents."
+}

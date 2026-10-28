@@ -1,0 +1,110 @@
+[
+  {
+    "id": "Z-01",
+    "name": "Panchavati",
+    "centerLat": 20.015,
+    "centerLng": 73.805,
+    "radiusKm": 2.5,
+    "density": "Very High",
+    "northOfRiver": true
+  },
+  {
+    "id": "Z-02",
+    "name": "Gangapur",
+    "centerLat": 20.035,
+    "centerLng": 73.745,
+    "radiusKm": 3,
+    "density": "High",
+    "northOfRiver": true
+  },
+  {
+    "id": "Z-03",
+    "name": "CIDCO",
+    "centerLat": 19.97,
+    "centerLng": 73.745,
+    "radiusKm": 3.2,
+    "density": "High",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-04",
+    "name": "Satpur Industrial",
+    "centerLat": 19.995,
+    "centerLng": 73.735,
+    "radiusKm": 2.8,
+    "density": "Medium",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-05",
+    "name": "Nashik Road",
+    "centerLat": 19.96,
+    "centerLng": 73.83,
+    "radiusKm": 3.5,
+    "density": "High",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-06",
+    "name": "Indira Nagar",
+    "centerLat": 19.975,
+    "centerLng": 73.785,
+    "radiusKm": 2.2,
+    "density": "High",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-07",
+    "name": "Ambad MIDC",
+    "centerLat": 19.955,
+    "centerLng": 73.725,
+    "radiusKm": 3,
+    "density": "Medium",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-08",
+    "name": "College Road",
+    "centerLat": 20.005,
+    "centerLng": 73.765,
+    "radiusKm": 2,
+    "density": "Very High",
+    "northOfRiver": true
+  },
+  {
+    "id": "Z-09",
+    "name": "Govind Nagar",
+    "centerLat": 19.985,
+    "centerLng": 73.775,
+    "radiusKm": 1.8,
+    "density": "Medium",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-10",
+    "name": "Dwarka Central",
+    "centerLat": 19.99,
+    "centerLng": 73.8,
+    "radiusKm": 2,
+    "density": "Very High",
+    "northOfRiver": false
+  },
+  {
+    "id": "Z-11",
+    "name": "Adgaon Express",
+    "centerLat": 20.04,
+    "centerLng": 73.835,
+    "radiusKm": 3.8,
+    "density": "Medium",
+    "northOfRiver": true
+  },
+  {
+    "id": "Z-12",
+    "name": "Mahatma Nagar",
+    "centerLat": 20,
+    "centerLng": 73.75,
+    "radiusKm": 1.8,
+    "density": "High",
+    "northOfRiver": false
+  }
+]

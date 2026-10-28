@@ -136,7 +136,8 @@ export class Graph {
    * By default, BLOCKED edges are omitted from traversal.
    */
   getNeighbors(nodeId, includeBlocked = false) {
-    const list = this.adjacencyList.get(nodeId) || [];
+    const norm = this._normalizeNodeId(nodeId);
+    const list = this.adjacencyList.get(norm) || [];
     if (includeBlocked) return list;
 
     return list
@@ -149,8 +150,39 @@ export class Graph {
       }));
   }
 
+  /**
+   * Alias for getNeighbors returning effectiveCost attribute for routing modules.
+   */
+  getAdjacentEdges(nodeId, includeBlocked = false) {
+    const norm = this._normalizeNodeId(nodeId);
+    const list = this.adjacencyList.get(norm) || [];
+    if (includeBlocked) return list;
+
+    return list
+      .filter((adj) => adj.condition !== config.roadConditions.BLOCKED)
+      .map((adj) => ({
+        toNodeId: adj.toNodeId,
+        edgeId: adj.edgeId,
+        effectiveCost: this.getEffectiveWeight(adj),
+        weight: this.getEffectiveWeight(adj),
+        condition: adj.condition
+      }));
+  }
+
+  _normalizeNodeId(nodeId) {
+    if (!nodeId || typeof nodeId !== 'string') return nodeId;
+    if (this.nodes.has(nodeId)) return nodeId;
+    const match = nodeId.match(/^N-(\d{1,3})$/i);
+    if (match) {
+      const alt = `N-${match[1].padStart(4, '0')}`;
+      if (this.nodes.has(alt)) return alt;
+    }
+    return nodeId;
+  }
+
   getNode(nodeId) {
-    return this.nodes.get(nodeId) || null;
+    const norm = this._normalizeNodeId(nodeId);
+    return this.nodes.get(norm) || null;
   }
 
   getEdge(edgeId) {

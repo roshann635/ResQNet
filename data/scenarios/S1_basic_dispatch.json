@@ -1,0 +1,9 @@
+{
+  "scenarioId": "S1_basic_dispatch",
+  "name": "S1: Basic Dispatch & Optimum Path",
+  "description": "Demonstrates cardiac arrest prioritization, greedy ambulance scoring, and Dijkstra/A* path discovery.",
+  "targetIncident": "INC-001",
+  "ambulance": "AMB-01",
+  "hospital": "HOSP-007",
+  "expectedOutcome": "Optimal path found in under 0.5 ms with ALS ambulance assigned."
+}

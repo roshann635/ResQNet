@@ -2,6 +2,44 @@ import config from '../config/index.js';
 import { dijkstra } from './dijkstra.js';
 
 /**
+ * Capability equivalence and medical skill mappings for emergency dispatch.
+ * Maps high-level clinical requirements to ambulance equipment and ALS capabilities.
+ */
+export const CAPABILITY_EQUIVALENCE = {
+  'cardiac-monitor': ['telemetry', 'defibrillator', 'advanced-life-support', 'cardiac-monitor'],
+  'telemetry': ['telemetry', 'cardiac-monitor', 'advanced-life-support'],
+  'defibrillator': ['defibrillator', 'telemetry', 'advanced-life-support'],
+  'trauma-care': ['advanced-life-support', 'first-aid', 'basic-life-support', 'trauma-care'],
+  'burn-unit': ['advanced-life-support', 'first-aid', 'oxygen', 'burn-unit'],
+  'pediatric-support': ['pediatric-icu', 'incubator', 'pediatric-support', 'basic-life-support', 'advanced-life-support'],
+  'neonatal-care': ['incubator', 'neonatal-care', 'pediatric-icu', 'basic-life-support'],
+  'ventilator': ['ventilator', 'advanced-life-support', 'oxygen'],
+  'oxygen': ['oxygen', 'ventilator', 'basic-life-support', 'advanced-life-support'],
+  'advanced-life-support': ['advanced-life-support', 'icu'],
+  'basic-life-support': ['basic-life-support', 'advanced-life-support', 'first-aid'],
+  'first-aid': ['first-aid', 'basic-life-support', 'advanced-life-support']
+};
+
+export function checkAmbulanceCapability(ambCapsSet, requiredCap) {
+  const req = String(requiredCap).toLowerCase().trim();
+  if (ambCapsSet.has(req)) return true;
+
+  const equivalents = CAPABILITY_EQUIVALENCE[req];
+  if (equivalents) {
+    for (const eq of equivalents) {
+      if (ambCapsSet.has(eq.toLowerCase())) return true;
+    }
+  }
+
+  // An ALS ambulance includes resuscitation kit, EMTs and equipment that covers BLS
+  if (ambCapsSet.has('advanced-life-support') && (req === 'basic-life-support' || req === 'first-aid' || req === 'oxygen')) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
  * Greedy Dispatch Scorer Module in Pure JavaScript.
  *
  * Scoring Formula:
@@ -14,7 +52,7 @@ import { dijkstra } from './dijkstra.js';
  *
  * Hard Filters:
  *  1. Status must be AVAILABLE.
- *  2. Ambulance must possess all required capabilities of the incident.
+ *  2. Ambulance must possess compatible capabilities of the incident.
  *  3. There must exist a traversable route from ambulance to incident.
  */
 export function scoreAmbulanceCandidates(
@@ -25,39 +63,44 @@ export function scoreAmbulanceCandidates(
 ) {
   const weights = customWeights || config.scoringWeights;
   const incidentLocation = incident.locationNodeId;
-  const requiredCaps = new Set(incident.requiredCapabilities || []);
+  const requiredCaps = new Set((incident.requiredCapabilities || []).map((c) => String(c).toLowerCase().trim()));
 
   const candidates = [];
   const rejected = [];
 
   // 1. Evaluate each ambulance
   for (const amb of ambulances) {
-    const ambCaps = new Set(amb.capabilities || []);
+    const ambCaps = new Set((amb.capabilities || []).map((c) => String(c).toLowerCase().trim()));
+    const callSign = amb.callSign || amb.label || amb.ambulanceId;
 
     // Filter 1: Availability
-    if (amb.status !== 'AVAILABLE') {
+    if (String(amb.status).toUpperCase() !== 'AVAILABLE') {
       rejected.push({
         ambulanceId: amb.ambulanceId,
-        label: amb.label,
-        vehicleType: amb.vehicleType,
+        callSign,
+        label: callSign,
+        type: amb.type || amb.vehicleType,
+        vehicleType: amb.vehicleType || amb.type,
         reason: `Vehicle unavailable (Current Status: ${amb.status})`,
         status: amb.status
       });
       continue;
     }
 
-    // Filter 2: Capability check
+    // Filter 2: Capability check with equivalence resolution
     const missingCaps = [];
     for (const req of requiredCaps) {
-      if (!ambCaps.has(req)) {
+      if (!checkAmbulanceCapability(ambCaps, req)) {
         missingCaps.push(req);
       }
     }
     if (missingCaps.length > 0) {
       rejected.push({
         ambulanceId: amb.ambulanceId,
-        label: amb.label,
-        vehicleType: amb.vehicleType,
+        callSign,
+        label: callSign,
+        type: amb.type || amb.vehicleType,
+        vehicleType: amb.vehicleType || amb.type,
         reason: `Missing required capability: ${missingCaps.join(', ')}`,
         missingCapabilities: missingCaps
       });
@@ -69,8 +112,10 @@ export function scoreAmbulanceCandidates(
     if (!routeResult.found) {
       rejected.push({
         ambulanceId: amb.ambulanceId,
-        label: amb.label,
-        vehicleType: amb.vehicleType,
+        callSign,
+        label: callSign,
+        type: amb.type || amb.vehicleType,
+        vehicleType: amb.vehicleType || amb.type,
         reason: `No traversable path from ${amb.currentNodeId} to incident location ${incidentLocation} (road blocked or severed).`,
         routeFound: false
       });
@@ -78,8 +123,8 @@ export function scoreAmbulanceCandidates(
     }
 
     // Excess capabilities metric (used for mismatch penalty: higher capability vehicle assigned to low severity task)
-    const excessCaps = amb.capabilities.filter((c) => !requiredCaps.has(c)).length;
-    const capabilityMismatchPenalty = Math.min(1.0, excessCaps * 0.15); // Slight penalty for wasting heavy equipment on minor calls
+    const excessCaps = (amb.capabilities || []).filter((c) => !requiredCaps.has(String(c).toLowerCase().trim())).length;
+    const capabilityMismatchPenalty = Math.min(1.0, excessCaps * 0.15);
 
     // Reliability penalty: 1 - reliabilityScore
     const reliabilityPenalty = Math.max(0.0, 1.0 - (amb.reliabilityScore || 0.95));
@@ -89,11 +134,18 @@ export function scoreAmbulanceCandidates(
 
     candidates.push({
       ambulance: amb,
-      route: routeResult,
+      route: {
+        path: routeResult.path,
+        cost: routeResult.cost,
+        nodesExpanded: routeResult.nodesExpanded,
+        edgesExamined: routeResult.edgesExamined,
+        runtimeMs: routeResult.runtimeMs
+      },
       rawRouteCost: routeResult.cost,
       utilizationPenalty,
       capabilityMismatchPenalty,
-      reliabilityPenalty
+      reliabilityPenalty,
+      isFallback: false
     });
   }
 
@@ -109,14 +161,24 @@ export function scoreAmbulanceCandidates(
     const weightedReliability = weights.reliability * cand.reliabilityPenalty;
 
     const totalScore = weightedRouteCost + weightedUtilization + weightedCapability + weightedReliability;
+    const callSign = cand.ambulance.callSign || cand.ambulance.label || cand.ambulance.ambulanceId;
+    const etaMinutes = Math.round((cand.rawRouteCost / 40) * 60 * 10) / 10;
 
     return {
       ambulanceId: cand.ambulance.ambulanceId,
-      label: cand.ambulance.label,
-      vehicleType: cand.ambulance.vehicleType,
+      callSign,
+      label: callSign,
+      type: cand.ambulance.type || cand.ambulance.vehicleType || 'ALS',
+      vehicleType: cand.ambulance.vehicleType || cand.ambulance.type || 'ALS',
       currentNodeId: cand.ambulance.currentNodeId,
-      capabilities: cand.ambulance.capabilities,
+      capabilities: cand.ambulance.capabilities || [],
+      fuelPct: cand.ambulance.fuelPct ?? 0.85,
+      crewFatigue: Math.round((cand.ambulance.utilizationRate || 0.2) * 10) || 2,
+      score: Math.round(totalScore * 1000) / 1000,
       totalScore: Math.round(totalScore * 1000) / 1000,
+      routeCost: Math.round(cand.rawRouteCost * 100) / 100,
+      etaMinutes,
+      isFallback: cand.isFallback,
       breakdown: {
         rawRouteCost: cand.rawRouteCost,
         normalizedRouteCost: Math.round(normalizedRouteCost * 1000) / 1000,
@@ -140,9 +202,12 @@ export function scoreAmbulanceCandidates(
     weights,
     bestCandidate: scoredCandidates.length > 0 ? scoredCandidates[0] : null,
     candidates: scoredCandidates,
+    eligibleCandidates: scoredCandidates,
     rejected,
+    ineligibleCandidates: rejected,
     eligibleCount: scoredCandidates.length,
-    rejectedCount: rejected.length
+    rejectedCount: rejected.length,
+    evaluatedCount: ambulances.length
   };
 }
 

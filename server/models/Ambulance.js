@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import config from '../config/index.js';
 
 const ambulanceSchema = new mongoose.Schema(
   {
@@ -10,61 +9,80 @@ const ambulanceSchema = new mongoose.Schema(
       trim: true,
       index: true
     },
+    callSign: {
+      type: String,
+      default: ''
+    },
     label: {
       type: String,
-      required: true,
-      trim: true
+      default: ''
     },
     currentNodeId: {
       type: String,
       required: true,
       index: true
     },
+    baseStationNodeId: {
+      type: String,
+      default: ''
+    },
     status: {
       type: String,
-      enum: ['AVAILABLE', 'DISPATCHED', 'EN_ROUTE', 'AT_SCENE', 'TRANSPORTING', 'MAINTENANCE', 'OFFLINE'],
-      default: 'AVAILABLE',
+      default: 'Available',
+      index: true
+    },
+    type: {
+      type: String,
+      default: 'BLS',
       index: true
     },
     vehicleType: {
       type: String,
-      enum: config.ambulanceTypes,
-      required: true,
-      index: true
+      default: 'BLS'
     },
     capabilities: {
       type: [String],
       default: []
     },
+    crew: {
+      type: Array,
+      default: []
+    },
+    fuelPct: {
+      type: Number,
+      default: 0.9,
+      min: 0.0,
+      max: 1.0
+    },
     utilizationRate: {
       type: Number,
-      min: 0.0,
-      max: 1.0,
       default: 0.20
     },
     reliabilityScore: {
       type: Number,
-      min: 0.0,
-      max: 1.0,
       default: 0.95
     },
     totalDispatches: {
       type: Number,
-      default: 0,
-      min: 0
+      default: 0
     },
     activeIncidentId: {
       type: String,
       default: null,
       index: true
     },
-    lastUpdatedAt: {
+    updatedAt: {
       type: Date,
       default: Date.now
     },
     isSynthetic: {
       type: Boolean,
       default: false,
+      index: true
+    },
+    scenario: {
+      type: String,
+      default: 'default',
       index: true
     }
   },
@@ -74,7 +92,11 @@ const ambulanceSchema = new mongoose.Schema(
 );
 
 ambulanceSchema.pre('save', function (next) {
-  this.lastUpdatedAt = new Date();
+  this.updatedAt = new Date();
+  if (!this.label && this.callSign) this.label = this.callSign;
+  if (!this.callSign && this.label) this.callSign = this.label;
+  if (!this.vehicleType && this.type) this.vehicleType = this.type;
+  if (!this.type && this.vehicleType) this.type = this.vehicleType;
   next();
 });
 

@@ -27,8 +27,8 @@ const roadEdgeSchema = new mongoose.Schema(
     },
     condition: {
       type: String,
-      enum: Object.values(config.roadConditions),
-      default: config.roadConditions.NORMAL,
+      enum: ['NORMAL', 'CONGESTED', 'BLOCKED', 'REOPENED', 'normal', 'congested', 'blocked', 'reopened'],
+      default: 'NORMAL',
       index: true
     },
     multiplier: {
@@ -48,6 +48,29 @@ const roadEdgeSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
       index: true
+    },
+    scenario: {
+      type: String,
+      default: 'default',
+      index: true
+    },
+    roadClass: {
+      type: String,
+      enum: ['arterial', 'collector', 'local', 'expressway', 'bridge'],
+      default: 'local',
+      index: true
+    },
+    roadName: {
+      type: String,
+      default: ''
+    },
+    distanceM: {
+      type: Number,
+      default: 0
+    },
+    speedLimit: {
+      type: Number,
+      default: 40
     }
   },
   {

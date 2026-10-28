@@ -1,3 +1,4 @@
 # Ensure line endings in data directory are LF so SHA-256 integrity checksums match across Windows and Linux
 data/** text eol=lf
 *.json text eol=lf
+

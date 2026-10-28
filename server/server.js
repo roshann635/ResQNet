@@ -36,7 +36,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: '*', // Allow local frontend connections seamlessly
+  origin: (origin, callback) => callback(null, true),
   credentials: true
 }));
 app.use(express.json({ limit: '2mb' }));
